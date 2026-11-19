@@ -1,304 +1,2782 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lic. Yara Cabrera · Psicóloga clínica en Ciudad de Guatemala</title>
-<meta name="description" content="Psicología clínica para adultos y adolescentes. Sesiones presenciales en Zona 14 y en línea. Sitio de ejemplo creado por Weaver.">
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#F9F7F4">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%233D5A4C'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23F9F7F4'%3EY%3C/text%3E%3C/svg%3E">
+<title>Weaver · Tecnología simple para tu negocio en Guatemala</title>
+<meta name="description" content="Weaver crea landing pages, sitios y catálogos que convierten visitas en mensajes de WhatsApp para negocios en Guatemala. Q0 de setup, desde Q200 al mes.">
+<meta name="theme-color" content="#F5F6FA">
+<link rel="canonical" href="https://somosweaver.com/">
+<meta property="og:url" content="https://somosweaver.com/">
+<meta property="og:image" content="https://somosweaver.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_GT">
+<meta property="og:site_name" content="Weaver">
+<meta property="og:title" content="Weaver · Tu negocio, conectado con tecnología simple">
+<meta property="og:description" content="Landing pages, sitios y catálogos que convierten visitas en mensajes de WhatsApp. Q0 de setup, desde Q200 al mes.">
+<meta property="og:image:alt" content="Weaver: Tu negocio, conectado con tecnología simple.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Weaver · Tu negocio, conectado con tecnología simple">
+<meta name="twitter:description" content="Landing pages, sitios y catálogos que convierten visitas en mensajes de WhatsApp. Q0 de setup, desde Q200 al mes.">
+<meta name="twitter:image" content="https://somosweaver.com/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='9' fill='%23F5F6FA'/%3E%3Cpolyline points='7,11 12.5,25 18,13 23.5,25 29,11' fill='none' stroke='%234C4FE0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='18' cy='13' r='2.8' fill='%23FF6B4A'/%3E%3C/svg%3E">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Weaver", "url": "https://somosweaver.com/", "email": "hola@somosweaver.com", "telephone": "+50243182227", "areaServed": {"@type": "Country", "name": "Guatemala"}, "description": "Landing pages, sitios multipágina, catálogos y sistemas web a medida para negocios en Guatemala."}</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+
+<script>
+  // ─── Configuración ──────────────────────────────────────────────
+  // Cambia este número por el WhatsApp real de Weaver (código de país + número, sin "+" ni espacios).
+  window.WEAVER_WHATSAPP = '50243182227';
+  window.wa = function (msg) {
+    return 'https://wa.me/' + window.WEAVER_WHATSAPP + '?text=' + encodeURIComponent(msg || 'Hola Weaver, quiero agendar una demo de 15 minutos para mi negocio.');
+  };
+  document.documentElement.classList.add('js');
+</script>
+
 <style>
-  :root{
-    --bg:#F9F7F4; --bg2:#F1EDE6; --ink:#262626; --ink2:#5E5B56; --accent:#3D5A4C; --line:#DDD7CC;
-    --serif:"Newsreader", Georgia, "Times New Roman", serif;
-    --sans:"DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+/* Tailwind CSS compilado (estático) */
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme {
+  :root, :host {
+    --font-sans: "Plus Jakarta Sans",system-ui,sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-sm: 24rem;
+    --container-md: 28rem;
+    --container-lg: 32rem;
+    --container-xl: 36rem;
+    --container-2xl: 42rem;
+    --container-4xl: 56rem;
+    --container-6xl: 72rem;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --tracking-wide: 0.025em;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-relaxed: 1.625;
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
+    --blur-md: 12px;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --color-niebla: #F5F6FA;
+    --color-grafito: #15171E;
+    --color-pizarra: #5B5E6B;
+    --color-humo: #C9CBD4;
+    --color-brand-indigo: #4C4FE0;
+    --color-brand-coral: #FF6B4A;
+    --font-display: Sora,system-ui,sans-serif;
+    --ease-out-expo: cubic-bezier(0.16,1,0.3,1);
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;scroll-padding-top:16px}
-  body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
-  a{color:inherit}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-
-  /* Barra de demo */
-  .demo{background:var(--bg2);border-bottom:1px solid var(--line);font-size:13px;line-height:1.5;color:var(--ink2);text-align:center;padding:8px 16px}
-  .demo a{color:var(--ink);text-underline-offset:3px}
-
-  /* Cabecera */
-  header.top{border-bottom:1px solid var(--line)}
-  header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 28px;padding-top:16px;padding-bottom:16px}
-  .name{font:500 21px/1.2 var(--serif);text-decoration:none}
-  .name small{display:block;font:400 13px/1.3 var(--sans);color:var(--ink2);margin-top:2px}
-  nav.links{display:flex;gap:22px;font-size:15px;order:3;width:100%}
-  nav.links a{color:var(--ink2);text-decoration:none}
-  nav.links a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
-  .btn{display:inline-block;font:600 15px/1 var(--sans);background:var(--accent);color:#fff;padding:14px 20px;border-radius:6px;border:1px solid var(--accent);text-decoration:none;cursor:pointer;text-align:center}
-  .btn:hover{background:#2F473B}
-  .btn.sm{padding:10px 16px;font-size:14px}
-  .btn.block{display:block;width:100%}
-  .textlink{font-weight:500;font-size:15.5px;text-underline-offset:4px}
-
-  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.2;letter-spacing:-.005em}
-  h1{font-size:clamp(32px,5vw,44px)}
-  h2{font-size:clamp(26px,3.4vw,32px);margin-bottom:14px}
-  section{padding:56px 0;border-top:1px solid var(--line)}
-  p+p{margin-top:14px}
-  .muted{color:var(--ink2)}
-
-  /* Hero */
-  .hero{border-top:0;padding:44px 0 56px}
-  .hero .wrap{display:grid;gap:36px}
-  .hero p.lead{font-size:18.5px;color:var(--ink2);margin-top:18px;max-width:34rem}
-  .cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:28px}
-  .proof{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:15px;color:var(--ink2);display:flex;flex-wrap:wrap;gap:6px 26px}
-  .proof b{font:500 22px var(--serif);color:var(--ink);margin-right:4px}
-  .photo{aspect-ratio:4/5;max-width:280px;width:100%;background:#E9E3D8;border:1px solid var(--line);border-radius:6px;display:flex;align-items:flex-end;padding:16px}
-  .photo p{font-size:12.5px;line-height:1.45;color:var(--ink2)}
-
-  /* Motivos */
-  .reasons{list-style:none;margin-top:22px}
-  .reasons li{padding:16px 0;border-top:1px solid var(--line)}
-  .reasons li:last-child{border-bottom:1px solid var(--line)}
-  .reasons b{display:block;font:500 20px/1.3 var(--serif)}
-  .reasons span{color:var(--ink2);font-size:16px}
-
-  /* Sobre mí */
-  .cols{display:grid;gap:32px}
-  .formation{list-style:none;margin-top:18px;font-size:15.5px;color:var(--ink2)}
-  .formation li{padding:9px 0;border-top:1px solid var(--line)}
-  .formation li:last-child{border-bottom:1px solid var(--line)}
-  .formation b{color:var(--ink);font-weight:500}
-  ol.first{margin:14px 0 0 20px;color:var(--ink2)}
-  ol.first li{padding-left:4px;margin-top:8px}
-
-  /* Información práctica */
-  .info{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:6px 22px;margin-top:22px}
-  .info div{padding:16px 0;border-top:1px solid var(--line)}
-  .info div:first-child{border-top:0}
-  .info dt{font:600 13px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
-  .info dd{font-size:16.5px}
-  .info dd span{display:block;color:var(--ink2);font-size:15px}
-
-  /* Formulario */
-  #agendar{background:var(--bg2)}
-  form{margin-top:22px;display:grid;gap:20px;max-width:560px}
-  label,legend{display:block;font:500 15px/1.4 var(--sans);margin-bottom:6px}
-  fieldset{border:0;min-width:0}
-  input[type=text],textarea{width:100%;font:400 16px/1.5 var(--sans);color:var(--ink);background:#fff;border:1px solid #C9C2B5;border-radius:6px;padding:12px 14px}
-  textarea{resize:vertical;min-height:84px}
-  input[type=text]:focus,textarea:focus{border-color:var(--accent);outline:2px solid rgba(61,90,76,.25);outline-offset:0}
-  .opts{display:flex;flex-wrap:wrap;gap:10px}
-  .opts label{display:flex;align-items:center;gap:8px;margin:0;font-weight:400;font-size:16px;background:#fff;border:1px solid #C9C2B5;border-radius:6px;padding:11px 16px;cursor:pointer}
-  .opts input{accent-color:var(--accent);width:16px;height:16px}
-  .hint{font-size:13.5px;color:var(--ink2);margin-top:5px}
-  .err{color:#8C2F2F;font-size:14px;margin-top:6px}
-  .note{font-size:13.5px;color:var(--ink2)}
-
-  /* Preguntas */
-  .faq{margin-top:20px}
-  details{border-top:1px solid var(--line)}
-  details:last-child{border-bottom:1px solid var(--line)}
-  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:18px 0;font:500 19px/1.35 var(--serif)}
-  summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";font:400 22px/1 var(--sans);color:var(--accent)}
-  details[open] summary::after{content:"–"}
-  details p{padding:0 0 18px;color:var(--ink2);max-width:40rem;font-size:16.5px}
-
-  footer{border-top:1px solid var(--line);padding:32px 0 40px;font-size:14px;line-height:1.6;color:var(--ink2)}
-  footer p+p{margin-top:8px}
-
-  @media (min-width:760px){
-    body{font-size:17.5px}
-    header.top .wrap{flex-wrap:nowrap}
-    nav.links{order:0;width:auto}
-    section{padding:72px 0}
-    .hero{padding:64px 0 76px}
-    .hero .wrap{grid-template-columns:1.35fr 1fr;gap:64px;align-items:start}
-    .photo{justify-self:end;max-width:340px}
-    .reasons li{display:grid;grid-template-columns:300px 1fr;gap:24px;align-items:baseline}
-    .cols{grid-template-columns:1fr 1fr;gap:64px}
-    .info{padding:6px 28px}
-    .info div{display:grid;grid-template-columns:150px 1fr;gap:20px}
-    .info dt{margin:3px 0 0}
-    .btn.block{display:inline-block;width:auto}
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
   }
-  @media print{ .demo{display:none} }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring:where(:not(iframe)) {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .inset-0 {
+    inset: 0px;
+  }
+  .inset-x-4 {
+    inset-inline: calc(var(--spacing) * 4);
+  }
+  .-top-24 {
+    top: calc(var(--spacing) * -24);
+  }
+  .top-0 {
+    top: 0px;
+  }
+  .top-1\/2 {
+    top: calc(1 / 2 * 100%);
+  }
+  .top-3 {
+    top: calc(var(--spacing) * 3);
+  }
+  .top-4 {
+    top: calc(var(--spacing) * 4);
+  }
+  .top-7 {
+    top: calc(var(--spacing) * 7);
+  }
+  .top-\[25\%\] {
+    top: 25%;
+  }
+  .top-\[42\%\] {
+    top: 42%;
+  }
+  .top-\[51\%\] {
+    top: 51%;
+  }
+  .top-\[76\%\] {
+    top: 76%;
+  }
+  .-right-24 {
+    right: calc(var(--spacing) * -24);
+  }
+  .right-0 {
+    right: 0px;
+  }
+  .right-2 {
+    right: calc(var(--spacing) * 2);
+  }
+  .right-\[16\.66\%\] {
+    right: 16.66%;
+  }
+  .-bottom-2 {
+    bottom: calc(var(--spacing) * -2);
+  }
+  .bottom-7 {
+    bottom: calc(var(--spacing) * 7);
+  }
+  .left-0 {
+    left: 0px;
+  }
+  .left-1\/2 {
+    left: calc(1 / 2 * 100%);
+  }
+  .left-7 {
+    left: calc(var(--spacing) * 7);
+  }
+  .left-\[3\%\] {
+    left: 3%;
+  }
+  .left-\[11px\] {
+    left: 11px;
+  }
+  .left-\[16\.66\%\] {
+    left: 16.66%;
+  }
+  .left-\[calc\(clamp\(120px\,23\%\,260px\)\+12px\)\] {
+    left: calc(clamp(120px, 23%, 260px) + 12px);
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .-mx-5 {
+    margin-inline: calc(var(--spacing) * -5);
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .my-3 {
+    margin-block: calc(var(--spacing) * 3);
+  }
+  .my-6 {
+    margin-block: calc(var(--spacing) * 6);
+  }
+  .mt-0\.5 {
+    margin-top: calc(var(--spacing) * 0.5);
+  }
+  .mt-1 {
+    margin-top: var(--spacing);
+  }
+  .mt-1\.5 {
+    margin-top: calc(var(--spacing) * 1.5);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-2\.5 {
+    margin-top: calc(var(--spacing) * 2.5);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
+  .mt-7 {
+    margin-top: calc(var(--spacing) * 7);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
+  }
+  .mt-14 {
+    margin-top: calc(var(--spacing) * 14);
+  }
+  .-mr-2 {
+    margin-right: calc(var(--spacing) * -2);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+  .ml-4 {
+    margin-left: calc(var(--spacing) * 4);
+  }
+  .ml-8 {
+    margin-left: calc(var(--spacing) * 8);
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .h-1\.5 {
+    height: calc(var(--spacing) * 1.5);
+  }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
+  .h-2\.5 {
+    height: calc(var(--spacing) * 2.5);
+  }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-11 {
+    height: calc(var(--spacing) * 11);
+  }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-72 {
+    height: calc(var(--spacing) * 72);
+  }
+  .h-\[14px\] {
+    height: 14px;
+  }
+  .h-\[500px\] {
+    height: 500px;
+  }
+  .h-\[1100px\] {
+    height: 1100px;
+  }
+  .h-\[calc\(100\%-24px\)\] {
+    height: calc(100% - 24px);
+  }
+  .h-\[calc\(100\%-56px\)\] {
+    height: calc(100% - 56px);
+  }
+  .h-auto {
+    height: auto;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-px {
+    height: 1px;
+  }
+  .min-h-\[188px\] {
+    min-height: 188px;
+  }
+  .w-1 {
+    width: var(--spacing);
+  }
+  .w-1\.5 {
+    width: calc(var(--spacing) * 1.5);
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
+  }
+  .w-2\.5 {
+    width: calc(var(--spacing) * 2.5);
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
+  }
+  .w-11 {
+    width: calc(var(--spacing) * 11);
+  }
+  .w-14 {
+    width: calc(var(--spacing) * 14);
+  }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
+  .w-72 {
+    width: calc(var(--spacing) * 72);
+  }
+  .w-\[66\.66\%\] {
+    width: 66.66%;
+  }
+  .w-\[68\%\] {
+    width: 68%;
+  }
+  .w-\[76\%\] {
+    width: 76%;
+  }
+  .w-\[1100px\] {
+    width: 1100px;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-2xl {
+    max-width: var(--container-2xl);
+  }
+  .max-w-4xl {
+    max-width: var(--container-4xl);
+  }
+  .max-w-6xl {
+    max-width: var(--container-6xl);
+  }
+  .max-w-\[13ch\] {
+    max-width: 13ch;
+  }
+  .max-w-\[34rem\] {
+    max-width: 34rem;
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
+  }
+  .max-w-md {
+    max-width: var(--container-md);
+  }
+  .max-w-none {
+    max-width: none;
+  }
+  .max-w-sm {
+    max-width: var(--container-sm);
+  }
+  .max-w-xl {
+    max-width: var(--container-xl);
+  }
+  .min-w-0 {
+    min-width: 0px;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-\[1\.6\] {
+    flex: 1.6;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-1\/2 {
+    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-rotate-90 {
+    rotate: calc(90deg * -1);
+  }
+  .\[transform\:translateZ\(20px\)\] {
+    transform: translateZ(20px);
+  }
+  .\[transform\:translateZ\(30px\)\] {
+    transform: translateZ(30px);
+  }
+  .\[transform\:translateZ\(40px\)\] {
+    transform: translateZ(40px);
+  }
+  .\[transform\:translateZ\(60px\)\] {
+    transform: translateZ(60px);
+  }
+  .snap-x {
+    scroll-snap-type: x var(--tw-scroll-snap-strictness);
+  }
+  .snap-start {
+    scroll-snap-align: start;
+  }
+  .scroll-mt-24 {
+    scroll-margin-top: calc(var(--spacing) * 24);
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .place-items-center {
+    place-items: center;
+  }
+  .items-baseline {
+    align-items: baseline;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .items-stretch {
+    align-items: stretch;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-1 {
+    gap: var(--spacing);
+  }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-2\.5 {
+    gap: calc(var(--spacing) * 2.5);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-3\.5 {
+    gap: calc(var(--spacing) * 3.5);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .gap-14 {
+    gap: calc(var(--spacing) * 14);
+  }
+  :where(.space-y-2\.5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-3 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-4 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-6 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  .gap-x-7 {
+    column-gap: calc(var(--spacing) * 7);
+  }
+  .gap-y-3 {
+    row-gap: calc(var(--spacing) * 3);
+  }
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .rounded-tl-sm {
+    border-top-left-radius: var(--radius-sm);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-\[\#128C4A\]\/20 {
+    border-color: color-mix(in oklab, #128C4A 20%, transparent);
+  }
+  .border-\[\#15171E\]\/10 {
+    border-color: color-mix(in oklab, #15171E 10%, transparent);
+  }
+  .border-\[\#DDD7CC\] {
+    border-color: #DDD7CC;
+  }
+  .border-brand-coral\/60 {
+    border-color: color-mix(in srgb, #FF6B4A 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-brand-coral) 60%, transparent);
+    }
+  }
+  .border-brand-indigo {
+    border-color: var(--color-brand-indigo);
+  }
+  .bg-\[\#3D5A4C\] {
+    background-color: #3D5A4C;
+  }
+  .bg-\[\#128C4A\] {
+    background-color: #128C4A;
+  }
+  .bg-\[\#DCDDE4\] {
+    background-color: #DCDDE4;
+  }
+  .bg-\[\#E0E0E6\] {
+    background-color: #E0E0E6;
+  }
+  .bg-\[\#E7F7EC\] {
+    background-color: #E7F7EC;
+  }
+  .bg-\[\#F0F0F4\] {
+    background-color: #F0F0F4;
+  }
+  .bg-\[\#F9F7F4\] {
+    background-color: #F9F7F4;
+  }
+  .bg-brand-coral {
+    background-color: var(--color-brand-coral);
+  }
+  .bg-brand-coral\/15 {
+    background-color: color-mix(in srgb, #FF6B4A 15%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-brand-coral) 15%, transparent);
+    }
+  }
+  .bg-brand-coral\/20 {
+    background-color: color-mix(in srgb, #FF6B4A 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-brand-coral) 20%, transparent);
+    }
+  }
+  .bg-brand-coral\/25 {
+    background-color: color-mix(in srgb, #FF6B4A 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-brand-coral) 25%, transparent);
+    }
+  }
+  .bg-brand-indigo {
+    background-color: var(--color-brand-indigo);
+  }
+  .bg-brand-indigo\/10 {
+    background-color: color-mix(in srgb, #4C4FE0 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-brand-indigo) 10%, transparent);
+    }
+  }
+  .bg-brand-indigo\/40 {
+    background-color: color-mix(in srgb, #4C4FE0 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-brand-indigo) 40%, transparent);
+    }
+  }
+  .bg-brand-indigo\/60 {
+    background-color: color-mix(in srgb, #4C4FE0 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-brand-indigo) 60%, transparent);
+    }
+  }
+  .bg-grafito {
+    background-color: var(--color-grafito);
+  }
+  .bg-niebla {
+    background-color: var(--color-niebla);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-white\/10 {
+    background-color: color-mix(in srgb, #fff 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+    }
+  }
+  .bg-white\/70 {
+    background-color: color-mix(in srgb, #fff 70%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 70%, transparent);
+    }
+  }
+  .bg-white\/80 {
+    background-color: color-mix(in srgb, #fff 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+  }
+  .bg-white\/95 {
+    background-color: color-mix(in srgb, #fff 95%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 95%, transparent);
+    }
+  }
+  .bg-white\/\[0\.04\] {
+    background-color: color-mix(in srgb, #fff 4%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 4%, transparent);
+    }
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .p-7 {
+    padding: calc(var(--spacing) * 7);
+  }
+  .px-1\.5 {
+    padding-inline: calc(var(--spacing) * 1.5);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-2\.5 {
+    padding-inline: calc(var(--spacing) * 2.5);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-3\.5 {
+    padding-inline: calc(var(--spacing) * 3.5);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-7 {
+    padding-inline: calc(var(--spacing) * 7);
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
+  }
+  .py-1 {
+    padding-block: var(--spacing);
+  }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-3\.5 {
+    padding-block: calc(var(--spacing) * 3.5);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .py-14 {
+    padding-block: calc(var(--spacing) * 14);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
+  }
+  .pt-1 {
+    padding-top: var(--spacing);
+  }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
+  }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
+  .pt-36 {
+    padding-top: calc(var(--spacing) * 36);
+  }
+  .pb-1 {
+    padding-bottom: var(--spacing);
+  }
+  .pb-3 {
+    padding-bottom: calc(var(--spacing) * 3);
+  }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
+  }
+  .pb-16 {
+    padding-bottom: calc(var(--spacing) * 16);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .text-\[10\.5px\] {
+    font-size: 10.5px;
+  }
+  .text-\[11\.5px\] {
+    font-size: 11.5px;
+  }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+  .text-\[12\.5px\] {
+    font-size: 12.5px;
+  }
+  .text-\[12px\] {
+    font-size: 12px;
+  }
+  .text-\[13\.5px\] {
+    font-size: 13.5px;
+  }
+  .text-\[13px\] {
+    font-size: 13px;
+  }
+  .text-\[14\.5px\] {
+    font-size: 14.5px;
+  }
+  .text-\[14px\] {
+    font-size: 14px;
+  }
+  .text-\[15\.5px\] {
+    font-size: 15.5px;
+  }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
+  .text-\[16\.5px\] {
+    font-size: 16.5px;
+  }
+  .text-\[16px\] {
+    font-size: 16px;
+  }
+  .text-\[17px\] {
+    font-size: 17px;
+  }
+  .text-\[18px\] {
+    font-size: 18px;
+  }
+  .text-\[19px\] {
+    font-size: 19px;
+  }
+  .text-\[20px\] {
+    font-size: 20px;
+  }
+  .text-\[22px\] {
+    font-size: 22px;
+  }
+  .text-\[24px\] {
+    font-size: 24px;
+  }
+  .text-\[26px\] {
+    font-size: 26px;
+  }
+  .text-\[28px\] {
+    font-size: 28px;
+  }
+  .text-\[32px\] {
+    font-size: 32px;
+  }
+  .text-\[36px\] {
+    font-size: 36px;
+  }
+  .text-\[40px\] {
+    font-size: 40px;
+  }
+  .leading-none {
+    --tw-leading: 1;
+    line-height: 1;
+  }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+  }
+  .leading-snug {
+    --tw-leading: var(--leading-snug);
+    line-height: var(--leading-snug);
+  }
+  .leading-tight {
+    --tw-leading: var(--leading-tight);
+    line-height: var(--leading-tight);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-\[0\.1em\] {
+    --tw-tracking: 0.1em;
+    letter-spacing: 0.1em;
+  }
+  .tracking-\[0\.06em\] {
+    --tw-tracking: 0.06em;
+    letter-spacing: 0.06em;
+  }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+  .text-\[\#5E5B56\] {
+    color: #5E5B56;
+  }
+  .text-\[\#262626\] {
+    color: #262626;
+  }
+  .text-brand-coral {
+    color: var(--color-brand-coral);
+  }
+  .text-brand-indigo {
+    color: var(--color-brand-indigo);
+  }
+  .text-grafito {
+    color: var(--color-grafito);
+  }
+  .text-grafito\/80 {
+    color: color-mix(in srgb, #15171E 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-grafito) 80%, transparent);
+    }
+  }
+  .text-humo {
+    color: var(--color-humo);
+  }
+  .text-pizarra {
+    color: var(--color-pizarra);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .decoration-brand-indigo\/40 {
+    text-decoration-color: color-mix(in srgb, #4C4FE0 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      text-decoration-color: color-mix(in oklab, var(--color-brand-indigo) 40%, transparent);
+    }
+  }
+  .decoration-white\/30 {
+    text-decoration-color: color-mix(in srgb, #fff 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      text-decoration-color: color-mix(in oklab, var(--color-white) 30%, transparent);
+    }
+  }
+  .underline-offset-4 {
+    text-underline-offset: 4px;
+  }
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .opacity-\[0\.05\] {
+    opacity: 0.05;
+  }
+  .opacity-\[0\.07\] {
+    opacity: 0.07;
+  }
+  .shadow-\[0_12px_32px_-8px_rgba\(255\,107\,74\,0\.6\)\] {
+    --tw-shadow: 0 12px 32px -8px var(--tw-shadow-color, rgba(255,107,74,0.6));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-card {
+    --tw-shadow: 0 1px 2px var(--tw-shadow-color, rgba(20,20,30,0.05)), 0 10px 28px var(--tw-shadow-color, rgba(20,20,30,0.07));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-float {
+    --tw-shadow: 0 2px 4px var(--tw-shadow-color, rgba(20,20,30,0.04)), 0 24px 48px -12px var(--tw-shadow-color, rgba(20,20,30,0.18));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-indigo {
+    --tw-shadow: 0 10px 30px -8px var(--tw-shadow-color, rgba(76,79,224,0.55));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .ring-4 {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .ring-brand-coral\/15 {
+    --tw-ring-color: color-mix(in srgb, #FF6B4A 15%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-ring-color: color-mix(in oklab, var(--color-brand-coral) 15%, transparent);
+    }
+  }
+  .ring-brand-coral\/40 {
+    --tw-ring-color: color-mix(in srgb, #FF6B4A 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-ring-color: color-mix(in oklab, var(--color-brand-coral) 40%, transparent);
+    }
+  }
+  .ring-white {
+    --tw-ring-color: var(--color-white);
+  }
+  .ring-white\/30 {
+    --tw-ring-color: color-mix(in srgb, #fff 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-ring-color: color-mix(in oklab, var(--color-white) 30%, transparent);
+    }
+  }
+  .backdrop-blur {
+    --tw-backdrop-blur: blur(8px);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-blur-md {
+    --tw-backdrop-blur: blur(var(--blur-md));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-transform {
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-200 {
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  .duration-700 {
+    --tw-duration: 700ms;
+    transition-duration: 700ms;
+  }
+  .ease-out-expo {
+    --tw-ease: var(--ease-out-expo);
+    transition-timing-function: var(--ease-out-expo);
+  }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .\[perspective\:1400px\] {
+    perspective: 1400px;
+  }
+  .\[transform-style\:preserve-3d\] {
+    transform-style: preserve-3d;
+  }
+  @media (hover: hover) {
+    .hover\:-translate-y-0\.5:hover {
+      --tw-translate-y: calc(var(--spacing) * -0.5);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+    .hover\:-translate-y-1:hover {
+      --tw-translate-y: calc(var(--spacing) * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+    .hover\:\[transform\:none\]:hover {
+      transform: none;
+    }
+    .hover\:bg-niebla:hover {
+      background-color: var(--color-niebla);
+    }
+    .hover\:text-brand-indigo:hover {
+      color: var(--color-brand-indigo);
+    }
+    .hover\:text-white:hover {
+      color: var(--color-white);
+    }
+    .hover\:decoration-brand-indigo:hover {
+      text-decoration-color: var(--color-brand-indigo);
+    }
+    .hover\:decoration-white:hover {
+      text-decoration-color: var(--color-white);
+    }
+    .hover\:shadow-card:hover {
+      --tw-shadow: 0 1px 2px var(--tw-shadow-color, rgba(20,20,30,0.05)), 0 10px 28px var(--tw-shadow-color, rgba(20,20,30,0.07));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+  }
+  .focus\:fixed:focus {
+    position: fixed;
+  }
+  .focus\:top-3:focus {
+    top: calc(var(--spacing) * 3);
+  }
+  .focus\:left-3:focus {
+    left: calc(var(--spacing) * 3);
+  }
+  .focus\:z-\[60\]:focus {
+    z-index: 60;
+  }
+  .focus\:rounded-xl:focus {
+    border-radius: var(--radius-xl);
+  }
+  .focus\:bg-white:focus {
+    background-color: var(--color-white);
+  }
+  .focus\:px-4:focus {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .focus\:py-3:focus {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .focus\:font-semibold:focus {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .focus\:text-grafito:focus {
+    color: var(--color-grafito);
+  }
+  .focus\:shadow-float:focus {
+    --tw-shadow: 0 2px 4px var(--tw-shadow-color, rgba(20,20,30,0.04)), 0 24px 48px -12px var(--tw-shadow-color, rgba(20,20,30,0.18));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  @media (width >= 40rem) {
+    .sm\:-bottom-3 {
+      bottom: calc(var(--spacing) * -3);
+    }
+    .sm\:block {
+      display: block;
+    }
+    .sm\:inline-flex {
+      display: inline-flex;
+    }
+    .sm\:h-\[18px\] {
+      height: 18px;
+    }
+    .sm\:h-\[520px\] {
+      height: 520px;
+    }
+    .sm\:flex-row {
+      flex-direction: row;
+    }
+    .sm\:p-6 {
+      padding: calc(var(--spacing) * 6);
+    }
+    .sm\:p-8 {
+      padding: calc(var(--spacing) * 8);
+    }
+    .sm\:p-10 {
+      padding: calc(var(--spacing) * 10);
+    }
+    .sm\:px-6 {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+    .sm\:px-12 {
+      padding-inline: calc(var(--spacing) * 12);
+    }
+    .sm\:pt-40 {
+      padding-top: calc(var(--spacing) * 40);
+    }
+    .sm\:text-\[20px\] {
+      font-size: 20px;
+    }
+    .sm\:text-\[22px\] {
+      font-size: 22px;
+    }
+    .sm\:text-\[26px\] {
+      font-size: 26px;
+    }
+    .sm\:text-\[34px\] {
+      font-size: 34px;
+    }
+    .sm\:text-\[36px\] {
+      font-size: 36px;
+    }
+    .sm\:text-\[44px\] {
+      font-size: 44px;
+    }
+    .sm\:text-\[52px\] {
+      font-size: 52px;
+    }
+    .sm\:text-\[54px\] {
+      font-size: 54px;
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:col-span-2 {
+      grid-column: span 2 / span 2;
+    }
+    .md\:col-span-3 {
+      grid-column: span 3 / span 3;
+    }
+    .md\:col-span-4 {
+      grid-column: span 4 / span 4;
+    }
+    .md\:row-span-2 {
+      grid-row: span 2 / span 2;
+    }
+    .md\:mx-auto {
+      margin-inline: auto;
+    }
+    .md\:my-0 {
+      margin-block: 0px;
+    }
+    .md\:block {
+      display: block;
+    }
+    .md\:hidden {
+      display: none;
+    }
+    .md\:w-5\/12 {
+      width: calc(5 / 12 * 100%);
+    }
+    .md\:max-w-\[17rem\] {
+      max-width: 17rem;
+    }
+    .md\:flex-1 {
+      flex: 1;
+    }
+    .md\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .md\:grid-cols-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    .md\:flex-col {
+      flex-direction: column;
+    }
+    .md\:flex-row {
+      flex-direction: row;
+    }
+    .md\:items-center {
+      align-items: center;
+    }
+    .md\:items-end {
+      align-items: flex-end;
+    }
+    .md\:justify-between {
+      justify-content: space-between;
+    }
+    .md\:gap-6 {
+      gap: calc(var(--spacing) * 6);
+    }
+    .md\:gap-14 {
+      gap: calc(var(--spacing) * 14);
+    }
+    .md\:text-center {
+      text-align: center;
+    }
+  }
+  @media (width >= 64rem) {
+    .lg\:inset-x-0 {
+      inset-inline: 0px;
+    }
+    .lg\:col-span-5 {
+      grid-column: span 5 / span 5;
+    }
+    .lg\:col-span-7 {
+      grid-column: span 7 / span 7;
+    }
+    .lg\:mt-14 {
+      margin-top: calc(var(--spacing) * 14);
+    }
+    .lg\:flex {
+      display: flex;
+    }
+    .lg\:hidden {
+      display: none;
+    }
+    .lg\:\[transform\:rotateX\(10deg\)_rotateY\(-14deg\)\] {
+      transform: rotateX(10deg) rotateY(-14deg);
+    }
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-12 {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-\[1\.5fr_1fr\] {
+      grid-template-columns: 1.5fr 1fr;
+    }
+    .lg\:flex-row {
+      flex-direction: row;
+    }
+    .lg\:items-center {
+      align-items: center;
+    }
+    .lg\:gap-10 {
+      gap: calc(var(--spacing) * 10);
+    }
+    .lg\:px-20 {
+      padding-inline: calc(var(--spacing) * 20);
+    }
+    .lg\:py-16 {
+      padding-block: calc(var(--spacing) * 16);
+    }
+    .lg\:py-24 {
+      padding-block: calc(var(--spacing) * 24);
+    }
+    .lg\:py-28 {
+      padding-block: calc(var(--spacing) * 28);
+    }
+    .lg\:pt-28 {
+      padding-top: calc(var(--spacing) * 28);
+    }
+    .lg\:pt-44 {
+      padding-top: calc(var(--spacing) * 44);
+    }
+    .lg\:pb-20 {
+      padding-bottom: calc(var(--spacing) * 20);
+    }
+    .lg\:pb-28 {
+      padding-bottom: calc(var(--spacing) * 28);
+    }
+    .lg\:text-\[64px\] {
+      font-size: 64px;
+    }
+    .lg\:text-\[68px\] {
+      font-size: 68px;
+    }
+  }
+  @media (width >= 80rem) {
+    .xl\:flex {
+      display: flex;
+    }
+  }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-scroll-snap-strictness {
+  syntax: "*";
+  inherits: false;
+  initial-value: proximity;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+      --tw-ease: initial;
+    }
+  }
+}
+
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+
+<style>
+  :root {
+    --niebla: #F5F6FA;
+    --surface: #FFFFFF;
+    --grafito: #15171E;
+    --pizarra: #5B5E6B;
+    --indigo: #4C4FE0;
+    --coral: #FF6B4A;
+    --border-subtle: rgba(21, 23, 30, 0.08);
+    --border-subtle-dark: rgba(245, 246, 250, 0.1);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  [x-cloak] { display: none !important; }
+
+  body {
+    background-color: var(--niebla);
+    background-image: radial-gradient(rgba(21, 23, 30, 0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+    color: var(--grafito);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .font-display { letter-spacing: -0.03em; }
+  .h-tight { line-height: 1.1; }
+  .border-subtle { border-color: var(--border-subtle); }
+  .border-subtle-dark { border-color: var(--border-subtle-dark); }
+  .ease-weaver { transition-timing-function: var(--ease); }
+
+  /* Revelado al hacer scroll */
+  html.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+  html.js .reveal.in { opacity: 1; transform: none; }
+  html.js .reveal[data-delay="1"] { transition-delay: .08s; }
+  html.js .reveal[data-delay="2"] { transition-delay: .16s; }
+  html.js .reveal[data-delay="3"] { transition-delay: .24s; }
+
+  /* Navbar: punto coral en hover */
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ""; position: absolute; left: 50%; bottom: -9px;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--coral);
+    transform: translateX(-50%) scale(0); transition: transform .3s var(--ease);
+  }
+  .nav-link:hover::after, .nav-link:focus-visible::after { transform: translateX(-50%) scale(1); }
+
+  /* Botón con brillo */
+  .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
+  .btn-shine::before {
+    content: ""; position: absolute; top: 0; left: -120%; width: 60%; height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+    transform: skewX(-20deg); transition: left .8s var(--ease); z-index: -1;
+  }
+  .btn-shine:hover::before { left: 140%; }
+  .arrow-diag { transition: transform .3s var(--ease); }
+  .group:hover .arrow-diag { transform: translate(3px, -3px); }
+
+  /* Pulso en vivo */
+  @keyframes ping-soft { 0% { transform: scale(1); opacity: .7; } 80%, 100% { transform: scale(2.6); opacity: 0; } }
+  .live-dot { position: relative; }
+  .live-dot::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--coral); animation: ping-soft 1.8s var(--ease) infinite; }
+
+  /* Subrayado geométrico */
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .underline-draw { stroke-dasharray: 420; stroke-dashoffset: 420; animation: draw 1.6s .5s var(--ease) forwards; }
+
+  /* Hilos de datos */
+  @keyframes flow { to { stroke-dashoffset: -40; } }
+  .thread-flow { stroke-dasharray: 4 6; animation: flow 1.4s linear infinite; }
+
+  /* Flotación del hero */
+  @keyframes float-a { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @keyframes float-b { 0%,100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+  .float-a { animation: float-a 6s ease-in-out infinite; }
+  .float-b { animation: float-b 7s ease-in-out infinite; }
+  .float-c { animation: float-a 8s ease-in-out infinite 1s; }
+
+  @keyframes progress { 0% { width: 12%; } 60% { width: 86%; } 100% { width: 12%; } }
+  .progress-run { animation: progress 4.2s var(--ease) infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spin { animation: spin 1.1s linear infinite; transform-origin: center; }
+  @keyframes bar-grow { from { transform: scaleY(.15); } to { transform: scaleY(1); } }
+  .bar-grow { transform-origin: bottom; animation: bar-grow 1.2s var(--ease) both; }
+
+  /* Telar */
+  .node-core { transform-box: fill-box; transform-origin: center; transition: transform .45s var(--ease); }
+  .node-core.is-active { transform: scale(1.22); }
+  .node-ring { transform-box: fill-box; transform-origin: center; transition: opacity .35s var(--ease), transform .45s var(--ease); }
+  .thread-line { transition: stroke .35s var(--ease), stroke-width .35s var(--ease), opacity .35s var(--ease); }
+  @keyframes center-pulse { 0% { transform: scale(1); opacity: .35; } 100% { transform: scale(1.9); opacity: 0; } }
+  .center-pulse { transform-box: fill-box; transform-origin: center; animation: center-pulse 2.4s var(--ease) infinite; }
+  .center-pulse.d2 { animation-delay: 1.2s; }
+  .svg-label { paint-order: stroke; stroke: var(--niebla); stroke-width: 6px; stroke-linejoin: round; }
+  .node-hit { cursor: pointer; outline: none; }
+  .node-hit:focus-visible .node-ring-focus { opacity: 1; }
+
+  @keyframes panel-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .panel-anim { animation: panel-in .55s var(--ease) both; }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+
+  /* Bento: barras de tiempo */
+  .time-bar { width: 0; transition: width 1.6s var(--ease); }
+  .in .time-bar { width: var(--w); }
+  .in .time-bar.delay { transition-delay: .35s; }
+
+  /* Slider */
+  input[type=range].weaver-range { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 999px; background: linear-gradient(to right, var(--indigo) var(--p), #E4E5EC var(--p)); outline: none; }
+  input[type=range].weaver-range::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #fff; border: 6px solid var(--indigo); box-shadow: 0 4px 12px rgba(76,79,224,.35); cursor: grab; transition: transform .3s var(--ease); }
+  input[type=range].weaver-range::-webkit-slider-thumb:active { transform: scale(1.15); cursor: grabbing; }
+  input[type=range].weaver-range::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 6px solid var(--indigo); box-shadow: 0 4px 12px rgba(76,79,224,.35); cursor: grab; }
+  input[type=range].weaver-range:focus-visible { box-shadow: 0 0 0 3px rgba(76,79,224,.3); }
+
+  /* Proceso */
+  .process-line { stroke-dasharray: 1000; stroke-dashoffset: 1000; transition: stroke-dashoffset 2s var(--ease) .2s; }
+  .in .process-line { stroke-dashoffset: 0; }
+  .step-dot { transition: background-color .5s var(--ease), color .5s var(--ease), box-shadow .5s var(--ease); }
+  .in .step-dot { background: var(--indigo); color: #fff; box-shadow: 0 0 0 6px rgba(76,79,224,.12); }
+  .in .step-dot[data-step="2"] { transition-delay: .7s; }
+  .in .step-dot[data-step="3"] { transition-delay: 1.3s; }
+
+  :focus-visible { outline: 2px solid var(--indigo); outline-offset: 3px; border-radius: 8px; }
+  .bg-grafito :focus-visible, .bg-grafito:focus-visible { outline-color: #FFFFFF; }
+  .node-hit:focus-visible { outline: none; }
+
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+    html.js .reveal { opacity: 1; transform: none; }
+    .underline-draw { stroke-dashoffset: 0; }
+  }
 </style>
 </head>
-<body>
 
-<div class="demo">Sitio de ejemplo creado por <a href="https://somosweaver.com">Weaver</a> · Datos ficticios · <a id="demoWa" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20vi%20el%20sitio%20de%20ejemplo%20de%20psicolog%C3%ADa%20y%20quiero%20una%20p%C3%A1gina%20as%C3%AD%20para%20mi%20consultorio.">¿Quieres una página así para tu consultorio?</a></div>
+<body class="font-sans antialiased overflow-x-hidden" x-data>
+<a href="#inicio" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-white focus:text-grafito focus:font-semibold focus:rounded-xl focus:px-4 focus:py-3 focus:shadow-float">Saltar al contenido</a>
 
-<header class="top">
-  <div class="wrap">
-    <a class="name" href="#inicio">Lic. Yara Cabrera<small>Psicóloga clínica</small></a>
-    <nav class="links" aria-label="Principal">
-      <a href="#servicios">Servicios</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#consultas">Consultas y horarios</a>
-    </nav>
-    <a class="btn sm" href="#agendar">Agendar cita</a>
+<!-- ═════════════════════════ NAVBAR ═════════════════════════ -->
+<header x-data="{ open: false }" class="fixed top-4 inset-x-4 lg:inset-x-0 max-w-6xl mx-auto z-50">
+  <nav class="rounded-2xl backdrop-blur-md bg-white/80 border border-[#15171E]/10 shadow-sm px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4" aria-label="Principal">
+    <a href="#inicio" class="flex items-center gap-2.5 shrink-0" aria-label="Weaver, inicio">
+      <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+        <g fill="none" stroke="#15171E" stroke-width="1" opacity="0.2">
+          <line x1="18" y1="18" x2="34.5" y2="18"/><line x1="18" y1="18" x2="29.67" y2="29.67"/><line x1="18" y1="18" x2="18" y2="34.5"/><line x1="18" y1="18" x2="6.33" y2="29.67"/>
+          <line x1="18" y1="18" x2="1.5" y2="18"/><line x1="18" y1="18" x2="6.33" y2="6.33"/><line x1="18" y1="18" x2="18" y2="1.5"/><line x1="18" y1="18" x2="29.67" y2="6.33"/>
+          <polygon points="23.5,18 21.89,21.89 18,23.5 14.11,21.89 12.5,18 14.11,14.11 18,12.5 21.89,14.11"/>
+          <polygon points="28.5,18 25.42,25.42 18,28.5 10.58,25.42 7.5,18 10.58,10.58 18,7.5 25.42,10.58"/>
+          <polygon points="33.5,18 28.96,28.96 18,33.5 7.04,28.96 2.5,18 7.04,7.04 18,2.5 28.96,7.04"/>
+        </g>
+        <polyline points="7,11 12.5,25 18,13 23.5,25 29,11" fill="none" stroke="#4C4FE0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="18" cy="13" r="2.6" fill="#FF6B4A"/>
+      </svg>
+      <span class="font-display font-bold text-[19px] text-grafito">Weaver</span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-grafito">
+      <li><a class="nav-link hover:text-brand-indigo transition-colors duration-300" href="#telar">Servicios</a></li>
+      <li><a class="nav-link hover:text-brand-indigo transition-colors duration-300" href="#ventajas">Por qué Weaver</a></li>
+      <li><a class="nav-link hover:text-brand-indigo transition-colors duration-300" href="#casos">Ejemplos</a></li>
+      <li><a class="nav-link hover:text-brand-indigo transition-colors duration-300" href="#precios">Precios</a></li>
+    </ul>
+
+    <div class="flex items-center gap-4">
+      <span class="hidden xl:flex items-center gap-2 text-[12.5px] text-pizarra">
+        <span class="live-dot w-2 h-2 rounded-full bg-brand-coral inline-block"></span>
+        Disponibles para nuevos proyectos
+      </span>
+      <a href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20agendar%20una%20demo%20de%2015%20minutos%20para%20mi%20negocio." target="_blank" rel="noopener"
+         class="btn-shine hidden sm:inline-flex items-center gap-2 font-display font-semibold text-[13.5px] text-white bg-brand-indigo rounded-xl px-4 py-2.5 shadow-indigo hover:-translate-y-0.5 transition-transform duration-300 ease-out-expo">
+        Agenda una demo
+      </a>
+      <button type="button" class="lg:hidden w-11 h-11 -mr-2 grid place-items-center rounded-xl hover:bg-niebla" @click="open = !open" :aria-expanded="open.toString()" aria-controls="menu-movil" aria-label="Abrir menú">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15171E" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path x-show="!open" d="M4 7h16M4 12h16M4 17h10"/>
+          <path x-show="open" x-cloak d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="menu-movil" x-show="open" x-cloak x-transition.opacity.duration.300ms @click.outside="open = false"
+       class="lg:hidden mt-2 rounded-2xl backdrop-blur-md bg-white/95 border border-[#15171E]/10 shadow-float p-3">
+    <a @click="open=false" href="#telar" class="block px-4 py-3 rounded-xl font-medium hover:bg-niebla">Servicios</a>
+    <a @click="open=false" href="#ventajas" class="block px-4 py-3 rounded-xl font-medium hover:bg-niebla">Por qué Weaver</a>
+    <a @click="open=false" href="#casos" class="block px-4 py-3 rounded-xl font-medium hover:bg-niebla">Ejemplos</a>
+    <a @click="open=false" href="#precios" class="block px-4 py-3 rounded-xl font-medium hover:bg-niebla">Precios</a>
+    <div class="flex items-center gap-2 px-4 pt-3 pb-1 text-[13px] text-pizarra">
+      <span class="live-dot w-2 h-2 rounded-full bg-brand-coral inline-block"></span> Disponibles para nuevos proyectos
+    </div>
+    <a href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20agendar%20una%20demo%20de%2015%20minutos%20para%20mi%20negocio." target="_blank" rel="noopener" class="mt-2 flex justify-center font-display font-semibold text-white bg-brand-indigo rounded-xl px-4 py-3">Agenda una demo</a>
   </div>
 </header>
 
-<main>
-<section class="hero" id="inicio">
-  <div class="wrap">
+<main id="inicio">
+
+<!-- ═════════════════════════ HERO ═════════════════════════ -->
+<section class="relative pt-36 sm:pt-40 lg:pt-44 pb-20 lg:pb-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6 grid lg:grid-cols-[1.5fr_1fr] gap-14 lg:gap-10 items-center">
+
     <div>
-      <h1>Psicología clínica para adultos y adolescentes en Ciudad de Guatemala</h1>
-      <p class="lead">Sesiones presenciales en Zona 14 y en línea. Atiendo ansiedad, estrés, duelos y dificultades en las relaciones, con enfoque cognitivo-conductual.</p>
-      <div class="cta">
-        <a class="btn" data-wa="Hola Lic. Yara, quisiera agendar una cita." href="https://wa.me/50243182227?text=Hola%20Lic.%20Yara%2C%20quisiera%20agendar%20una%20cita.">Agendar por WhatsApp</a>
-        <a class="textlink" href="#primera-cita">Cómo es la primera cita</a>
+      <div class="reveal inline-flex items-center gap-2.5 rounded-full border border-subtle bg-white/70 backdrop-blur px-3.5 py-1.5 text-[13px] font-medium text-grafito shadow-sm">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-coral ring-4 ring-brand-coral/15"></span>
+        Conectamos ideas. Tejemos soluciones simples.
       </div>
-      <div class="proof">
-        <span><b>+900</b>pacientes atendidos</span>
-        <span><b>8 años</b>de práctica clínica</span>
+
+      <h1 class="reveal font-display font-bold h-tight text-grafito mt-6 text-[40px] sm:text-[52px] lg:text-[64px] max-w-[13ch]" data-delay="1">
+        Tu negocio, conectado con
+        <span class="relative inline-block whitespace-nowrap">
+          tecnología simple.
+          <svg class="absolute left-0 -bottom-2 sm:-bottom-3 w-full h-[14px] sm:h-[18px]" viewBox="0 0 400 18" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="ug" x1="0" x2="1"><stop offset="0" stop-color="#4C4FE0"/><stop offset=".75" stop-color="#4C4FE0"/><stop offset="1" stop-color="#FF6B4A"/></linearGradient>
+            </defs>
+            <polyline class="underline-draw" points="4,12 70,5 136,13 202,5 268,13 334,5 396,9" fill="none" stroke="url(#ug)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+          </svg>
+        </span>
+      </h1>
+
+      <p class="reveal mt-8 text-[18px] sm:text-[20px] leading-relaxed text-grafito/80 max-w-[34rem]" data-delay="2">
+        Páginas web que convierten visitas en conversaciones de WhatsApp. Listas en semanas, sin jerga técnica ni procesos eternos.
+      </p>
+
+      <div class="reveal mt-10 flex flex-col sm:flex-row gap-3.5" data-delay="3">
+        <a href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20agendar%20una%20demo%20de%2015%20minutos%20para%20mi%20negocio." target="_blank" rel="noopener"
+           class="group btn-shine inline-flex items-center justify-center gap-2.5 font-display font-semibold text-[15px] text-white bg-brand-indigo rounded-xl px-6 py-4 shadow-indigo hover:-translate-y-1 transition-transform duration-300 ease-out-expo">
+          Agenda una demo de 15 min
+          <svg class="arrow-diag" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+        <a href="#telar"
+           class="inline-flex items-center justify-center gap-2.5 font-display font-semibold text-[15px] text-grafito bg-white border border-subtle rounded-xl px-6 py-4 shadow-sm hover:-translate-y-1 hover:shadow-card transition-all duration-300 ease-out-expo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4C4FE0" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5" fill="#4C4FE0"/><circle cx="4" cy="5" r="1.8"/><circle cx="20" cy="5" r="1.8"/><circle cx="4" cy="19" r="1.8"/><circle cx="20" cy="19" r="1.8"/><path d="M5.5 6.2l4.6 4.3M18.5 6.2l-4.6 4.3M5.5 17.8l4.6-4.3M18.5 17.8l-4.6-4.3"/></svg>
+          Explorar la red de soluciones
+        </a>
       </div>
+
+      <dl class="reveal mt-12 grid grid-cols-3 max-w-md gap-6 border-t border-subtle pt-6" data-delay="3">
+        <div><dt class="text-[12.5px] text-pizarra">Primer avance</dt><dd class="font-display font-bold text-[17px] sm:text-[22px] mt-1 whitespace-nowrap">Semana 1</dd></div>
+        <div><dt class="text-[12.5px] text-pizarra">Landing lista</dt><dd class="font-display font-bold text-[17px] sm:text-[22px] mt-1 whitespace-nowrap">1–2 sem</dd></div>
+        <div><dt class="text-[12.5px] text-pizarra">Diagnóstico</dt><dd class="font-display font-bold text-[17px] sm:text-[22px] mt-1 whitespace-nowrap">Gratis</dd></div>
+      </dl>
     </div>
-    <div class="photo" role="img" aria-label="Espacio para tu fotografía">
-      <p>Tu foto podría estar aquí<br>Recomendado: vertical 4:5, 800 × 1000 px</p>
+
+    <!-- Flujo: de Google a cita confirmada -->
+    <div class="reveal relative h-[500px] sm:h-[520px] [perspective:1400px]" data-delay="2" role="img" aria-label="Flujo de un cliente: búsqueda en Google, visita a tu web, mensaje prellenado en WhatsApp y cita o venta confirmada">
+      <div class="absolute inset-0 [transform-style:preserve-3d] lg:[transform:rotateX(10deg)_rotateY(-14deg)] transition-transform duration-700 ease-out-expo hover:[transform:none]">
+
+        <!-- Hilos -->
+        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M38 20 C 38 23.5, 66 21.5, 66 25" fill="none" stroke="#C9CBD4" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+          <path d="M38 20 C 38 23.5, 66 21.5, 66 25" fill="none" stroke="#4C4FE0" stroke-width="2" vector-effect="non-scaling-stroke" class="thread-flow"/>
+          <path d="M66 45 C 66 48.5, 41 47.5, 41 51" fill="none" stroke="#C9CBD4" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+          <path d="M66 45 C 66 48.5, 41 47.5, 41 51" fill="none" stroke="#4C4FE0" stroke-width="2" vector-effect="non-scaling-stroke" class="thread-flow"/>
+          <path d="M41 71 C 41 74.5, 66 72.5, 66 76" fill="none" stroke="#C9CBD4" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+          <path d="M41 71 C 41 74.5, 66 72.5, 66 76" fill="none" stroke="#FF6B4A" stroke-width="2" vector-effect="non-scaling-stroke" class="thread-flow"/>
+        </svg>
+        <span class="absolute w-3 h-3 rounded-full bg-brand-indigo ring-4 ring-white" style="left:calc(38% - 6px);top:calc(20% - 6px)"></span>
+        <span class="absolute w-3 h-3 rounded-full bg-brand-indigo ring-4 ring-white" style="left:calc(66% - 6px);top:calc(25% - 6px)"></span>
+        <span class="absolute w-3 h-3 rounded-full bg-brand-indigo ring-4 ring-white" style="left:calc(66% - 6px);top:calc(45% - 6px)"></span>
+        <span class="absolute w-3 h-3 rounded-full bg-brand-coral ring-4 ring-white" style="left:calc(41% - 6px);top:calc(51% - 6px)"></span>
+        <span class="absolute w-3 h-3 rounded-full bg-brand-coral ring-4 ring-white" style="left:calc(41% - 6px);top:calc(71% - 6px)"></span>
+        <span class="absolute w-3 h-3 rounded-full bg-grafito ring-4 ring-white" style="left:calc(66% - 6px);top:calc(76% - 6px)"></span>
+
+        <!-- 1. Búsqueda en Google -->
+        <div class="float-a absolute left-0 top-0 w-[76%] bg-white rounded-2xl shadow-float border border-subtle p-3 [transform:translateZ(30px)]">
+          <span class="text-[10.5px] font-semibold tracking-wide uppercase text-pizarra">1 · Búsqueda en Google</span>
+          <div class="mt-2 flex items-center gap-2 rounded-full border border-subtle bg-niebla px-3 py-1.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B5E6B" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <span class="text-[12.5px] text-grafito truncate">psicólogo en zona 10</span>
+          </div>
+          <p class="mt-1.5 text-[11px] text-pizarra truncate"><span class="font-semibold text-grafito">tunegocio.com</span> · ★ 4.9 · Abierto ahora</p>
+        </div>
+
+        <!-- 2. Visita a tu web -->
+        <div class="float-b absolute right-0 top-[25%] w-[68%] bg-grafito text-white rounded-2xl shadow-float p-3 [transform:translateZ(60px)]">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-[10.5px] font-semibold tracking-wide uppercase text-humo">2 · Visita a tu web</span>
+            <span class="text-[10.5px] font-semibold text-brand-coral">Carga en 1 s</span>
+          </div>
+          <p class="mt-2 font-display font-semibold text-[14px] leading-tight">Agenda tu primera sesión</p>
+          <span class="mt-2.5 inline-flex items-center gap-1.5 text-[11.5px] font-semibold text-white bg-[#128C4A] rounded-lg px-2.5 py-1.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Escribir por WhatsApp</span>
+        </div>
+
+        <!-- 3. Mensaje prellenado -->
+        <div class="float-c absolute left-[3%] top-[51%] w-[76%] bg-white rounded-2xl shadow-float border border-subtle p-3 [transform:translateZ(40px)]">
+          <span class="text-[10.5px] font-semibold tracking-wide uppercase text-pizarra">3 · Mensaje prellenado en WhatsApp</span>
+          <div class="mt-2 rounded-xl rounded-tl-sm bg-[#E7F7EC] border border-[#128C4A]/20 px-3 py-2 text-[12px] leading-snug">Hola, quiero agendar una primera sesión para mañana.</div>
+        </div>
+
+        <!-- 4. Cita o venta confirmada -->
+        <div class="float-a absolute right-0 top-[76%] w-[68%] bg-white rounded-2xl shadow-float border-2 border-brand-coral/60 p-3 [transform:translateZ(20px)]">
+          <span class="text-[10.5px] font-semibold tracking-wide uppercase text-pizarra">4 · Cita o venta confirmada</span>
+          <div class="mt-2 flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-brand-coral/15 grid place-items-center shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#15171E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+            <div class="min-w-0"><p class="font-display font-semibold text-[13.5px] leading-tight">Cita confirmada</p><p class="text-[11.5px] text-pizarra truncate">Mañana · 10:30 AM</p></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="servicios">
-  <div class="wrap">
-    <h2>Motivos de consulta frecuentes</h2>
-    <p class="muted">Algunas de las razones por las que las personas me escriben. Si lo tuyo no está en la lista, cuéntame en el mensaje.</p>
-    <ul class="reasons">
-      <li><b>Ansiedad</b><span>Preocupación constante, tensión en el cuerpo, dificultad para dormir o para desconectarte.</span></li>
-      <li><b>Estrés laboral</b><span>Agotamiento, irritabilidad y la sensación de que el trabajo ocupa todo el día.</span></li>
-      <li><b>Duelos y pérdidas</b><span>Fallecimientos, separaciones o cambios grandes que cuesta asimilar.</span></li>
-      <li><b>Límites en las relaciones</b><span>Pareja, familia o trabajo: aprender a decir que no sin culpa y a pedir lo que necesitas.</span></li>
-      <li><b>Manejo emocional</b><span>Enojo, tristeza o ánimo bajo que se repiten y te cuesta regular.</span></li>
-    </ul>
+<!-- ═════════════════════════ EL TELAR DIGITAL ═════════════════════════ -->
+<section id="telar" class="relative py-20 lg:py-28 scroll-mt-24" x-data="telar()" aria-labelledby="telar-titulo">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6">
+    <div class="reveal max-w-2xl">
+      <p class="font-display font-bold text-[13px] tracking-[0.1em] uppercase text-brand-indigo">El Telar Digital</p>
+      <h2 id="telar-titulo" class="font-display font-bold h-tight text-[32px] sm:text-[44px] mt-3">Una red hecha a la medida de tu negocio</h2>
+      <p class="mt-4 text-[17px] text-pizarra">Toca cada nodo para ver qué incluye y en cuánto tiempo lo entregamos.</p>
+    </div>
+    <p class="sr-only" aria-live="polite" x-text="'Mostrando: ' + current.name"></p>
+
+    <!-- Selector móvil -->
+    <div class="lg:hidden mt-8 -mx-5 px-5 flex gap-2 overflow-x-auto no-scrollbar snap-x" role="group" aria-label="Servicios">
+      <button type="button" @click="setNode(0)" :aria-pressed="(activeNode === 0).toString()"
+              class="snap-start shrink-0 inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-[14px] font-semibold border transition-all duration-300 ease-out-expo bg-brand-indigo text-white border-brand-indigo shadow-indigo"
+              :class="activeNode === 0 ? 'bg-brand-indigo text-white border-brand-indigo shadow-indigo' : 'bg-white text-grafito border-subtle'">
+        <span class="w-2 h-2 rounded-full bg-brand-coral" :class="activeNode === 0 ? 'bg-brand-coral' : 'bg-brand-indigo/40'"></span>Landing Pages
+      </button>
+      <button type="button" @click="setNode(1)" :aria-pressed="(activeNode === 1).toString()"
+              class="snap-start shrink-0 inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-[14px] font-semibold border transition-all duration-300 ease-out-expo bg-white text-grafito border-subtle"
+              :class="activeNode === 1 ? 'bg-brand-indigo text-white border-brand-indigo shadow-indigo' : 'bg-white text-grafito border-subtle'">
+        <span class="w-2 h-2 rounded-full bg-brand-indigo/40" :class="activeNode === 1 ? 'bg-brand-coral' : 'bg-brand-indigo/40'"></span>WhatsApp & Maps
+      </button>
+      <button type="button" @click="setNode(2)" :aria-pressed="(activeNode === 2).toString()"
+              class="snap-start shrink-0 inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-[14px] font-semibold border transition-all duration-300 ease-out-expo bg-white text-grafito border-subtle"
+              :class="activeNode === 2 ? 'bg-brand-indigo text-white border-brand-indigo shadow-indigo' : 'bg-white text-grafito border-subtle'">
+        <span class="w-2 h-2 rounded-full bg-brand-indigo/40" :class="activeNode === 2 ? 'bg-brand-coral' : 'bg-brand-indigo/40'"></span>Sitios & Catálogos
+      </button>
+      <button type="button" @click="setNode(3)" :aria-pressed="(activeNode === 3).toString()"
+              class="snap-start shrink-0 inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-[14px] font-semibold border transition-all duration-300 ease-out-expo bg-white text-grafito border-subtle"
+              :class="activeNode === 3 ? 'bg-brand-indigo text-white border-brand-indigo shadow-indigo' : 'bg-white text-grafito border-subtle'">
+        <span class="w-2 h-2 rounded-full bg-brand-indigo/40" :class="activeNode === 3 ? 'bg-brand-coral' : 'bg-brand-indigo/40'"></span>Sistemas a Medida
+      </button>
+    </div>
+
+    <div class="mt-8 lg:mt-14 grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+      <!-- Grafo -->
+      <div class="reveal lg:col-span-7">
+        <svg viewBox="0 0 600 500" class="w-full h-auto select-none" role="group" aria-label="Telaraña de servicios de Weaver">
+          <g fill="none" stroke="#15171E" stroke-opacity="0.1" stroke-width="1">
+            <line x1="300" y1="250" x2="535" y2="250"/><line x1="300" y1="250" x2="466.2" y2="416.2"/><line x1="300" y1="250" x2="300" y2="485"/><line x1="300" y1="250" x2="133.8" y2="416.2"/>
+            <line x1="300" y1="250" x2="65" y2="250"/><line x1="300" y1="250" x2="133.8" y2="83.8"/><line x1="300" y1="250" x2="300" y2="15"/><line x1="300" y1="250" x2="466.2" y2="83.8"/>
+            <polygon points="370,250 349.5,299.5 300,320 250.5,299.5 230,250 250.5,200.5 300,180 349.5,200.5"/>
+            <polygon points="440,250 399,349 300,390 201,349 160,250 201,151 300,110 399,151"/>
+            <polygon points="510,250 448.5,398.5 300,460 151.5,398.5 90,250 151.5,101.5 300,40 448.5,101.5"/>
+          </g>
+          <g fill="#15171E" fill-opacity="0.18">
+            <circle cx="510" cy="250" r="3"/><circle cx="300" cy="460" r="3"/><circle cx="90" cy="250" r="3"/><circle cx="300" cy="40" r="3"/>
+            <circle cx="399" cy="151" r="2.5"/><circle cx="399" cy="349" r="2.5"/><circle cx="201" cy="349" r="2.5"/><circle cx="201" cy="151" r="2.5"/>
+          </g>
+          <line class="thread-line" x1="300" y1="250" x2="151.5" y2="101.5" stroke="#4C4FE0" stroke-width="3.5" stroke-opacity="1"
+                :stroke="activeNode === 0 ? '#4C4FE0' : '#15171E'" :stroke-width="activeNode === 0 ? 3.5 : 1.5" :stroke-opacity="activeNode === 0 ? 1 : 0.25" stroke-linecap="round"/>
+          <line class="thread-line" x1="300" y1="250" x2="448.5" y2="101.5" stroke="#15171E" stroke-width="1.5" stroke-opacity="0.25"
+                :stroke="activeNode === 1 ? '#4C4FE0' : '#15171E'" :stroke-width="activeNode === 1 ? 3.5 : 1.5" :stroke-opacity="activeNode === 1 ? 1 : 0.25" stroke-linecap="round"/>
+          <line class="thread-line" x1="300" y1="250" x2="448.5" y2="398.5" stroke="#15171E" stroke-width="1.5" stroke-opacity="0.25"
+                :stroke="activeNode === 2 ? '#4C4FE0' : '#15171E'" :stroke-width="activeNode === 2 ? 3.5 : 1.5" :stroke-opacity="activeNode === 2 ? 1 : 0.25" stroke-linecap="round"/>
+          <line class="thread-line" x1="300" y1="250" x2="151.5" y2="398.5" stroke="#15171E" stroke-width="1.5" stroke-opacity="0.25"
+                :stroke="activeNode === 3 ? '#4C4FE0' : '#15171E'" :stroke-width="activeNode === 3 ? 3.5 : 1.5" :stroke-opacity="activeNode === 3 ? 1 : 0.25" stroke-linecap="round"/>
+          <g x-show="activeNode === 0"><circle r="5.5" fill="#FF6B4A"><animateMotion dur="1.6s" repeatCount="indefinite" path="M151.5,101.5 L300,250"/></circle><circle r="3.5" fill="#FF6B4A" opacity=".6"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite" path="M151.5,101.5 L300,250"/></circle></g>
+          <g x-show="activeNode === 1" x-cloak><circle r="5.5" fill="#FF6B4A"><animateMotion dur="1.6s" repeatCount="indefinite" path="M448.5,101.5 L300,250"/></circle><circle r="3.5" fill="#FF6B4A" opacity=".6"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite" path="M448.5,101.5 L300,250"/></circle></g>
+          <g x-show="activeNode === 2" x-cloak><circle r="5.5" fill="#FF6B4A"><animateMotion dur="1.6s" repeatCount="indefinite" path="M448.5,398.5 L300,250"/></circle><circle r="3.5" fill="#FF6B4A" opacity=".6"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite" path="M448.5,398.5 L300,250"/></circle></g>
+          <g x-show="activeNode === 3" x-cloak><circle r="5.5" fill="#FF6B4A"><animateMotion dur="1.6s" repeatCount="indefinite" path="M151.5,398.5 L300,250"/></circle><circle r="3.5" fill="#FF6B4A" opacity=".6"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite" path="M151.5,398.5 L300,250"/></circle></g>
+          <circle class="center-pulse" cx="300" cy="250" r="46" fill="#15171E"/>
+          <circle class="center-pulse d2" cx="300" cy="250" r="46" fill="#15171E"/>
+          <circle cx="300" cy="250" r="46" fill="#15171E"/>
+          <circle cx="300" cy="250" r="38" fill="none" stroke="#FFFFFF" stroke-opacity=".12"/>
+          <text x="300" y="246" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11" letter-spacing="1.2" fill="#FFFFFF">TU</text>
+          <text x="300" y="261" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11" letter-spacing="1.2" fill="#FFFFFF">NEGOCIO</text>
+            <g class="node-hit" tabindex="0" role="button" aria-label="Landing & Presencia Web" :aria-pressed="(activeNode === 0).toString()"
+               @click="setNode(0)" @mouseenter="setNode(0)" @keydown.enter.prevent="setNode(0)" @keydown.space.prevent="setNode(0)">
+              <circle cx="151.5" cy="101.5" r="44" fill="transparent"/>
+              <circle class="node-ring" cx="151.5" cy="101.5" r="36" fill="none" stroke="#FF6B4A" stroke-width="2.5"
+                      :style="activeNode === 0 ? 'opacity:1;transform:scale(1)' : 'opacity:0;transform:scale(.7)'" style="opacity:1"/>
+              <circle class="node-ring-focus" cx="151.5" cy="101.5" r="40" fill="none" stroke="#4C4FE0" stroke-width="2" stroke-dasharray="3 4" opacity="0"/>
+              <g class="node-core is-active" :class="activeNode === 0 && 'is-active'">
+                <circle cx="151.5" cy="101.5" r="24" fill="#4C4FE0" :fill="activeNode === 0 ? '#4C4FE0' : '#FFFFFF'" stroke="#4C4FE0" stroke-width="2" style="transition: fill .35s"/>
+                <g transform="translate(142.5,92.5)" fill="none" stroke="#FFFFFF" :stroke="activeNode === 0 ? '#FFFFFF' : '#4C4FE0'" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 1a8 8 0 1 0 0 16A8 8 0 0 0 9 1zM1 9h16M9 1c2.4 2.4 3.4 5 3.4 8S11.4 14.6 9 17M9 1C6.6 3.4 5.6 6 5.6 9S6.6 14.6 9 17"/>
+                </g>
+              </g>
+              <text class="svg-label hidden sm:block" x="151.5" y="53.5" text-anchor="middle"
+                    font-family="Sora, sans-serif" font-weight="700" font-size="16"
+                    fill="#4C4FE0" :fill="activeNode === 0 ? '#4C4FE0' : '#15171E'" style="transition: fill .35s">Landing & Presencia Web</text>
+            </g>
+            <g class="node-hit" tabindex="0" role="button" aria-label="WhatsApp & Google Maps" :aria-pressed="(activeNode === 1).toString()"
+               @click="setNode(1)" @mouseenter="setNode(1)" @keydown.enter.prevent="setNode(1)" @keydown.space.prevent="setNode(1)">
+              <circle cx="448.5" cy="101.5" r="44" fill="transparent"/>
+              <circle class="node-ring" cx="448.5" cy="101.5" r="36" fill="none" stroke="#FF6B4A" stroke-width="2.5"
+                      :style="activeNode === 1 ? 'opacity:1;transform:scale(1)' : 'opacity:0;transform:scale(.7)'" style="opacity:0"/>
+              <circle class="node-ring-focus" cx="448.5" cy="101.5" r="40" fill="none" stroke="#4C4FE0" stroke-width="2" stroke-dasharray="3 4" opacity="0"/>
+              <g class="node-core" :class="activeNode === 1 && 'is-active'">
+                <circle cx="448.5" cy="101.5" r="24" fill="#FFFFFF" :fill="activeNode === 1 ? '#4C4FE0' : '#FFFFFF'" stroke="#4C4FE0" stroke-width="2" style="transition: fill .35s"/>
+                <g transform="translate(439.5,92.5)" fill="none" stroke="#4C4FE0" :stroke="activeNode === 1 ? '#FFFFFF' : '#4C4FE0'" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 3h14v10H8l-4 3v-3H2z"/>
+                </g>
+              </g>
+              <text class="svg-label hidden sm:block" x="448.5" y="53.5" text-anchor="middle"
+                    font-family="Sora, sans-serif" font-weight="700" font-size="16"
+                    fill="#15171E" :fill="activeNode === 1 ? '#4C4FE0' : '#15171E'" style="transition: fill .35s">WhatsApp & Google Maps</text>
+            </g>
+            <g class="node-hit" tabindex="0" role="button" aria-label="Sitios & Catálogos" :aria-pressed="(activeNode === 2).toString()"
+               @click="setNode(2)" @mouseenter="setNode(2)" @keydown.enter.prevent="setNode(2)" @keydown.space.prevent="setNode(2)">
+              <circle cx="448.5" cy="398.5" r="44" fill="transparent"/>
+              <circle class="node-ring" cx="448.5" cy="398.5" r="36" fill="none" stroke="#FF6B4A" stroke-width="2.5"
+                      :style="activeNode === 2 ? 'opacity:1;transform:scale(1)' : 'opacity:0;transform:scale(.7)'" style="opacity:0"/>
+              <circle class="node-ring-focus" cx="448.5" cy="398.5" r="40" fill="none" stroke="#4C4FE0" stroke-width="2" stroke-dasharray="3 4" opacity="0"/>
+              <g class="node-core" :class="activeNode === 2 && 'is-active'">
+                <circle cx="448.5" cy="398.5" r="24" fill="#FFFFFF" :fill="activeNode === 2 ? '#4C4FE0' : '#FFFFFF'" stroke="#4C4FE0" stroke-width="2" style="transition: fill .35s"/>
+                <g transform="translate(439.5,389.5)" fill="none" stroke="#4C4FE0" :stroke="activeNode === 2 ? '#FFFFFF' : '#4C4FE0'" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 2h6v6H2zM10 2h6v6h-6zM2 10h6v6H2zM10 10h6v6h-6z"/>
+                </g>
+              </g>
+              <text class="svg-label hidden sm:block" x="448.5" y="458.5" text-anchor="middle"
+                    font-family="Sora, sans-serif" font-weight="700" font-size="16"
+                    fill="#15171E" :fill="activeNode === 2 ? '#4C4FE0' : '#15171E'" style="transition: fill .35s">Sitios & Catálogos</text>
+            </g>
+            <g class="node-hit" tabindex="0" role="button" aria-label="Sistemas Web a Medida" :aria-pressed="(activeNode === 3).toString()"
+               @click="setNode(3)" @mouseenter="setNode(3)" @keydown.enter.prevent="setNode(3)" @keydown.space.prevent="setNode(3)">
+              <circle cx="151.5" cy="398.5" r="44" fill="transparent"/>
+              <circle class="node-ring" cx="151.5" cy="398.5" r="36" fill="none" stroke="#FF6B4A" stroke-width="2.5"
+                      :style="activeNode === 3 ? 'opacity:1;transform:scale(1)' : 'opacity:0;transform:scale(.7)'" style="opacity:0"/>
+              <circle class="node-ring-focus" cx="151.5" cy="398.5" r="40" fill="none" stroke="#4C4FE0" stroke-width="2" stroke-dasharray="3 4" opacity="0"/>
+              <g class="node-core" :class="activeNode === 3 && 'is-active'">
+                <circle cx="151.5" cy="398.5" r="24" fill="#FFFFFF" :fill="activeNode === 3 ? '#4C4FE0' : '#FFFFFF'" stroke="#4C4FE0" stroke-width="2" style="transition: fill .35s"/>
+                <g transform="translate(142.5,389.5)" fill="none" stroke="#4C4FE0" :stroke="activeNode === 3 ? '#FFFFFF' : '#4C4FE0'" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 2h14v14H2zM2 7h14M7 7v9"/>
+                </g>
+              </g>
+              <text class="svg-label hidden sm:block" x="151.5" y="458.5" text-anchor="middle"
+                    font-family="Sora, sans-serif" font-weight="700" font-size="16"
+                    fill="#15171E" :fill="activeNode === 3 ? '#4C4FE0' : '#15171E'" style="transition: fill .35s">Sistemas Web a Medida</text>
+            </g>
+        </svg>
+      </div>
+
+      <!-- Panel: todo el contenido está en el HTML; Alpine solo alterna cuál se muestra -->
+      <div class="lg:col-span-5">
+        <article x-ref="panel" class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-subtle">
+          <div id="servicio-0" x-show="activeNode === 0" x-transition:enter="transition ease-out-expo duration-500" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <span class="text-[12px] font-semibold uppercase tracking-[0.06em] text-brand-indigo bg-brand-indigo/10 rounded-full px-3 py-1">Landing Pages &amp; Presencia Web</span>
+            <span class="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-pizarra">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              Entrega en 1 a 2 semanas
+            </span>
+          </div>
+          <h3 class="font-display font-bold text-[24px] sm:text-[26px] h-tight mt-5">Que te encuentren y te escriban.</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-pizarra">Landing pages rápidas, visibles en Google y pensadas para una sola cosa: que tu cliente te escriba. Menos visitas perdidas, más conversaciones reales.</p>
+          <div class="mt-6 rounded-2xl bg-niebla border border-subtle p-4 min-h-[188px]">
+              <div class="rounded-xl bg-white border border-subtle overflow-hidden">
+                <div class="flex items-center gap-1.5 px-3 py-2 bg-[#F0F0F4]">
+                  <span class="w-2 h-2 rounded-full bg-[#E0E0E6]"></span><span class="w-2 h-2 rounded-full bg-[#E0E0E6]"></span><span class="w-2 h-2 rounded-full bg-[#E0E0E6]"></span>
+                  <span class="ml-2 flex-1 text-[10.5px] text-pizarra bg-white rounded-md px-2 py-0.5 truncate">tunegocio.com</span>
+                </div>
+                <div class="p-3 flex items-center gap-4">
+                  <div class="relative w-16 h-16 shrink-0">
+                    <svg viewBox="0 0 36 36" class="w-16 h-16 -rotate-90" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="#E4E5EC" stroke-width="3.5"/><circle cx="18" cy="18" r="15" fill="none" stroke="#4C4FE0" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="93.3 94.25"/></svg>
+                    <span class="absolute inset-0 grid place-items-center font-display font-bold text-[17px]">99</span>
+                  </div>
+                  <div class="min-w-0">
+                    <p class="text-[11px] text-pizarra">Velocidad móvil</p>
+                    <p class="font-display font-bold text-[15px]">99/100</p>
+                    <a href="#precios" class="mt-2 inline-flex items-center gap-1.5 text-[11.5px] font-semibold text-white bg-[#128C4A] rounded-lg px-2.5 py-1.5 hover:-translate-y-0.5 transition-transform duration-300"><svg width="12" height="12" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Escríbenos por WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-[12px] text-pizarra flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-coral"></span>Cada visita a un clic de una conversación.</p>
+          </div>
+          <ul class="mt-6 space-y-2.5">
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Landing page rápida y adaptada al celular</span></li>
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SEO local básico para aparecer en Google</span></li>
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Botón directo a WhatsApp en cada sección</span></li>
+          </ul>
+          </div>
+          <div id="servicio-1" x-show="activeNode === 1" x-cloak x-transition:enter="transition ease-out-expo duration-500" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <span class="text-[12px] font-semibold uppercase tracking-[0.06em] text-brand-indigo bg-brand-indigo/10 rounded-full px-3 py-1">WhatsApp Inteligente &amp; Google Maps</span>
+            <span class="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-pizarra">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              Listo junto con tu web
+            </span>
+          </div>
+          <h3 class="font-display font-bold text-[24px] sm:text-[26px] h-tight mt-5">Cada clic, una conversación.</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-pizarra">Botones que abren WhatsApp con el mensaje ya escrito según lo que tu cliente eligió, y tu negocio en Google Maps para que te encuentren y lleguen.</p>
+          <div class="mt-6 rounded-2xl bg-niebla border border-subtle p-4 min-h-[188px]">
+              <div class="rounded-xl bg-white border border-subtle p-3">
+                <p class="text-[11px] text-pizarra">El cliente elige qué necesita:</p>
+                <div class="mt-2 flex flex-wrap gap-1.5" role="group" aria-label="Elige qué necesita el cliente">
+                  <button type="button" @click="chip = 0" :aria-pressed="(chip === 0).toString()" class="rounded-full border px-3 py-1.5 text-[11.5px] font-semibold transition-colors duration-300 bg-brand-indigo text-white border-brand-indigo" :class="chip === 0 ? 'bg-brand-indigo text-white border-brand-indigo' : 'bg-white text-grafito border-subtle'">Agendar cita</button>
+                  <button type="button" @click="chip = 1" :aria-pressed="(chip === 1).toString()" class="rounded-full border px-3 py-1.5 text-[11.5px] font-semibold transition-colors duration-300 bg-white text-grafito border-subtle" :class="chip === 1 ? 'bg-brand-indigo text-white border-brand-indigo' : 'bg-white text-grafito border-subtle'">Pedir precio</button>
+                  <button type="button" @click="chip = 2" :aria-pressed="(chip === 2).toString()" class="rounded-full border px-3 py-1.5 text-[11.5px] font-semibold transition-colors duration-300 bg-white text-grafito border-subtle" :class="chip === 2 ? 'bg-brand-indigo text-white border-brand-indigo' : 'bg-white text-grafito border-subtle'">Ver ubicación</button>
+                </div>
+                <p class="mt-3 text-[11px] text-pizarra">Se abre WhatsApp con este mensaje ya escrito:</p>
+                <div class="mt-1.5 rounded-xl rounded-tl-sm bg-[#E7F7EC] border border-[#128C4A]/20 px-3 py-2.5 text-[12.5px] leading-snug" aria-live="polite" x-text="msgs[chip]">Hola, quiero agendar una cita. ¿Qué horarios tienen disponibles?</div>
+              </div>
+              <p class="mt-3 text-[12px] text-pizarra flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6B4A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Google Maps · ★ 4.9 · Abierto hasta las 6:00 PM</p>
+          </div>
+          <ul class="mt-6 space-y-2.5">
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mensajes prellenados por servicio o producto</span></li>
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ficha y ubicación en Google Maps</span></li>
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Horarios y botón de llamar en un toque</span></li>
+          </ul>
+          </div>
+          <div id="servicio-2" x-show="activeNode === 2" x-cloak x-transition:enter="transition ease-out-expo duration-500" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <span class="text-[12px] font-semibold uppercase tracking-[0.06em] text-brand-indigo bg-brand-indigo/10 rounded-full px-3 py-1">Sitios Multipágina &amp; Catálogos</span>
+            <span class="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-pizarra">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              Entrega en 2 a 3 semanas
+            </span>
+          </div>
+          <h3 class="font-display font-bold text-[24px] sm:text-[26px] h-tight mt-5">Todo tu negocio, con cotizador a WhatsApp.</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-pizarra">Un sitio completo con una página por servicio, o un catálogo de productos. Tu cliente elige lo que quiere y te llega la cotización armada a WhatsApp.</p>
+          <div class="mt-6 rounded-2xl bg-niebla border border-subtle p-4 min-h-[188px]">
+              <div class="rounded-xl bg-white border border-subtle p-3">
+                <div class="grid grid-cols-2 gap-2">
+                  <template x-for="(c, ci) in catalog" :key="c.n">
+                    <button type="button" @click="c.on = !c.on" :aria-pressed="c.on.toString()" class="text-left rounded-xl border px-3 py-2.5 transition-colors duration-300" :class="c.on ? 'border-brand-indigo bg-brand-indigo/10' : 'border-subtle bg-white hover:bg-niebla'">
+                      <span class="block text-[12.5px] font-semibold" x-text="c.n"></span>
+                      <span class="block text-[11px]" :class="c.on ? 'text-brand-indigo font-semibold' : 'text-pizarra'" x-text="c.on ? '✓ En tu cotización' : 'Agregar'"></span>
+                    </button>
+                  </template>
+                </div>
+                <div class="mt-3 flex items-center justify-between gap-2 rounded-xl bg-[#128C4A] text-white px-3 py-2 text-[12px] font-semibold" aria-live="polite">
+                  <span x-text="'Cotizar ' + picked + (picked === 1 ? ' servicio' : ' servicios')">Cotizar 1 servicio</span><span aria-hidden="true">por WhatsApp →</span>
+                </div>
+              </div>
+              <p class="mt-3 text-[12px] text-pizarra">Tu cliente elige y te llega la cotización armada.</p>
+          </div>
+          <ul class="mt-6 space-y-2.5">
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Varias páginas o catálogo de productos y servicios</span></li>
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cotizador que arma el mensaje a WhatsApp</span></li>
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Dominio .com y hosting incluidos</span></li>
+          </ul>
+          </div>
+          <div id="servicio-3" x-show="activeNode === 3" x-cloak x-transition:enter="transition ease-out-expo duration-500" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <span class="text-[12px] font-semibold uppercase tracking-[0.06em] text-brand-indigo bg-brand-indigo/10 rounded-full px-3 py-1">Sistemas Web a Medida</span>
+            <span class="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-pizarra">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              Entrega en 4 a 6 semanas
+            </span>
+          </div>
+          <h3 class="font-display font-bold text-[24px] sm:text-[26px] h-tight mt-5">Tu agenda o inventario, sin cuadernos.</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-pizarra">Web apps sencillas para llevar citas, pedidos o inventarios. Adiós a los cuadernos, los chats sueltos y los datos duplicados.</p>
+          <div class="mt-6 rounded-2xl bg-niebla border border-subtle p-4 min-h-[188px]">
+              <div class="rounded-xl bg-white border border-subtle overflow-hidden">
+                <table class="w-full text-left text-[12px]">
+                  <thead class="bg-[#F0F0F4] text-pizarra">
+                    <tr><th class="font-semibold px-3 py-2">Hora</th><th class="font-semibold px-3 py-2">Cliente</th><th class="font-semibold px-3 py-2 text-right">Estado</th></tr>
+                  </thead>
+                  <tbody>
+                    <template x-for="(r, ri) in citas" :key="r.id">
+                      <tr class="border-t border-subtle hover:bg-niebla transition-colors duration-200">
+                        <td class="px-3 py-2 font-semibold" x-text="r.id"></td>
+                        <td class="px-3 py-2 text-pizarra" x-text="r.client"></td>
+                        <td class="px-3 py-2 text-right">
+                          <button type="button" @click="cycleStatus(ri)" class="rounded-full px-2.5 py-1 text-[11px] font-semibold transition-colors duration-300" :class="statusClass(r.status)" x-text="r.status" :aria-label="'Cambiar estado de la cita de las ' + r.id"></button>
+                        </td>
+                      </tr>
+                    </template>
+                  </tbody>
+                </table>
+              </div>
+              <p class="mt-3 text-[12px] text-pizarra">Toca un estado para actualizarlo, como lo haría tu equipo.</p>
+          </div>
+          <ul class="mt-6 space-y-2.5">
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Agenda en línea, pedidos o inventario simple</span></li>
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Acceso con usuario para tu equipo</span></li>
+            <li class="flex items-start gap-3 text-[14.5px]"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Capacitación para tu equipo</span></li>
+          </ul>
+          </div>
+
+          <a href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20cotizar%3A%20Landing%20Pages%20%26%20Presencia%20Web" :href="wa('Hola Weaver, quiero cotizar: ' + current.name)" target="_blank" rel="noopener"
+             class="group btn-shine mt-7 w-full inline-flex items-center justify-center gap-2 font-display font-semibold text-[15px] text-white bg-brand-indigo rounded-xl px-6 py-3.5 shadow-indigo hover:-translate-y-1 transition-transform duration-300 ease-out-expo">
+            Cotizar esta solución
+            <svg class="arrow-diag" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="sobre-mi">
-  <div class="wrap cols">
-    <div>
-      <h2>Sobre mí</h2>
-      <p>Soy psicóloga clínica y llevo ocho años atendiendo a adultos y adolescentes, en consulta presencial y en línea.</p>
-      <p>Trabajo con terapia cognitivo-conductual: en las primeras sesiones definimos qué quieres cambiar, y a partir de ahí cada sesión tiene un objetivo claro. Entre una y otra te dejo ejercicios breves para practicar. No hace falta que traigas nada preparado.</p>
-      <ul class="formation">
-        <li><b>Licenciatura en Psicología Clínica</b></li>
-        <li><b>Diplomado en terapia cognitivo-conductual</b></li>
-        <li><b>Colegiado activo</b> #XXXX</li>
-      </ul>
+<!-- ═════════════════════════ BENTO: POR QUÉ WEAVER ═════════════════════════ -->
+<section id="ventajas" class="py-20 lg:py-28 scroll-mt-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6">
+    <div class="reveal max-w-2xl">
+      <p class="font-display font-bold text-[13px] tracking-[0.1em] uppercase text-brand-indigo">Por qué Weaver</p>
+      <h2 class="font-display font-bold h-tight text-[32px] sm:text-[44px] mt-3">Por qué los negocios en crecimiento eligen Weaver</h2>
     </div>
-    <div id="primera-cita">
-      <h2>Qué esperar en la primera cita</h2>
-      <p>Dura 50 minutos y es para conocernos. No tienes que contarlo todo en un solo día.</p>
-      <ol class="first">
-        <li>Me cuentas qué te trae y desde cuándo te pasa.</li>
-        <li>Te hago algunas preguntas sobre tu día a día y tu historia.</li>
-        <li>Al final te explico cómo trabajaríamos y cuántas sesiones calculo. Tú decides si continúas.</li>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-6 gap-5">
+
+      <!-- 1. Velocidad -->
+      <div class="reveal md:col-span-4 bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-subtle hover:-translate-y-1 transition-transform duration-300 ease-out-expo">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.06em] text-pizarra">Velocidad</p>
+        <h3 class="font-display font-bold text-[28px] sm:text-[34px] h-tight mt-2">Semanas, no meses.</h3>
+        <p class="mt-3 text-[15px] text-pizarra max-w-lg">Trabajamos en ciclos cortos: ves avances reales cada semana en lugar de esperar a que termine una larga lista de requisitos.</p>
+
+        <div class="mt-8 space-y-6">
+          <div>
+            <div class="flex justify-between text-[13px] mb-2"><span class="font-semibold">Proceso tradicional</span><span class="text-pizarra">≈ 6 meses</span></div>
+            <div class="h-10 rounded-xl bg-niebla overflow-hidden">
+              <div class="time-bar h-full rounded-xl bg-[#DCDDE4] flex items-center gap-1 px-1.5" style="--w:100%">
+                <span class="h-7 flex-1 rounded-lg bg-white/70 text-[11px] text-pizarra grid place-items-center truncate">Cotizaciones</span>
+                <span class="h-7 flex-1 rounded-lg bg-white/70 text-[11px] text-pizarra grid place-items-center truncate">Comités</span>
+                <span class="h-7 flex-[1.6] rounded-lg bg-white/70 text-[11px] text-pizarra grid place-items-center truncate">Desarrollo</span>
+                <span class="h-7 flex-1 rounded-lg bg-white/70 text-[11px] text-pizarra grid place-items-center truncate">Cambios</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-[13px] mb-2"><span class="font-semibold text-brand-indigo">Con Weaver</span><span class="text-pizarra">1 a 6 semanas según el proyecto</span></div>
+            <div class="h-10 rounded-xl bg-niebla overflow-hidden relative">
+              <div class="time-bar delay h-full rounded-xl bg-brand-indigo relative" style="--w:clamp(120px, 23%, 260px)">
+                <span class="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-coral ring-4 ring-white/30"></span>
+              </div>
+              <span class="absolute left-[calc(clamp(120px,23%,260px)+12px)] top-1/2 -translate-y-1/2 text-[12.5px] font-semibold text-grafito">En producción ✓</span>
+            </div>
+          </div>
+          <div class="flex justify-between text-[11px] text-pizarra pt-1 border-t border-subtle">
+            <span class="pt-2">Mes 1</span><span class="pt-2">Mes 2</span><span class="pt-2">Mes 3</span><span class="pt-2">Mes 4</span><span class="pt-2">Mes 5</span><span class="pt-2">Mes 6</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Cero jerga -->
+      <div class="reveal md:col-span-2 md:row-span-2 relative overflow-hidden bg-grafito text-white rounded-3xl p-6 sm:p-8 hover:-translate-y-1 transition-transform duration-300 ease-out-expo" data-delay="1">
+        <svg class="absolute -right-24 -top-24 w-72 h-72 opacity-[0.07]" viewBox="0 0 200 200" aria-hidden="true">
+          <g fill="none" stroke="#fff" stroke-width="1"><polygon points="132,100 122.6,122.6 100,132 77.4,122.6 68,100 77.4,77.4 100,68 122.6,77.4"/><polygon points="158,100 141,141 100,158 59,141 42,100 59,59 100,42 141,59"/><polygon points="184,100 159.4,159.4 100,184 40.6,159.4 16,100 40.6,40.6 100,16 159.4,40.6"/><path d="M100 100L192 100M100 100L165 165M100 100L100 192M100 100L35 165M100 100L8 100M100 100L35 35M100 100L100 8M100 100L165 35"/></g>
+        </svg>
+        <p class="relative text-[13px] font-semibold uppercase tracking-[0.06em] text-humo">Cero jerga</p>
+        <h3 class="relative font-display font-bold text-[28px] h-tight mt-2">Hablamos tu idioma, no en código.</h3>
+        <p class="relative mt-3 text-[15px] text-humo leading-relaxed">Escuchamos cómo trabaja tu equipo y lo convertimos en herramientas que cualquier empleado entiende desde el primer día.</p>
+
+        <div class="relative mt-8 space-y-4">
+          <div class="rounded-2xl border border-subtle-dark bg-white/[0.04] p-4">
+            <p class="text-[12px] text-humo">Tú nos dices</p>
+            <p class="mt-1 text-[15px] font-medium">“Se nos olvidan las citas y los pacientes no llegan.”</p>
+            <div class="my-3 flex items-center gap-2 text-brand-coral" aria-hidden="true"><span class="h-px flex-1 bg-white/10"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg><span class="h-px flex-1 bg-white/10"></span></div>
+            <p class="text-[12px] text-humo">Nosotros tejemos</p>
+            <p class="mt-1 text-[15px] font-semibold">Una agenda en línea donde ves cada cita del día.</p>
+          </div>
+          <div class="rounded-2xl border border-subtle-dark bg-white/[0.04] p-4">
+            <p class="text-[12px] text-humo">Tú nos dices</p>
+            <p class="mt-1 text-[15px] font-medium">“Mis clientes me preguntan lo mismo todos los días por WhatsApp.”</p>
+            <div class="my-3 flex items-center gap-2 text-brand-coral" aria-hidden="true"><span class="h-px flex-1 bg-white/10"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg><span class="h-px flex-1 bg-white/10"></span></div>
+            <p class="text-[12px] text-humo">Nosotros tejemos</p>
+            <p class="mt-1 text-[15px] font-semibold">Una web con precios, horarios y ubicación, y un botón que abre el chat con el mensaje listo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Calculadora -->
+      <div class="reveal md:col-span-2 bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-subtle hover:-translate-y-1 transition-transform duration-300 ease-out-expo"
+           x-data="{ h: 8, get year() { return this.h * 48 }, get days() { return Math.round(this.h * 48 / 8) } }">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.06em] text-pizarra">Tiempo de vuelta</p>
+        <label for="horas" class="block mt-2 text-[15.5px] font-medium leading-snug">¿Cuántas horas a la semana pierdes respondiendo las mismas preguntas o agendando citas a mano?</label>
+        <div class="mt-6 flex items-baseline justify-between">
+          <span class="font-display font-bold text-[40px] leading-none" x-text="h">8</span>
+          <span class="text-[13px] text-pizarra">horas / semana</span>
+        </div>
+        <input id="horas" type="range" min="2" max="25" step="1" x-model.number="h" class="weaver-range mt-4"
+               :style="'--p:' + ((h - 2) / 23 * 100) + '%'" style="--p:26%" aria-describedby="calc-nota">
+        <div class="flex justify-between text-[11px] text-pizarra mt-2"><span>2 h</span><span>25 h</span></div>
+        <div class="mt-6 grid grid-cols-2 gap-3">
+          <div class="rounded-2xl bg-niebla p-4">
+            <p class="font-display font-bold text-[24px] text-brand-indigo leading-none" x-text="year.toLocaleString('es-GT')">384</p>
+            <p class="text-[12px] text-pizarra mt-1.5">horas al año</p>
+          </div>
+          <div class="rounded-2xl bg-brand-coral/15 p-4">
+            <p class="font-display font-bold text-[24px] leading-none" x-text="days">48</p>
+            <p class="text-[12px] text-pizarra mt-1.5">días laborales</p>
+          </div>
+        </div>
+        <p id="calc-nota" class="mt-4 text-[11.5px] text-pizarra">Estimado con 48 semanas laborales al año y jornadas de 8 horas, si automatizamos esa tarea.</p>
+      </div>
+
+      <!-- 4. Escalabilidad -->
+      <div class="reveal md:col-span-2 bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-subtle hover:-translate-y-1 transition-transform duration-300 ease-out-expo" data-delay="1">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.06em] text-pizarra">Escalabilidad</p>
+        <h3 class="font-display font-bold text-[26px] h-tight mt-2">Crece a tu ritmo.</h3>
+        <p class="mt-3 text-[14.5px] text-pizarra">Empieza con una landing page hoy, súmale un sitio completo o catálogo mañana y un sistema a medida cuando lo necesites.</p>
+        <div class="relative mt-7">
+          <svg class="absolute left-[11px] top-3 h-[calc(100%-24px)] w-1" preserveAspectRatio="none" viewBox="0 0 2 100" aria-hidden="true"><line x1="1" y1="0" x2="1" y2="100" stroke="#4C4FE0" stroke-width="2" class="thread-flow" vector-effect="non-scaling-stroke"/></svg>
+          <ol class="space-y-4">
+            <li class="relative flex items-center gap-4"><span class="w-6 h-6 rounded-full bg-white border-2 border-brand-indigo shrink-0 z-10"></span><div class="flex-1 rounded-xl bg-niebla px-3 py-2"><p class="text-[11px] text-pizarra">Hoy</p><p class="text-[14px] font-semibold">Landing page</p></div></li>
+            <li class="relative flex items-center gap-4"><span class="w-6 h-6 rounded-full bg-brand-indigo/60 shrink-0 z-10"></span><div class="flex-1 rounded-xl bg-niebla px-3 py-2 ml-4"><p class="text-[11px] text-pizarra">Mañana</p><p class="text-[14px] font-semibold">Sitio completo o catálogo</p></div></li>
+            <li class="relative flex items-center gap-4"><span class="w-6 h-6 rounded-full bg-brand-indigo ring-4 ring-brand-coral/40 shrink-0 z-10"></span><div class="flex-1 rounded-xl bg-grafito text-white px-3 py-2 ml-8"><p class="text-[11px] text-humo">Cuando escales</p><p class="text-[14px] font-semibold">Sistema a medida</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════ EJEMPLOS REALES ═════════════════════════ -->
+<section id="casos" class="py-20 lg:py-24 scroll-mt-24" aria-labelledby="casos-titulo">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6">
+    <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div class="max-w-2xl">
+        <p class="font-display font-bold text-[13px] tracking-[0.1em] uppercase text-brand-indigo">Ejemplo real</p>
+        <h2 id="casos-titulo" class="font-display font-bold h-tight text-[32px] sm:text-[44px] mt-3">Míralo funcionando, no en una presentación</h2>
+      </div>
+      <p class="text-[15px] text-pizarra max-w-sm">Un sitio de ejemplo que puedes abrir y tocar desde tu celular. Así se siente tu sitio antes de decidir.</p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-5">
+      <!-- Demo principal -->
+      <a href="/demos/psicologia" class="reveal group md:col-span-3 relative overflow-hidden flex flex-col md:flex-row md:items-center md:gap-14 bg-white rounded-3xl p-7 sm:p-10 shadow-card border border-subtle hover:-translate-y-1 transition-transform duration-300 ease-out-expo" aria-label="Abrir la demo de la psicóloga Yara Cabrera">
+        <div class="relative my-6 md:my-0 md:w-5/12 shrink-0" aria-hidden="true">
+          <div class="rounded-lg bg-[#F9F7F4] text-[#262626] p-5 sm:p-6 border border-[#DDD7CC]">
+            <p class="text-[17px]" style="font-family:Georgia,serif">Lic. Yara Cabrera</p>
+            <p class="text-[11px] text-[#5E5B56] pb-3 border-b border-[#DDD7CC]">Psicóloga clínica</p>
+            <p class="mt-3 text-[19px] leading-snug" style="font-family:Georgia,serif">Psicología clínica para adultos y adolescentes en Ciudad de Guatemala</p>
+            <span class="mt-4 inline-block rounded-md bg-[#3D5A4C] text-white text-[11.5px] font-semibold px-3.5 py-2">Agendar por WhatsApp</span>
+          </div>
+        </div>
+        <div class="md:flex-1">
+          <div class="flex items-center gap-3">
+            <span class="text-[12px] font-semibold uppercase tracking-[0.06em] text-pizarra">Salud mental</span>
+            <span class="text-[11.5px] font-semibold text-grafito bg-brand-coral/25 rounded-full px-2.5 py-1">Demo navegable</span>
+          </div>
+          <h3 class="font-display font-bold text-[28px] sm:text-[36px] h-tight mt-4">Consultorio de psicología</h3>
+          <p class="mt-3 text-[15px] text-pizarra leading-relaxed max-w-xl">Página de presentación para una psicóloga independiente: servicios, horarios, preguntas frecuentes y un formulario que arma el mensaje de WhatsApp para agendar la cita.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-[12px] font-semibold">
+            <span class="rounded-full border border-subtle px-3 py-1.5">Formulario a WhatsApp</span>
+            <span class="rounded-full border border-subtle px-3 py-1.5">Pensada para celular</span>
+          </div>
+          <span class="mt-8 inline-flex items-center gap-2 font-display font-semibold text-[15px] text-brand-indigo">Abrir la demo <svg class="arrow-diag" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════ PRECIOS ═════════════════════════ -->
+<section id="precios" class="py-20 lg:py-28 scroll-mt-24" aria-labelledby="precios-titulo">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6">
+    <div class="reveal text-center max-w-2xl mx-auto">
+      <p class="font-display font-bold text-[13px] tracking-[0.1em] uppercase text-brand-indigo">Modelos de trabajo</p>
+      <h2 id="precios-titulo" class="font-display font-bold h-tight text-[32px] sm:text-[44px] mt-3">Precios claros, en quetzales</h2>
+      <p class="mt-4 text-[17px] text-pizarra">Q0 de setup inicial y sin letras pequeñas. Elige cómo empezar y crece cuando lo necesites.</p>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-3 gap-5 items-stretch">
+      <!-- Plan 1 -->
+      <article class="reveal flex flex-col bg-white rounded-3xl p-7 sm:p-8 shadow-card border border-subtle hover:-translate-y-1 transition-transform duration-300 ease-out-expo">
+        <p class="text-[12px] font-semibold uppercase tracking-[0.06em] text-pizarra">Suscripción mensual</p>
+        <h3 class="font-display font-bold text-[22px] mt-2">Impulso Digital</h3>
+        <p class="mt-2 text-[14px] text-pizarra">Para empezar a recibir mensajes de clientes ya.</p>
+        <p class="mt-6 flex items-baseline gap-1.5"><span class="text-[14px] text-pizarra">Desde</span><span class="font-display font-bold text-[40px] leading-none">Q200</span><span class="text-[14px] text-pizarra">/ mes</span></p>
+        <p class="mt-2 text-[13px] text-pizarra">o <span class="font-semibold text-grafito">Q2,000 al año</span> · 2 meses gratis</p>
+        <ul class="mt-7 space-y-3 text-[14.5px] flex-1">
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Landing page rápida y moderna</li>
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Dominio .com y hosting incluidos</li>
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>WhatsApp con mensajes prellenados y Google Maps</li>
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Soporte y hasta 2 cambios pequeños al mes</li>
+        </ul>
+        <p class="mt-5 text-[12px] text-pizarra">Q0 de setup inicial.</p>
+        <a href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20me%20interesa%20el%20plan%20Impulso%20Digital%20de%20Q200%2Fmes." target="_blank" rel="noopener" class="mt-6 inline-flex justify-center font-display font-semibold text-[15px] text-grafito bg-white border border-subtle rounded-xl px-6 py-3.5 hover:-translate-y-0.5 hover:shadow-card transition-all duration-300 ease-out-expo">Empezar con Impulso</a>
+      </article>
+
+      <!-- Plan 2 destacado -->
+      <article class="reveal relative flex flex-col bg-white rounded-3xl p-7 sm:p-8 shadow-float border-2 border-brand-indigo hover:-translate-y-1 transition-transform duration-300 ease-out-expo" data-delay="1">
+        <p class="text-[12px] font-semibold uppercase tracking-[0.06em] text-brand-indigo">Suscripción mensual</p>
+        <h3 class="font-display font-bold text-[22px] mt-2">Sitio Completo / Catálogo</h3>
+        <p class="mt-2 text-[14px] text-pizarra">Para mostrar todos tus servicios o productos.</p>
+        <p class="mt-6 flex items-baseline gap-1.5"><span class="text-[14px] text-pizarra">Desde</span><span class="font-display font-bold text-[40px] leading-none">Q350</span><span class="text-[14px] text-pizarra">/ mes</span></p>
+        <p class="mt-2 text-[13px] text-pizarra">o <span class="font-semibold text-grafito">Q3,500 al año</span> · 2 meses gratis</p>
+        <ul class="mt-7 space-y-3 text-[14.5px] flex-1">
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Sitio multipágina o catálogo de productos y servicios</li>
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Cotizador directo a WhatsApp</li>
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Dominio .com, hosting y Google Maps incluidos</li>
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Soporte prioritario</li>
+        </ul>
+        <p class="mt-5 text-[12px] text-pizarra">Q0 de setup inicial.</p>
+        <a href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20me%20interesa%20el%20plan%20de%20Sitio%20Completo%20%2F%20Cat%C3%A1logo." target="_blank" rel="noopener" class="group btn-shine mt-6 inline-flex justify-center items-center gap-2 font-display font-semibold text-[15px] text-white bg-brand-indigo rounded-xl px-6 py-3.5 shadow-indigo hover:-translate-y-0.5 transition-transform duration-300 ease-out-expo">
+          Quiero mi sitio completo
+          <svg class="arrow-diag" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+      </article>
+
+      <!-- Plan 3 -->
+      <article class="reveal flex flex-col bg-white rounded-3xl p-7 sm:p-8 shadow-card border border-subtle hover:-translate-y-1 transition-transform duration-300 ease-out-expo" data-delay="2">
+        <p class="text-[12px] font-semibold uppercase tracking-[0.06em] text-pizarra">Pago único o por etapas</p>
+        <h3 class="font-display font-bold text-[22px] mt-2">Proyecto a Medida</h3>
+        <p class="mt-2 text-[14px] text-pizarra">Cuando necesitas algo hecho exactamente para tu operación.</p>
+        <p class="mt-6 font-display font-bold text-[32px] leading-none">Cotización a medida</p>
+        <p class="mt-2 text-[13px] text-pizarra">Te decimos el precio antes de empezar.</p>
+        <ul class="mt-7 space-y-3 text-[14.5px] flex-1">
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Agenda en línea para citas o reservas</li>
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Sistema de pedidos o inventario simple</li>
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Acceso con usuario para tu equipo</li>
+          <li class="flex gap-3"><svg class="mt-0.5 shrink-0" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4C4FE0" fill-opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#4C4FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Desarrollo específico para tu operación</li>
+        </ul>
+        <a href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20cotizar%20un%20proyecto%20web%20a%20medida." target="_blank" rel="noopener" class="mt-8 inline-flex justify-center font-display font-semibold text-[15px] text-grafito bg-white border border-subtle rounded-xl px-6 py-3.5 hover:-translate-y-0.5 hover:shadow-card transition-all duration-300 ease-out-expo">Pedir cotización</a>
+      </article>
+    </div>
+
+    <div class="reveal mt-10 grid lg:grid-cols-3 gap-4 text-[14px]">
+      <div class="flex gap-3 items-start rounded-2xl bg-white/70 border border-subtle p-4"><span class="mt-1.5 w-2 h-2 rounded-full bg-brand-coral shrink-0"></span><p><span class="font-semibold">Paga el año, llévate 2 meses.</span> <span class="text-pizarra">Pagas 10 mensualidades y usas el servicio 12 meses.</span></p></div>
+      <div class="flex gap-3 items-start rounded-2xl bg-white/70 border border-subtle p-4"><span class="mt-1.5 w-2 h-2 rounded-full bg-brand-indigo shrink-0"></span><p><span class="font-semibold">Sin plazo forzoso:</span> <span class="text-pizarra">cancelas cuando quieras sin penalizaciones. Al cumplir 6 meses consecutivos, el dominio <span class="whitespace-nowrap">.com</span> pasa a tu nombre sin costo adicional. Si cancelas antes y deseas llevarte el dominio, solo cubres el costo de registro/transferencia (Q150).</span></p></div>
+      <div class="flex gap-3 items-start rounded-2xl bg-white/70 border border-subtle p-4"><span class="mt-1.5 w-2 h-2 rounded-full bg-grafito shrink-0"></span><p><span class="font-semibold">¿Quieres quedarte con el sitio?</span> <span class="text-pizarra">Es tuyo pagando el equivalente a 12 mensualidades, sin hosting ni soporte.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════ PROCESO ═════════════════════════ -->
+<section id="proceso" class="py-20 lg:py-28 scroll-mt-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6">
+    <div class="reveal max-w-2xl">
+      <p class="font-display font-bold text-[13px] tracking-[0.1em] uppercase text-brand-indigo">Proceso</p>
+      <h2 class="font-display font-bold h-tight text-[32px] sm:text-[44px] mt-3">Cómo tejemos tu solución</h2>
+    </div>
+
+    <div class="reveal relative mt-14">
+      <!-- Hilo horizontal (desktop) -->
+      <svg class="hidden md:block absolute left-[16.66%] right-[16.66%] top-7 w-[66.66%] h-2" viewBox="0 0 1000 8" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="0" y1="4" x2="1000" y2="4" stroke="#15171E" stroke-opacity=".12" stroke-width="2" vector-effect="non-scaling-stroke"/>
+        <line class="process-line" x1="0" y1="4" x2="1000" y2="4" stroke="#4C4FE0" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      </svg>
+      <!-- Hilo vertical (móvil) -->
+      <svg class="md:hidden absolute left-7 top-7 bottom-7 w-2 h-[calc(100%-56px)]" viewBox="0 0 8 1000" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="4" y1="0" x2="4" y2="1000" stroke="#15171E" stroke-opacity=".12" stroke-width="2" vector-effect="non-scaling-stroke"/>
+        <line class="process-line" x1="4" y1="0" x2="4" y2="1000" stroke="#4C4FE0" stroke-width="3" vector-effect="non-scaling-stroke"/>
+      </svg>
+
+      <ol class="relative grid md:grid-cols-3 gap-10 md:gap-6">
+        <li class="flex md:flex-col md:items-center md:text-center gap-5">
+          <span class="step-dot w-14 h-14 shrink-0 rounded-full bg-white border border-subtle grid place-items-center font-display font-bold text-[17px] text-grafito" data-step="1">01</span>
+          <div>
+            <h3 class="font-display font-bold text-[20px]">Diagnóstico de 15 min</h3>
+            <p class="mt-2 text-[15px] text-pizarra md:max-w-[17rem] md:mx-auto">Sin costo. Entendemos tu cuello de botella real antes de proponer nada.</p>
+          </div>
+        </li>
+        <li class="flex md:flex-col md:items-center md:text-center gap-5">
+          <span class="step-dot w-14 h-14 shrink-0 rounded-full bg-white border border-subtle grid place-items-center font-display font-bold text-[17px] text-grafito" data-step="2">02</span>
+          <div>
+            <h3 class="font-display font-bold text-[20px]">Prototipo y construcción</h3>
+            <p class="mt-2 text-[15px] text-pizarra md:max-w-[17rem] md:mx-auto">Avances visibles desde la primera semana, para que ajustes sobre algo real.</p>
+          </div>
+        </li>
+        <li class="flex md:flex-col md:items-center md:text-center gap-5">
+          <span class="step-dot w-14 h-14 shrink-0 rounded-full bg-white border border-subtle grid place-items-center font-display font-bold text-[17px] text-grafito" data-step="3">03</span>
+          <div>
+            <h3 class="font-display font-bold text-[20px]">Lanzamiento y evolución</h3>
+            <p class="mt-2 text-[15px] text-pizarra md:max-w-[17rem] md:mx-auto">Capacitamos a tu equipo y seguimos cerca con soporte y mejoras.</p>
+          </div>
+        </li>
       </ol>
     </div>
   </div>
 </section>
 
-<section id="consultas">
-  <div class="wrap">
-    <h2>Consultas y horarios</h2>
-    <dl class="info">
-      <div><dt>Modalidad</dt><dd>Presencial en Zona 14, Ciudad de Guatemala<span>O por videollamada (Google Meet o Zoom).</span></dd></div>
-      <div><dt>Horarios</dt><dd>Lunes a viernes, de 2:00 a 7:00 p. m.<span>Sábados por la mañana, de 8:00 a. m. a 12:00 m.</span></dd></div>
-      <div><dt>Inversión</dt><dd>Q350 por sesión de 50 minutos<span>Pago por transferencia bancaria o en efectivo. Emito factura.</span></dd></div>
-      <div><dt>Ubicación</dt><dd>Zona 14, Ciudad de Guatemala<span>Te comparto la dirección exacta al confirmar tu cita.</span></dd></div>
-    </dl>
-  </div>
-</section>
-
-<section id="agendar">
-  <div class="wrap">
-    <h2>Agenda tu cita</h2>
-    <p class="muted">Llena estos datos y se abre WhatsApp con el mensaje ya escrito. Respondo durante el día hábil.</p>
-    <form id="cita" onsubmit="return false" autocomplete="off">
-      <div>
-        <label for="nombre">Nombre del paciente</label>
-        <input type="text" id="nombre" maxlength="60" placeholder="Nombre y apellido">
-        <p class="err" id="err" role="alert" hidden>Escribe tu nombre para continuar.</p>
+<!-- ═════════════════════════ RESPALDO ═════════════════════════ -->
+<section id="respaldo" class="py-14 lg:py-16 scroll-mt-24" aria-labelledby="respaldo-titulo">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6">
+    <div class="reveal max-w-2xl">
+      <p class="font-display font-bold text-[13px] tracking-[0.1em] uppercase text-brand-indigo">Respaldo</p>
+      <h2 id="respaldo-titulo" class="font-display font-bold h-tight text-[28px] sm:text-[36px] mt-3">Un negocio formal detrás de tu sitio</h2>
+    </div>
+    <div class="reveal mt-8 grid md:grid-cols-3 gap-4">
+      <div class="flex gap-4 items-start rounded-2xl bg-white border border-subtle shadow-card p-5">
+        <span class="w-11 h-11 shrink-0 rounded-xl bg-brand-indigo/10 grid place-items-center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4C4FE0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span>
+        <div><h3 class="font-display font-bold text-[16.5px] h-tight">Facturación formal (FEL)</h3><p class="mt-1.5 text-[14px] text-pizarra leading-relaxed">Emitimos factura electrónica en Guatemala por cada pago.</p></div>
       </div>
-      <fieldset>
-        <legend>Modalidad</legend>
-        <div class="opts">
-          <label><input type="radio" name="mod" value="presencial" checked>Presencial</label>
-          <label><input type="radio" name="mod" value="en línea">En línea</label>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Horario preferido</legend>
-        <div class="opts">
-          <label><input type="radio" name="hor" value="la mañana" checked>Mañana</label>
-          <label><input type="radio" name="hor" value="la tarde">Tarde</label>
-        </div>
-      </fieldset>
-      <div>
-        <label for="motivo">Motivo breve <span class="muted" style="font-weight:400">(opcional)</span></label>
-        <textarea id="motivo" maxlength="200" placeholder="Si prefieres, lo hablamos en la primera cita."></textarea>
-        <p class="hint">Escribe solo lo que quieras compartir por mensaje.</p>
+      <div class="flex gap-4 items-start rounded-2xl bg-white border border-subtle shadow-card p-5">
+        <span class="w-11 h-11 shrink-0 rounded-xl bg-brand-indigo/10 grid place-items-center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4C4FE0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <div><h3 class="font-display font-bold text-[16.5px] h-tight">Soporte en menos de 24 h hábiles</h3><p class="mt-1.5 text-[14px] text-pizarra leading-relaxed">Escríbenos con cualquier duda o cambio y te respondemos en menos de 24 horas hábiles.</p></div>
       </div>
-      <div>
-        <a class="btn block" id="enviar" href="https://wa.me/50243182227" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+      <div class="flex gap-4 items-start rounded-2xl bg-white border border-subtle shadow-card p-5">
+        <span class="w-11 h-11 shrink-0 rounded-xl bg-brand-indigo/10 grid place-items-center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4C4FE0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 8l9 6 9-6"/></svg></span>
+        <div><h3 class="font-display font-bold text-[16.5px] h-tight">Contacto directo</h3><p class="mt-1.5 text-[14px] text-pizarra leading-relaxed"><a class="font-semibold text-grafito underline decoration-brand-indigo/40 underline-offset-4 hover:decoration-brand-indigo" href="mailto:hola@somosweaver.com">hola@somosweaver.com</a><br>o por WhatsApp al +502 4318 2227.</p></div>
       </div>
-    </form>
-  </div>
-</section>
-
-<section id="preguntas">
-  <div class="wrap">
-    <h2>Preguntas frecuentes</h2>
-    <div class="faq">
-      <details><summary>¿Lo que hablo en consulta es confidencial?</summary><p>Sí. Todo lo que conversamos está protegido por el secreto profesional. Las únicas excepciones son situaciones de riesgo para tu vida o la de otra persona, y te las explico desde la primera cita.</p></details>
-      <details><summary>¿Qué pasa si necesito cancelar o cambiar mi cita?</summary><p>Avísame con al menos 24 horas de anticipación y la reprogramamos sin costo. Si la cita se cancela el mismo día o no te presentas, se cobra la sesión.</p></details>
-      <details><summary>¿Funciona la terapia en línea?</summary><p>Sí. Para la mayoría de los motivos de consulta es igual de útil que la presencial. Solo necesitas un lugar tranquilo, buena conexión y audífonos si compartes espacio con otras personas.</p></details>
-      <details><summary>¿Cuántas sesiones voy a necesitar?</summary><p>Depende de cada caso. En la primera cita te doy un estimado y lo vamos revisando. Cada sesión dura 50 minutos y normalmente nos vemos una vez por semana al inicio.</p></details>
-      <details><summary>¿Atiendes adolescentes?</summary><p>Sí, desde los 13 años. La primera sesión incluye a su mamá, papá o encargado, y después trabajo con el adolescente de forma individual.</p></details>
     </div>
   </div>
 </section>
+
+<!-- ═════════════════════════ CTA FINAL + FOOTER ═════════════════════════ -->
+<section id="contacto" class="pb-6 pt-10 scroll-mt-24">
+  <div class="max-w-6xl mx-auto px-3 sm:px-6">
+    <div class="reveal relative overflow-hidden bg-grafito text-white rounded-3xl">
+      <!-- Telaraña gigante -->
+      <svg class="absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-[1100px] max-w-none h-[1100px] opacity-[0.05] pointer-events-none" viewBox="0 0 200 200" aria-hidden="true">
+        <g fill="none" stroke="#FFFFFF" stroke-width=".35">
+          <path d="M100 100L196 100M100 100L167.9 167.9M100 100L100 196M100 100L32.1 167.9M100 100L4 100M100 100L32.1 32.1M100 100L100 4M100 100L167.9 32.1"/>
+          <polygon points="116,100 111.3,111.3 100,116 88.7,111.3 84,100 88.7,88.7 100,84 111.3,88.7"/>
+          <polygon points="136,100 125.5,125.5 100,136 74.5,125.5 64,100 74.5,74.5 100,64 125.5,74.5"/>
+          <polygon points="158,100 141,141 100,158 59,141 42,100 59,59 100,42 141,59"/>
+          <polygon points="184,100 159.4,159.4 100,184 40.6,159.4 16,100 40.6,40.6 100,16 159.4,40.6"/>
+        </g>
+      </svg>
+
+      <div class="relative px-6 sm:px-12 lg:px-20 pt-20 pb-16 lg:pt-28 lg:pb-20 text-center">
+        <svg class="mx-auto" width="56" height="56" viewBox="0 0 48 48" aria-hidden="true">
+          <line x1="6" y1="10" x2="42" y2="10" stroke="#FF6B4A" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <polyline points="6,10 16,34 24,14 32,34 42,10" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="6" cy="10" r="3.5" fill="#FFFFFF"/><circle cx="16" cy="34" r="3.5" fill="#FFFFFF"/><circle cx="24" cy="14" r="4" fill="#FF6B4A"/><circle cx="32" cy="34" r="3.5" fill="#FFFFFF"/><circle cx="42" cy="10" r="3.5" fill="#FFFFFF"/>
+        </svg>
+        <h2 class="mt-8 font-display font-bold h-tight text-[36px] sm:text-[54px] lg:text-[68px] max-w-4xl mx-auto">Conectamos ideas. <span class="text-humo">Tejemos soluciones simples.</span></h2>
+        <p class="mt-6 text-[17px] text-humo max-w-xl mx-auto">Cuéntanos qué te quita tiempo hoy. En 15 minutos te decimos cómo lo resolveríamos.</p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20agendar%20una%20demo%20de%2015%20minutos%20para%20mi%20negocio." target="_blank" rel="noopener"
+             class="group btn-shine inline-flex items-center gap-2.5 font-display font-semibold text-[16px] text-grafito bg-brand-coral rounded-xl px-7 py-4 shadow-[0_12px_32px_-8px_rgba(255,107,74,0.6)] hover:-translate-y-1 transition-transform duration-300 ease-out-expo">
+            Hablar por WhatsApp ahora
+            <svg class="arrow-diag" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+          <span class="text-[15px] font-medium text-humo">WhatsApp: <span class="text-white">+502 4318 2227</span> · <a class="text-white underline underline-offset-4 decoration-white/30 hover:decoration-white" href="mailto:hola@somosweaver.com">hola@somosweaver.com</a></span>
+        </div>
+      </div>
+
+      <footer class="relative border-t border-subtle-dark px-6 sm:px-12 lg:px-20 py-10">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+          <div class="flex items-center gap-2.5">
+            <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+              <g fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.2">
+                <line x1="18" y1="18" x2="34.5" y2="18"/><line x1="18" y1="18" x2="29.67" y2="29.67"/><line x1="18" y1="18" x2="18" y2="34.5"/><line x1="18" y1="18" x2="6.33" y2="29.67"/>
+                <line x1="18" y1="18" x2="1.5" y2="18"/><line x1="18" y1="18" x2="6.33" y2="6.33"/><line x1="18" y1="18" x2="18" y2="1.5"/><line x1="18" y1="18" x2="29.67" y2="6.33"/>
+                <polygon points="23.5,18 21.89,21.89 18,23.5 14.11,21.89 12.5,18 14.11,14.11 18,12.5 21.89,14.11"/>
+                <polygon points="28.5,18 25.42,25.42 18,28.5 10.58,25.42 7.5,18 10.58,10.58 18,7.5 25.42,10.58"/>
+                <polygon points="33.5,18 28.96,28.96 18,33.5 7.04,28.96 2.5,18 7.04,7.04 18,2.5 28.96,7.04"/>
+              </g>
+              <polyline points="7,11 12.5,25 18,13 23.5,25 29,11" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="18" cy="13" r="2.6" fill="#FF6B4A"/>
+            </svg>
+            <span class="font-display font-bold text-[19px]">Weaver</span>
+          </div>
+          <nav aria-label="Pie de página">
+            <ul class="flex flex-wrap gap-x-7 gap-y-3 text-[14px] text-humo">
+              <li><a href="#telar" class="hover:text-white transition-colors duration-300">Servicios</a></li>
+              <li><a href="#ventajas" class="hover:text-white transition-colors duration-300">Por qué Weaver</a></li>
+              <li><a href="#casos" class="hover:text-white transition-colors duration-300">Ejemplos</a></li>
+              <li><a href="#precios" class="hover:text-white transition-colors duration-300">Precios</a></li>
+              <li><a href="#proceso" class="hover:text-white transition-colors duration-300">Proceso</a></li>
+              <li><a href="#respaldo" class="hover:text-white transition-colors duration-300">Respaldo</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="mt-8 pt-6 border-t border-subtle-dark flex flex-col sm:flex-row justify-between gap-3 text-[13px] text-humo">
+          <p class="flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            Ciudad de Guatemala, Guatemala
+          </p>
+          <p>© <span id="year">2026</span> Weaver. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<footer>
-  <div class="wrap">
-    <p><b style="color:var(--ink);font-weight:500">Lic. Yara Cabrera</b> · Psicóloga clínica · Zona 14, Ciudad de Guatemala (dirección referencial)</p>
-    <p>Esta consulta no atiende emergencias. Si estás en riesgo o en crisis, acude al servicio de urgencias más cercano o llama a los servicios de emergencia de tu localidad.</p>
-    <p>Sitio de ejemplo creado por <a href="https://somosweaver.com">Weaver</a>. Nombres y datos ficticios.</p>
-  </div>
-</footer>
-
 <script>
-(function () {
-  var NUM = '50243182227';
-  function wa(t) { return 'https://wa.me/' + NUM + '?text=' + encodeURIComponent(t); }
-  var $ = function (id) { return document.getElementById(id); };
-  var form = $('cita'), nombre = $('nombre'), motivo = $('motivo'), enviar = $('enviar'), err = $('err');
-
-  function checked(name) { return form.querySelector('input[name=' + name + ']:checked').value; }
-  function mensaje() {
-    var n = nombre.value.trim() || '[tu nombre]';
-    var t = 'Hola Lic. Yara, soy ' + n + '. Quisiera consultar disponibilidad para una sesión ' +
-            checked('mod') + ' en horario de ' + checked('hor') + '.';
-    var m = motivo.value.trim();
-    if (m) t += ' Motivo de consulta: ' + m;
-    return t;
+  // Estado del Telar Digital (el contenido de cada servicio ya está en el HTML)
+  function telar() {
+    return {
+      activeNode: 0,
+      names: ['Landing Pages & Presencia Web', 'WhatsApp Inteligente & Google Maps', 'Sitios Multipágina & Catálogos', 'Sistemas Web a Medida'],
+      chip: 0,
+      msgs: [
+        'Hola, quiero agendar una cita. ¿Qué horarios tienen disponibles?',
+        'Hola, quiero saber el precio de sus servicios. ¿Me pueden ayudar?',
+        'Hola, ¿me pueden compartir su ubicación y horario de atención?',
+      ],
+      catalog: [
+        { n: 'Sesión individual', on: true }, { n: 'Terapia de pareja', on: false },
+        { n: 'Taller grupal', on: false }, { n: 'Primera consulta', on: false },
+      ],
+      citas: [
+        { id: '9:00', client: 'Ana M.', status: 'Atendida' },
+        { id: '10:30', client: 'Carlos R.', status: 'Confirmada' },
+        { id: '12:00', client: 'Lucía G.', status: 'Pendiente' },
+        { id: '15:30', client: 'Pedro S.', status: 'Pendiente' },
+      ],
+      statuses: ['Pendiente', 'Confirmada', 'Atendida'],
+      get current() { return { name: this.names[this.activeNode] }; },
+      get picked() { return this.catalog.filter(function (c) { return c.on; }).length; },
+      setNode(i) {
+        if (this.activeNode === i) return;
+        this.activeNode = i;
+        const p = this.$refs.panel;
+        if (p) { p.classList.remove('panel-anim'); void p.offsetWidth; p.classList.add('panel-anim'); }
+      },
+      cycleStatus(ri) {
+        const r = this.citas[ri];
+        r.status = this.statuses[(this.statuses.indexOf(r.status) + 1) % this.statuses.length];
+      },
+      statusClass(st) {
+        return st === 'Atendida' ? 'bg-brand-indigo/10 text-brand-indigo'
+             : st === 'Pendiente' ? 'bg-brand-coral/20 text-grafito'
+             : 'bg-grafito text-white';
+      },
+    };
   }
-  function actualizar() { enviar.href = wa(mensaje()); if (nombre.value.trim()) err.hidden = true; }
 
-  form.addEventListener('input', actualizar);
-  form.addEventListener('change', actualizar);
-  enviar.addEventListener('click', function (e) {
-    if (!nombre.value.trim()) { e.preventDefault(); err.hidden = false; nombre.focus(); }
+  // Revelado al hacer scroll
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Respeta prefers-reduced-motion también en las animaciones SVG (partículas del telar)
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('svg').forEach(function (v) { if (v.pauseAnimations) v.pauseAnimations(); });
+    }
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (e) { io.observe(e); });
   });
-  actualizar();
-})();
 </script>
 </body>
 </html>
