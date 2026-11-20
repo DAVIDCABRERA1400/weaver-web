@@ -10,7 +10,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%233D5A4C'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23F9F7F4'%3EY%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
 <style>
   :root{
     --bg:#F9F7F4; --bg2:#F1EDE6; --ink:#262626; --ink2:#5E5B56; --accent:#3D5A4C; --line:#DDD7CC;
@@ -126,12 +126,66 @@
     .info dt{margin:3px 0 0}
     .btn.block{display:inline-block;width:auto}
   }
-  @media print{ .demo{display:none} }
+  /* ───── Capa Weaver: convierte la demo en una invitación ───── */
+  :root{--w-ink:#15171E;--w-coral:#FF6B4A;--w-indigo:#4C4FE0;--w-display:"Bricolage Grotesque","DM Sans",system-ui,sans-serif}
+  body{padding-bottom:88px}
+  .demo{background:var(--w-ink);color:#E4E5EC;border-bottom:0;font-size:14px;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 18px}
+  .demo b{color:#fff;font-weight:600}
+  .demo a{color:#fff}
+  .wlogo{width:22px;height:22px;flex:none;vertical-align:middle}
+  .wbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/1 var(--w-display);letter-spacing:-.005em;background:var(--w-coral);color:var(--w-ink);padding:13px 20px;border-radius:12px;text-decoration:none;box-shadow:0 10px 24px -10px rgba(255,107,74,.8);transition:transform .3s cubic-bezier(.16,1,.3,1)}
+  .wbtn:hover{transform:translateY(-2px)}
+  .wbtn.sm{padding:9px 14px;font-size:13.5px;border-radius:10px;box-shadow:none}
+  .wbtn svg{width:17px;height:17px;fill:currentColor}
+  .notes-toggle{font:500 13px/1 var(--sans);color:#C9CBD4;background:none;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 12px;cursor:pointer}
+  .notes-toggle:hover{color:#fff;border-color:#fff}
+
+  .wnote{display:flex;gap:12px;align-items:flex-start;margin-top:22px;max-width:34rem;background:#fff;border:1.5px solid var(--w-coral);border-radius:12px 12px 12px 4px;padding:12px 14px;font:500 14.5px/1.45 var(--sans);color:var(--ink);box-shadow:0 14px 28px -20px rgba(255,107,74,.9)}
+  .wnote .wlogo{width:26px;height:26px;margin-top:1px;background:var(--w-ink);border-radius:7px;padding:3px}
+  .wnote b{display:block;font:800 13px/1.2 var(--w-display);color:#D4452A;margin-bottom:2px}
+  body.no-notes .wnote{display:none}
+  .cols .wnote,.hero .wnote{max-width:none}
+
+  .weaver{background:var(--w-ink);color:#fff;border-top:0;padding:72px 0 80px;position:relative;overflow:hidden}
+  .weaver::before{content:"";position:absolute;right:-12%;top:-30%;width:70vmin;height:70vmin;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='white' stroke-width='.6'%3E%3Cpolygon points='132,100 122.6,122.6 100,132 77.4,122.6 68,100 77.4,77.4 100,68 122.6,77.4'/%3E%3Cpolygon points='158,100 141,141 100,158 59,141 42,100 59,59 100,42 141,59'/%3E%3Cpolygon points='184,100 159.4,159.4 100,184 40.6,159.4 16,100 40.6,40.6 100,16 159.4,40.6'/%3E%3Cpath d='M100 100L196 100M100 100L167.9 167.9M100 100L100 196M100 100L32.1 167.9M100 100L4 100M100 100L32.1 32.1M100 100L100 4M100 100L167.9 32.1'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;pointer-events:none}
+  .weaver .wrap{position:relative}
+  .weaver h2{font:800 clamp(34px,6.2vw,64px)/1 var(--w-display);letter-spacing:-.035em;max-width:16ch;margin:0}
+  .weaver .sub{margin-top:18px;font-size:19px;color:#C9CBD4;max-width:36rem}
+  .wfacts{margin:36px 0 0;display:grid;gap:0;border-top:1px solid rgba(255,255,255,.18)}
+  .wfacts div{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .wfacts dt{font-size:14px;color:#C9CBD4}
+  .wfacts dd{font:800 clamp(22px,3vw,28px)/1.15 var(--w-display);letter-spacing:-.02em}
+  .wfacts dd span{font:400 15px var(--sans);color:#C9CBD4;letter-spacing:0;display:block;margin-top:2px}
+  .weaver .row{margin-top:32px;display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center}
+  .weaver .wbtn{font-size:17px;padding:17px 26px}
+  .weaver .alt{color:#fff;font:700 16px var(--w-display);text-underline-offset:5px}
+  .weaver .other{margin-top:28px;font-size:15px;color:#9EA2B3}
+
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--w-ink);color:#fff;border-top:3px solid var(--w-coral);transform:translateY(110%);transition:transform .6s cubic-bezier(.16,1,.3,1)}
+  .sticky.is-on{transform:none}
+  .sticky .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:12px;padding-bottom:12px}
+  .sticky p{font:600 15px/1.3 var(--sans);margin:0}
+  .sticky p small{display:block;font-weight:400;font-size:13px;color:#C9CBD4}
+  .sticky .long{display:none}
+  .sticky .wbtn{white-space:nowrap}
+  @media (min-width:760px){
+    .wfacts{grid-template-columns:repeat(3,1fr);gap:32px;border-top:0}
+    .wfacts div{border-top:1px solid rgba(255,255,255,.18);border-bottom:0}
+    .sticky .long{display:inline}
+    .sticky p{font-size:16px}
+  }
+  @media (prefers-reduced-motion:reduce){.sticky,.wbtn{transition:none}}
+  @media print{ .demo,.sticky,.wnote,.weaver{display:none} }
 </style>
 </head>
 <body>
 
-<div class="demo">Sitio de ejemplo creado por <a href="https://somosweaver.com">Weaver</a> · Datos ficticios · <a id="demoWa" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20vi%20el%20sitio%20de%20ejemplo%20de%20psicolog%C3%ADa%20y%20quiero%20una%20p%C3%A1gina%20as%C3%AD%20para%20mi%20consultorio.">¿Quieres una página así para tu consultorio?</a></div>
+<div class="demo">
+  <svg class="wlogo" viewBox="0 0 36 36" aria-hidden="true"><polyline points="7,11 12.5,25 18,13 23.5,25 29,11" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="13" r="3" fill="#FF6B4A"/></svg>
+  <span><b>Esto es un sitio de ejemplo</b> hecho por <a href="https://somosweaver.com">Weaver</a>. Los datos son ficticios; tócalo, pruébalo y lee las notas.</span>
+  <a class="wbtn sm" id="demoWa" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20vi%20el%20sitio%20de%20ejemplo%20de%20psicolog%C3%ADa%20y%20quiero%20una%20p%C3%A1gina%20as%C3%AD%20para%20mi%20consultorio." target="_blank" rel="noopener">Quiero una página así</a>
+  <button class="notes-toggle" id="notesToggle" type="button" aria-pressed="true">Ocultar notas</button>
+</div>
 
 <header class="top">
   <div class="wrap">
@@ -155,6 +209,7 @@
         <a class="btn" data-wa="Hola Lic. Yara, quisiera agendar una cita." href="https://wa.me/50243182227?text=Hola%20Lic.%20Yara%2C%20quisiera%20agendar%20una%20cita.">Agendar por WhatsApp</a>
         <a class="textlink" href="#primera-cita">Cómo es la primera cita</a>
       </div>
+      <aside class="wnote"><svg class="wlogo" viewBox="0 0 36 36" aria-hidden="true"><polyline points="7,11 12.5,25 18,13 23.5,25 29,11" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="13" r="3" fill="#FF6B4A"/></svg><p><b>Un botón, una conversación</b>El paciente te escribe por WhatsApp con el mensaje ya listo. Sin llamadas perdidas ni formularios eternos.</p></aside>
       <div class="proof">
         <span><b>+900</b>pacientes atendidos</span>
         <span><b>8 años</b>de práctica clínica</span>
@@ -170,6 +225,7 @@
   <div class="wrap">
     <h2>Motivos de consulta frecuentes</h2>
     <p class="muted">Algunas de las razones por las que las personas me escriben. Si lo tuyo no está en la lista, cuéntame en el mensaje.</p>
+    <aside class="wnote"><svg class="wlogo" viewBox="0 0 36 36" aria-hidden="true"><polyline points="7,11 12.5,25 18,13 23.5,25 29,11" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="13" r="3" fill="#FF6B4A"/></svg><p><b>Responde antes de que pregunten</b>Cada motivo de consulta aclara una duda y lleva a la persona a escribirte con más seguridad.</p></aside>
     <ul class="reasons">
       <li><b>Ansiedad</b><span>Preocupación constante, tensión en el cuerpo, dificultad para dormir o para desconectarte.</span></li>
       <li><b>Estrés laboral</b><span>Agotamiento, irritabilidad y la sensación de que el trabajo ocupa todo el día.</span></li>
@@ -207,6 +263,7 @@
 <section id="consultas">
   <div class="wrap">
     <h2>Consultas y horarios</h2>
+    <aside class="wnote"><svg class="wlogo" viewBox="0 0 36 36" aria-hidden="true"><polyline points="7,11 12.5,25 18,13 23.5,25 29,11" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="13" r="3" fill="#FF6B4A"/></svg><p><b>Menos mensajes repetidos</b>Horario, precio y modalidad a la vista: dejas de contestar lo mismo todos los días.</p></aside>
     <dl class="info">
       <div><dt>Modalidad</dt><dd>Presencial en Zona 14, Ciudad de Guatemala<span>O por videollamada (Google Meet o Zoom).</span></dd></div>
       <div><dt>Horarios</dt><dd>Lunes a viernes, de 2:00 a 7:00 p. m.<span>Sábados por la mañana, de 8:00 a. m. a 12:00 m.</span></dd></div>
@@ -220,6 +277,7 @@
   <div class="wrap">
     <h2>Agenda tu cita</h2>
     <p class="muted">Llena estos datos y se abre WhatsApp con el mensaje ya escrito. Respondo durante el día hábil.</p>
+    <aside class="wnote"><svg class="wlogo" viewBox="0 0 36 36" aria-hidden="true"><polyline points="7,11 12.5,25 18,13 23.5,25 29,11" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="13" r="3" fill="#FF6B4A"/></svg><p><b>Pruébalo ahora</b>Escribe un nombre y toca enviar: se abre WhatsApp con todo armado. En tu página, ese mensaje llega a tu número.</p></aside>
     <form id="cita" onsubmit="return false" autocomplete="off">
       <div>
         <label for="nombre">Nombre del paciente</label>
@@ -255,6 +313,7 @@
 <section id="preguntas">
   <div class="wrap">
     <h2>Preguntas frecuentes</h2>
+    <aside class="wnote"><svg class="wlogo" viewBox="0 0 36 36" aria-hidden="true"><polyline points="7,11 12.5,25 18,13 23.5,25 29,11" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="13" r="3" fill="#FF6B4A"/></svg><p><b>Tu mejor ayudante</b>Las dudas que te hacen siempre, respondidas a cualquier hora, mientras tú atiendes.</p></aside>
     <div class="faq">
       <details><summary>¿Lo que hablo en consulta es confidencial?</summary><p>Sí. Todo lo que conversamos está protegido por el secreto profesional. Las únicas excepciones son situaciones de riesgo para tu vida o la de otra persona, y te las explico desde la primera cita.</p></details>
       <details><summary>¿Qué pasa si necesito cancelar o cambiar mi cita?</summary><p>Avísame con al menos 24 horas de anticipación y la reprogramamos sin costo. Si la cita se cancela el mismo día o no te presentas, se cobra la sesión.</p></details>
@@ -262,6 +321,23 @@
       <details><summary>¿Cuántas sesiones voy a necesitar?</summary><p>Depende de cada caso. En la primera cita te doy un estimado y lo vamos revisando. Cada sesión dura 50 minutos y normalmente nos vemos una vez por semana al inicio.</p></details>
       <details><summary>¿Atiendes adolescentes?</summary><p>Sí, desde los 13 años. La primera sesión incluye a su mamá, papá o encargado, y después trabajo con el adolescente de forma individual.</p></details>
     </div>
+  </div>
+</section>
+
+<section class="weaver" id="quiero-una" aria-labelledby="w-t">
+  <div class="wrap">
+    <h2 id="w-t">Tu consultorio también puede tener una página así.</h2>
+    <p class="sub">Todo lo que acabas de ver, con tu nombre, tu foto y tus horarios. Hecha para que tus pacientes te escriban por WhatsApp.</p>
+    <dl class="wfacts">
+      <div><dt>Primer avance</dt><dd>Semana 1</dd></div>
+      <div><dt>Tu página lista en</dt><dd>1 a 2 semanas</dd></div>
+      <div><dt>Plan Impulso Digital</dt><dd>Desde Q200 / mes<span>Puesta en marcha Q0 para los primeros 5 clientes</span></dd></div>
+    </dl>
+    <div class="row">
+      <a class="wbtn" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20vi%20el%20sitio%20de%20ejemplo%20de%20psicolog%C3%ADa%20y%20quiero%20una%20p%C3%A1gina%20as%C3%AD%20para%20mi%20consultorio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Quiero una página así</a>
+      <a class="alt" href="https://somosweaver.com/#precios">Ver precios y planes</a>
+    </div>
+    <p class="other">¿No eres psicólogo o psicóloga? Hacemos lo mismo para clínicas, tiendas, servicios y cualquier negocio en Guatemala.</p>
   </div>
 </section>
 </main>
@@ -273,6 +349,14 @@
     <p>Sitio de ejemplo creado por <a href="https://somosweaver.com">Weaver</a>. Nombres y datos ficticios.</p>
   </div>
 </footer>
+
+
+<div class="sticky" id="sticky" role="region" aria-label="Pide tu página">
+  <div class="wrap">
+    <p>¿Te gustó? <span class="long">Tu página así, lista en 1 a 2 semanas.</span><small>Desde Q200/mes. Puesta en marcha Q0 para los primeros 5 clientes.</small></p>
+    <a class="wbtn" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20vi%20el%20sitio%20de%20ejemplo%20de%20psicolog%C3%ADa%20y%20quiero%20una%20p%C3%A1gina%20as%C3%AD%20para%20mi%20consultorio." target="_blank" rel="noopener">Quiero una así</a>
+  </div>
+</div>
 
 <script>
 (function () {
@@ -298,6 +382,21 @@
     if (!nombre.value.trim()) { e.preventDefault(); err.hidden = false; nombre.focus(); }
   });
   actualizar();
+
+  /* Capa Weaver: barra fija y notas */
+  var st = document.getElementById('sticky');
+  var cierre = document.getElementById('quiero-una');
+  function barra() {
+    var enCierre = cierre.getBoundingClientRect().top < window.innerHeight - 120;
+    st.classList.toggle('is-on', window.scrollY > 240 && !enCierre);
+  }
+  window.addEventListener('scroll', barra, { passive: true }); barra();
+  var tg = document.getElementById('notesToggle');
+  tg.addEventListener('click', function () {
+    var off = document.body.classList.toggle('no-notes');
+    tg.textContent = off ? 'Mostrar notas' : 'Ocultar notas';
+    tg.setAttribute('aria-pressed', String(!off));
+  });
 })();
 </script>
 </body>
