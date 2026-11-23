@@ -3,1144 +3,189 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Weaver · Tecnología simple para tu negocio en Guatemala</title>
-<meta name="description" content="Weaver crea landing pages, sitios y catálogos que convierten visitas en mensajes de WhatsApp para negocios en Guatemala. desde Q200 al mes y Q0 de puesta en marcha para los primeros 5 clientes.">
-<meta name="theme-color" content="#4C4FE0">
+<title>Weaver · Conectamos ideas. Tejemos soluciones simples.</title>
+<meta name="description" content="Weaver crea software simple que convierte los datos de un negocio en decisiones, un sector a la vez. Su primer producto es Hilo, para propietarios de inmuebles en alquiler.">
+<meta name="theme-color" content="#F5F6FA">
 <link rel="canonical" href="https://somosweaver.com/">
-<meta property="og:url" content="https://somosweaver.com/">
-<meta property="og:image" content="https://somosweaver.com/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:title" content="Weaver">
+<meta property="og:description" content="Conectamos ideas. Tejemos soluciones simples.">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="es_GT">
-<meta property="og:site_name" content="Weaver">
-<meta property="og:title" content="Weaver · Tu negocio, conectado con tecnología simple">
-<meta property="og:description" content="Landing pages, sitios y catálogos que convierten visitas en mensajes de WhatsApp. desde Q200 al mes y Q0 de puesta en marcha para los primeros 5 clientes.">
-<meta property="og:image:alt" content="Weaver: Tu negocio, conectado con tecnología simple.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Weaver · Tu negocio, conectado con tecnología simple">
-<meta name="twitter:description" content="Landing pages, sitios y catálogos que convierten visitas en mensajes de WhatsApp. desde Q200 al mes y Q0 de puesta en marcha para los primeros 5 clientes.">
-<meta name="twitter:image" content="https://somosweaver.com/og.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='9' fill='%234C4FE0'/%3E%3Cpolyline points='7,11 12.5,25 18,13 23.5,25 29,11' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='18' cy='13' r='2.8' fill='%23FF6B4A'/%3E%3C/svg%3E">
-
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Weaver", "url": "https://somosweaver.com/", "email": "info@somosweaver.com", "telephone": "+50243182227", "areaServed": {"@type": "Country", "name": "Guatemala"}, "description": "Landing pages, sitios multipágina, catálogos y sistemas web a medida para negocios en Guatemala."}</script>
-
+<meta property="og:url" content="https://somosweaver.com/">
+<link rel="icon" type="image/svg+xml" href="assets/logos/weaver-icon-light.svg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Weaver","url":"https://somosweaver.com/","email":"info@somosweaver.com","telephone":"+50243182227","areaServed":{"@type":"Country","name":"Guatemala"},"description":"Weaver desarrolla software simple que convierte los datos de un negocio en decisiones. Su primer producto es Hilo."}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/tokens.css">
 <style>
-/* ───────────── Tokens ───────────── */
-:root {
-  --indigo: #4C4FE0;
-  --indigo-deep: #2F32B8;
-  --ink: #15171E;
-  --paper: #F5F6FA;
-  --ice: #E6E7FB;
-  --coral: #FF6B4A;
-  --slate: #5B5E6B;
-  --smoke: #C9CBD4;
-  --wa: #128C4A;
-  --wa-tint: #E7F7EC;
-  --line: rgba(21, 23, 30, .16);
-  --display: "Bricolage Grotesque", system-ui, sans-serif;
-  --body: "Hanken Grotesk", system-ui, sans-serif;
-  --ease: cubic-bezier(.16, 1, .3, 1);
-  --wrap: 1160px;
-  --cut: clamp(38px, 6vw, 92px);
-}
-
+:root { --wrap: 1180px; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body {
-  font-family: var(--body);
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  color: var(--ink);
-  background: var(--paper);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  overflow-x: hidden;
-}
-h1, h2, h3, h4 { font-weight: inherit; }
-a { color: inherit; text-decoration: none; }
-ul, ol { list-style: none; }
-button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scrollbar-color: var(--muted) var(--bg); }
+body { font: 400 1rem/1.55 var(--font-body); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; overflow-x: hidden; accent-color: var(--primary); caret-color: var(--primary); }
+::selection { background: var(--primary); color: var(--on-primary); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; text-wrap: balance; }
+a { color: inherit; }
+ul { list-style: none; }
 svg { display: block; }
-:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; border-radius: 6px; }
-section[id] { scroll-margin-top: 5.5rem; }
-
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
+.on-primary :focus-visible, .on-ink :focus-visible { outline-color: var(--on-primary); }
+section[id] { scroll-margin-top: 5rem; }
 .wrap { width: min(var(--wrap), 100% - 2.5rem); margin-inline: auto; }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.skip { position: absolute; left: .75rem; top: -4rem; z-index: 100; background: #fff; color: var(--ink); padding: .75rem 1rem; border-radius: 10px; font-weight: 600; }
+.skip { position: absolute; left: .75rem; top: -4rem; z-index: 100; background: var(--surface); padding: .75rem 1rem; border-radius: var(--radius-sm); font-weight: 600; box-shadow: var(--shadow-card); }
 .skip:focus { top: .75rem; }
 
-/* ───────────── Tipografía ───────────── */
-.title {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: clamp(2.1rem, 4.8vw, 3.7rem);
-  line-height: 1.03;
-  letter-spacing: -.028em;
-  max-width: 19ch;
-}
-.intro { margin-top: 1.1rem; font-size: 1.15rem; color: var(--slate); max-width: 46ch; }
-.on-dark .intro { color: var(--smoke); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; font: 600 .95rem/1.2 var(--font-body); min-height: 2.9rem; padding: .6rem 1.4rem; background: var(--primary); color: var(--on-primary); border-radius: var(--radius-sm); text-decoration: none; transition: filter .2s; }
+.btn:hover { filter: brightness(.92); }
+.btn svg { width: 1.1rem; height: 1.1rem; }
+.link { font-weight: 600; font-size: .95rem; text-underline-offset: .3em; text-decoration-thickness: 1.5px; }
+.link:hover { color: var(--primary); }
 
-/* ───────────── Botones ───────────── */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
-  font-family: var(--display); font-weight: 700; font-size: 1.02rem; letter-spacing: -.005em;
-  padding: 1rem 1.6rem; border-radius: 14px;
-  transition: transform .35s var(--ease), box-shadow .35s var(--ease), background-color .25s;
-}
-.btn:hover { transform: translateY(-3px); }
-.btn-coral { background: var(--coral); color: var(--ink); box-shadow: 0 14px 30px -12px rgba(255, 107, 74, .75); }
-.btn-ink { background: var(--ink); color: #fff; }
-.btn-indigo { background: var(--indigo); color: #fff; box-shadow: 0 14px 30px -14px rgba(76, 79, 224, .8); }
-.btn-line { border: 2px solid var(--ink); color: var(--ink); padding: calc(1rem - 2px) calc(1.6rem - 2px); }
-.btn-line:hover { background: var(--ink); color: #fff; }
-.btn-block { width: 100%; }
-.wa-ico { width: 1.15em; height: 1.15em; flex: none; }
+.nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: .5px solid var(--border-subtle); }
+.nav-in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 4rem; }
+.brand { display: inline-flex; align-items: center; gap: var(--space-2); font: 700 1.25rem/1 var(--font-display); text-decoration: none; }
+.brand img { width: 34px; height: 34px; }
+.nav-links { display: none; gap: 2rem; font: 500 .9rem var(--font-body); }
+.nav-links a { text-decoration: none; padding: .4rem 0; color: var(--ink-secondary); }
+.nav-links a:hover { color: var(--primary); }
+.nav .btn { min-height: 2.5rem; padding: .4rem 1rem; font-size: .9rem; }
+@media (min-width: 820px) { .nav-links { display: flex; } }
 
-/* ───────────── Navegación ───────────── */
-.nav {
-  position: fixed; inset: 0 0 auto 0; z-index: 50;
-  color: #fff;
-  transition: background-color .3s, color .3s, box-shadow .3s;
-}
-.nav.is-solid { background: rgba(245, 246, 250, .9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); color: var(--ink); box-shadow: 0 1px 0 var(--line); }
-.nav-in { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: 4.5rem; }
-.brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--display); font-weight: 800; font-size: 1.4rem; letter-spacing: -.03em; }
-.brand svg { width: 34px; height: 34px; }
-.brand .w-line { stroke: currentColor; }
-.nav-links { display: none; gap: 2rem; font-weight: 600; font-size: .95rem; }
-.nav-links a { padding: .4rem 0; background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat; transition: background-size .35s var(--ease); }
-.nav-links a:hover { background-size: 100% 2px; }
-.nav-right { display: flex; align-items: center; gap: 1rem; }
-.nav-status { display: none; align-items: center; gap: .55rem; font-size: .85rem; opacity: .85; }
-.dot-live { position: relative; width: 8px; height: 8px; border-radius: 50%; background: var(--coral); }
-.dot-live::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--coral); animation: ping 1.9s var(--ease) infinite; }
-@keyframes ping { 0% { transform: scale(1); opacity: .7; } 80%, 100% { transform: scale(2.8); opacity: 0; } }
-.nav .btn { padding: .7rem 1.1rem; font-size: .92rem; border-radius: 11px; display: none; }
-.burger { width: 44px; height: 44px; display: grid; place-items: center; margin-right: -.5rem; border-radius: 12px; }
-.burger svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
-.menu { display: none; background: var(--paper); color: var(--ink); border-top: 1px solid var(--line); padding: .75rem 0 1.25rem; box-shadow: 0 24px 40px -24px rgba(21, 23, 30, .4); }
-.menu.is-open { display: block; }
-.menu a:not(.btn) { display: block; padding: .95rem 0; font-family: var(--display); font-weight: 700; font-size: 1.35rem; border-bottom: 1px solid var(--line); }
-.menu .btn { margin-top: 1rem; width: 100%; }
-@media (min-width: 640px) { .nav .btn { display: inline-flex; } }
-@media (min-width: 1000px) { .nav-links { display: flex; } .burger { display: none; } .menu { display: none !important; } }
-@media (min-width: 1180px) { .nav-status { display: flex; } }
+.hero { padding: 3.5rem 0 0; }
+.hero-grid { display: grid; gap: 2.5rem; align-items: center; }
+h1 { font-size: clamp(2.3rem, 5.2vw, 3.8rem); line-height: 1.05; letter-spacing: -.02em; max-width: 15ch; }
+.lede { margin-top: 1.1rem; color: var(--ink-secondary); font-size: 1.1rem; max-width: 34rem; }
+.cta-row { margin-top: 1.6rem; display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.5rem; }
+@media (min-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; } }
 
-/* ───────────── Hero ───────────── */
-.hero {
-  position: relative;
-  background: var(--indigo);
-  color: #fff;
-  padding: 8.5rem 0 calc(var(--cut) + 3.5rem);
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--cut)), 75% 100%, 50% calc(100% - var(--cut) * .85), 25% 100%, 0 calc(100% - var(--cut)));
-  overflow: hidden;
-}
-.hero::before { /* telaraña de fondo */
-  content: ""; position: absolute; right: -18%; top: -22%; width: 90vmin; height: 90vmin; opacity: .13; pointer-events: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='white' stroke-width='.5'%3E%3Cpolygon points='132,100 122.6,122.6 100,132 77.4,122.6 68,100 77.4,77.4 100,68 122.6,77.4'/%3E%3Cpolygon points='158,100 141,141 100,158 59,141 42,100 59,59 100,42 141,59'/%3E%3Cpolygon points='184,100 159.4,159.4 100,184 40.6,159.4 16,100 40.6,40.6 100,16 159.4,40.6'/%3E%3Cpath d='M100 100L196 100M100 100L167.9 167.9M100 100L100 196M100 100L32.1 167.9M100 100L4 100M100 100L32.1 32.1M100 100L100 4M100 100L167.9 32.1'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
-}
-.hero-grid { position: relative; display: grid; gap: 3.5rem; align-items: center; }
-.hero h1 {
-  font-family: var(--display); font-weight: 800;
-  font-size: clamp(2.9rem, 8.4vw, 5.9rem);
-  line-height: .96; letter-spacing: -.04em;
-}
-.hero .lede { margin-top: 1.75rem; font-size: clamp(1.1rem, 1.6vw, 1.3rem); line-height: 1.55; color: rgba(255, 255, 255, .88); max-width: 34rem; }
-.cta-row { margin-top: 2.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; }
-.link-under { font-family: var(--display); font-weight: 700; padding: .35rem 0; background: linear-gradient(currentColor, currentColor) 0 100% / 100% 2px no-repeat; transition: background-size .35s var(--ease); }
-.link-under:hover { background-size: 0 2px; background-position: 100% 100%; }
-.facts { margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 1.25rem 0; max-width: 36rem; }
-.facts div { padding-right: 1.5rem; margin-right: 1.5rem; border-right: 1px solid rgba(255, 255, 255, .28); }
-.facts div:last-child { border: 0; margin: 0; padding: 0; }
-.facts dt { font-size: .85rem; color: rgba(255, 255, 255, .75); }
-.facts dd { font-family: var(--display); font-weight: 800; font-size: 1.55rem; letter-spacing: -.02em; line-height: 1.2; white-space: nowrap; }
+/* Composición de la portada de identidad: losa índigo + satélites */
+.cover { display: grid; gap: var(--space-4); grid-template-columns: 1.7fr 1fr; grid-template-rows: 1fr 1fr; min-height: 22rem; }
+.tile { border-radius: var(--radius-xl); position: relative; overflow: hidden; }
+.tile.slab { grid-row: span 2; background: var(--primary); display: grid; place-items: center; box-shadow: var(--shadow-card); }
+.tile.slab svg { width: 78%; height: auto; }
+.tile.ink { background: var(--ink); color: var(--on-primary); display: grid; place-items: center; }
+.tile.ink svg { width: 62%; opacity: .55; }
+.tile.hilo { background: var(--accent); color: var(--ink); padding: var(--space-4); display: flex; flex-direction: column; justify-content: flex-end; text-decoration: none; transition: filter .2s; }
+.tile.hilo:hover { filter: brightness(.95); }
+.tile.hilo b { font: 700 1.5rem/1 var(--font-display); }
+.tile.hilo span { font-size: .85rem; font-weight: 600; margin-top: .3rem; }
 
-@media (min-width: 960px) {
-  .hero { padding-top: 10rem; }
-  .hero-grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); gap: 3rem; }
-}
+.block { padding: 6.5rem 0 0; }
+h2.title { font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.1; letter-spacing: -.02em; max-width: 20ch; }
+.block-intro { margin-top: 1rem; color: var(--ink-secondary); font-size: 1.05rem; max-width: 38rem; }
 
-/* Teléfono: la historia completa de un cliente */
-.stage { display: grid; justify-items: center; gap: 1.1rem; }
-.phone {
-  width: min(292px, 100%); aspect-ratio: 292 / 590;
-  background: var(--ink); border-radius: 44px; padding: 10px;
-  box-shadow: 0 50px 90px -30px rgba(8, 9, 70, .75), 0 0 0 1.5px rgba(255, 255, 255, .14) inset;
-  rotate: 3deg;
-}
-.screen { position: relative; height: 100%; border-radius: 35px; overflow: hidden; background: #fff; color: var(--ink); }
-.screen::before { /* isla */
-  content: ""; position: absolute; top: 10px; left: 50%; width: 76px; height: 20px; border-radius: 12px; background: var(--ink); transform: translateX(-50%); z-index: 5;
-}
-.scene { position: absolute; inset: 0; padding-top: 3.1rem; opacity: 0; transform: translateY(10px); transition: opacity .5s var(--ease), transform .5s var(--ease); pointer-events: none; }
-.phone[data-scene="0"] .scene-0,
-.phone[data-scene="1"] .scene-1,
-.phone[data-scene="2"] .scene-2 { opacity: 1; transform: none; }
+.ideas { margin-top: 2.25rem; border-top: .5px solid var(--border-subtle); }
+.idea { padding: 1.6rem 0; border-bottom: .5px solid var(--border-subtle); display: grid; gap: .5rem 3rem; }
+.idea h3 { font-size: clamp(1.2rem, 2.3vw, 1.5rem); line-height: 1.2; }
+.idea p { color: var(--ink-secondary); max-width: 44ch; }
+@media (min-width: 820px) { .idea { grid-template-columns: 1fr 1.2fr; align-items: center; } }
 
-.s-search { margin: .4rem 1rem 0; display: flex; align-items: center; gap: .55rem; border: 1.5px solid #D9DBE4; border-radius: 999px; padding: .6rem .9rem; font-size: .82rem; min-height: 2.5rem; }
-.s-search svg { width: 15px; height: 15px; stroke: var(--slate); fill: none; stroke-width: 2.2; stroke-linecap: round; flex: none; }
-.caret::after { content: ""; display: inline-block; width: 1.5px; height: 1em; margin-left: 1px; background: var(--ink); vertical-align: -2px; animation: blink 1s steps(1) infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-.s-result { margin: 1.1rem 1rem 0; padding: .8rem; border-radius: 14px; border: 1.5px solid transparent; transition: border-color .4s, background-color .4s, box-shadow .4s; }
-.s-result.is-hit { border-color: var(--indigo); background: var(--ice); }
-.s-url { font-size: .7rem; color: var(--slate); }
-.s-title { margin-top: .15rem; font-family: var(--display); font-weight: 700; font-size: .95rem; line-height: 1.25; color: var(--indigo-deep); }
-.s-meta { margin-top: .35rem; display: flex; gap: .8rem; font-size: .72rem; color: var(--slate); }
-.s-meta b { color: var(--ink); font-weight: 600; }
-.skel { margin: .85rem 1rem 0; }
-.skel i { display: block; height: 8px; border-radius: 4px; background: #ECEDF3; margin-top: 7px; }
-.skel i:nth-child(1) { width: 40%; height: 7px; }
-.skel i:nth-child(2) { width: 82%; height: 10px; background: #E1E3EC; }
-.skel i:nth-child(3) { width: 95%; }
+.products { margin-top: 2.5rem; display: grid; gap: var(--space-4); }
+.card { background: var(--surface); border-radius: var(--radius-xl); box-shadow: var(--shadow-card); padding: var(--space-8); display: flex; flex-direction: column; gap: .8rem; }
+.card h3 { font-size: 1.4rem; }
+.card p { color: var(--ink-secondary); max-width: 40ch; }
+.card .hilo-logo { display: flex; align-items: center; gap: .6rem; }
+.card .hilo-logo svg { width: 40px; height: 40px; }
+.card .hilo-logo b { font: 800 1.9rem/1 "Plus Jakarta Sans", var(--font-display); letter-spacing: -.03em; color: #14532D; }
+.card .go { margin-top: auto; padding-top: 1rem; }
+.card.soon { background: transparent; box-shadow: none; border: 1.5px dashed var(--ink-secondary); justify-content: flex-end; min-height: 14rem; }
+@media (min-width: 820px) { .products { grid-template-columns: 1.5fr 1fr; } }
 
-.s-site-nav { display: flex; align-items: center; justify-content: space-between; padding: .5rem 1rem .8rem; border-bottom: 1px solid #ECEDF3; font-family: var(--display); font-weight: 800; font-size: .85rem; }
-.s-site-nav span { font-weight: 600; font-size: .68rem; color: var(--slate); font-family: var(--body); }
-.s-site-body { padding: 1.2rem 1rem; }
-.s-site-body h4 { font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-height: 1.05; letter-spacing: -.03em; }
-.s-site-body p { margin-top: .6rem; font-size: .78rem; color: var(--slate); line-height: 1.45; }
-.s-wa { position: relative; margin-top: 1rem; display: inline-flex; align-items: center; gap: .45rem; background: var(--wa); color: #fff; font-weight: 700; font-size: .78rem; padding: .65rem .9rem; border-radius: 10px; transition: transform .25s; }
-.s-wa svg { width: 14px; height: 14px; fill: #fff; }
-.s-wa.is-tap { transform: scale(.94); }
-.s-wa.is-tap::after { content: ""; position: absolute; right: 18px; top: 50%; width: 36px; height: 36px; margin: -18px 0 0; border-radius: 50%; background: rgba(21, 23, 30, .25); animation: tap .6s var(--ease) both; }
-@keyframes tap { from { transform: scale(.2); opacity: 1; } to { transform: scale(1.5); opacity: 0; } }
-.s-blocks { margin-top: 1.1rem; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
-.s-blocks i { height: 54px; border-radius: 10px; background: #F0F1F6; }
-
-.wa-head { margin-top: -.2rem; display: flex; align-items: center; gap: .6rem; background: var(--wa); color: #fff; padding: .7rem 1rem; }
-.wa-av { width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 255, 255, .22); display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: .72rem; }
-.wa-head b { display: block; font-size: .85rem; line-height: 1.1; }
-.wa-head small { font-size: .68rem; opacity: .85; }
-.wa-body { height: calc(100% - 3.1rem - 3.4rem); padding: 1rem .8rem; background: #EFEAE2; display: flex; flex-direction: column; gap: .5rem; }
-.bub { max-width: 84%; padding: .5rem .7rem; border-radius: 12px; font-size: .78rem; line-height: 1.35; opacity: 0; transform: translateY(8px) scale(.94); transition: opacity .4s var(--ease), transform .4s var(--ease); box-shadow: 0 1px 1px rgba(0, 0, 0, .08); }
-.bub.is-on { opacity: 1; transform: none; }
-.bub.out { align-self: flex-end; background: #D9FDD3; border-top-right-radius: 3px; }
-.bub.in { align-self: flex-start; background: #fff; border-top-left-radius: 3px; }
-.bub.typing { align-self: flex-start; background: #fff; display: flex; gap: 4px; padding: .7rem .8rem; }
-.bub.typing[hidden] { display: none; }
-.bub.typing i { width: 6px; height: 6px; border-radius: 50%; background: #9AA0AE; animation: bob 1s infinite; }
-.bub.typing i:nth-child(2) { animation-delay: .15s; }
-.bub.typing i:nth-child(3) { animation-delay: .3s; }
-@keyframes bob { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
-.bub.ok { align-self: stretch; max-width: none; margin-top: .4rem; background: var(--ink); color: #fff; display: flex; align-items: center; gap: .7rem; padding: .7rem .8rem; border-radius: 14px; }
-.bub.ok .chk { width: 30px; height: 30px; border-radius: 50%; background: var(--coral); display: grid; place-items: center; flex: none; }
-.bub.ok .chk svg { width: 16px; height: 16px; stroke: var(--ink); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.bub.ok b { display: block; font-family: var(--display); font-size: .92rem; line-height: 1.15; }
-.bub.ok span { font-size: .72rem; color: var(--smoke); }
-
-.rail { width: min(292px, 100%); display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-.rail li { font-size: .72rem; line-height: 1.25; color: rgba(255, 255, 255, .65); border-top: 3px solid rgba(255, 255, 255, .28); padding-top: .45rem; transition: color .4s, border-color .4s; }
-.rail li.is-on { color: #fff; border-color: var(--coral); }
-.replay { font-size: .85rem; font-weight: 600; color: #fff; opacity: 0; pointer-events: none; transition: opacity .4s; padding: .2rem .4rem; background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1.5px no-repeat; }
-.replay.is-show { opacity: .9; pointer-events: auto; }
-
-/* ───────────── Secciones ───────────── */
-.band { padding-block: clamp(4.5rem, 9vw, 8.5rem); }
-.band-tight { padding-block: clamp(3.5rem, 6vw, 5.5rem); }
-
-/* Servicios */
-.acc { margin-top: 3.25rem; border-top: 2px solid var(--ink); }
-.acc-item { border-bottom: 1px solid var(--line); }
-.acc-btn { display: flex; align-items: baseline; gap: 1rem 1.5rem; width: 100%; text-align: left; padding: 1.5rem 0; flex-wrap: wrap; }
-.acc-name { flex: 1 1 18rem; font-family: var(--display); font-weight: 800; font-size: clamp(1.7rem, 4.4vw, 3.2rem); line-height: 1.02; letter-spacing: -.03em; transition: color .3s, transform .5s var(--ease); }
-.acc-btn:hover .acc-name { color: var(--indigo); transform: translateX(6px); }
-.acc-item.is-open .acc-name { color: var(--indigo); transform: none; }
-.acc-time { font-weight: 600; font-size: .95rem; color: var(--slate); }
-.acc-icon { width: 26px; height: 26px; align-self: center; stroke: currentColor; stroke-width: 2.4; fill: none; stroke-linecap: round; transition: transform .5s var(--ease); }
-.acc-item.is-open .acc-icon { transform: rotate(45deg); }
-.acc-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .55s var(--ease); }
-.acc-item.is-open .acc-panel { grid-template-rows: 1fr; }
-.acc-inner { overflow: hidden; min-height: 0; }
-.acc-body { display: grid; gap: 2rem; padding: .25rem 0 3rem; }
-.acc-lead { font-family: var(--display); font-weight: 700; font-size: clamp(1.3rem, 2.4vw, 1.75rem); line-height: 1.15; letter-spacing: -.02em; }
-.acc-text p { margin-top: .85rem; color: var(--slate); max-width: 42ch; }
-.ticks { margin-top: 1.5rem; display: grid; gap: .65rem; font-weight: 500; }
-.ticks li { display: flex; gap: .75rem; align-items: flex-start; }
-.ticks li::before {
-  content: ""; flex: none; width: 20px; height: 20px; margin-top: 2px;
-  background: var(--tick, var(--indigo));
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
-          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
-}
-.acc-text .btn { margin-top: 2rem; }
-.well { background: var(--ice); border-radius: 22px; padding: 1.25rem; align-self: start; }
-.well-note { margin-top: .9rem; font-size: .85rem; color: var(--slate); }
-.mini { background: #fff; border-radius: 14px; box-shadow: 0 10px 30px -18px rgba(47, 50, 184, .5); overflow: hidden; }
-.mini-bar { display: flex; align-items: center; gap: 6px; padding: .55rem .8rem; background: #EEF0F8; }
-.mini-bar i { width: 8px; height: 8px; border-radius: 50%; background: #D3D6E3; }
-.mini-bar span { margin-left: .4rem; flex: 1; font-size: .72rem; color: var(--slate); background: #fff; border-radius: 6px; padding: .12rem .5rem; }
-.mini-pad { padding: 1rem; }
-.speed { display: flex; align-items: center; gap: 1.1rem; }
-.speed .ring { position: relative; width: 74px; height: 74px; flex: none; }
-.speed svg { transform: rotate(-90deg); width: 74px; height: 74px; }
-.speed .ring b { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 1.3rem; }
-.speed small { font-size: .78rem; color: var(--slate); }
-.speed strong { display: block; font-family: var(--display); font-size: 1.05rem; }
-.chip-row { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .6rem; }
-.chip { border: 1.5px solid var(--line); border-radius: 999px; padding: .4rem .85rem; font-weight: 600; font-size: .85rem; background: #fff; transition: background-color .25s, color .25s, border-color .25s; }
-.chip[aria-pressed="true"] { background: var(--indigo); color: #fff; border-color: var(--indigo); }
-.bubble-prev { margin-top: .5rem; background: var(--wa-tint); border: 1px solid rgba(18, 140, 74, .22); border-radius: 4px 14px 14px 14px; padding: .65rem .8rem; font-size: .9rem; line-height: 1.4; }
-.mini small.cap { display: block; margin-top: .85rem; font-size: .78rem; color: var(--slate); }
-.cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
-.cat { text-align: left; border: 1.5px solid var(--line); border-radius: 12px; padding: .65rem .75rem; background: #fff; transition: background-color .25s, border-color .25s; }
-.cat b { display: block; font-size: .9rem; }
-.cat span { font-size: .75rem; color: var(--slate); }
-.cat[aria-pressed="true"] { border-color: var(--indigo); background: var(--ice); }
-.cat[aria-pressed="true"] span { color: var(--indigo-deep); font-weight: 700; }
-.quote-bar { margin-top: .7rem; display: flex; justify-content: space-between; gap: .5rem; background: var(--wa); color: #fff; font-weight: 700; font-size: .85rem; padding: .65rem .85rem; border-radius: 10px; }
-.tbl { width: 100%; border-collapse: collapse; text-align: left; font-size: .85rem; }
-.tbl th { background: #EEF0F8; color: var(--slate); font-weight: 600; padding: .55rem .8rem; }
-.tbl td { padding: .55rem .8rem; border-top: 1px solid #ECEDF3; }
-.tbl th:last-child, .tbl td:last-child { text-align: right; }
-.status { border-radius: 999px; padding: .25rem .7rem; font-weight: 700; font-size: .75rem; transition: background-color .3s, color .3s; }
-.status[data-s="Pendiente"] { background: rgba(255, 107, 74, .22); color: var(--ink); }
-.status[data-s="Confirmada"] { background: var(--ink); color: #fff; }
-.status[data-s="Atendida"] { background: var(--ice); color: var(--indigo-deep); }
-
-@media (min-width: 900px) {
-  .acc-body { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4.5rem; }
-}
-
-/* Por qué Weaver */
-.dark { background: var(--ink); color: var(--paper); }
-.dark .title { color: #fff; }
-.why-grid { margin-top: 4rem; display: grid; gap: 5rem; }
-.big { font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: .98; letter-spacing: -.035em; }
-.why-sub { margin-top: .9rem; color: var(--smoke); max-width: 46ch; }
-.race { margin-top: 2.75rem; display: grid; gap: 1.75rem; max-width: 52rem; }
-.race-head { display: flex; justify-content: space-between; gap: 1rem; font-size: .92rem; margin-bottom: .5rem; flex-wrap: wrap; }
-.race-head b { font-weight: 700; }
-.race-head span { color: var(--smoke); }
-.track { height: 3rem; border-radius: 12px; background: rgba(255, 255, 255, .06); position: relative; overflow: hidden; }
-.bar { height: 100%; border-radius: 12px; width: 0; transition: width 1.8s var(--ease); display: flex; align-items: center; gap: 4px; padding: 5px; }
-.in-view .bar { width: var(--w); }
-.bar.slow { background: #2B2E3B; }
-.bar.slow span { flex: 1; height: 100%; border-radius: 8px; background: rgba(255, 255, 255, .08); display: grid; place-items: center; font-size: .72rem; color: var(--smoke); overflow: hidden; white-space: nowrap; }
-.bar.slow span:nth-child(3) { flex: 1.6; }
-.bar.fast { background: var(--coral); transition-delay: .4s; padding: 0; }
-.fast-tag { position: absolute; top: 50%; translate: 0 -50%; left: calc(var(--w) + .9rem); font-weight: 700; font-size: .92rem; opacity: 0; transition: opacity .6s 1.6s; }
-.in-view .fast-tag { opacity: 1; }
-.months { display: flex; justify-content: space-between; font-size: .75rem; color: #8E92A3; border-top: 1px solid rgba(255, 255, 255, .14); padding-top: .55rem; }
-
-.why-two { display: grid; gap: 4rem; }
-.trans { display: grid; gap: 0; margin-top: 2.25rem; }
-.trans-row { padding: 1.6rem 0; border-top: 1px solid rgba(255, 255, 255, .16); display: grid; gap: .9rem; }
-.trans-row:last-child { border-bottom: 1px solid rgba(255, 255, 255, .16); }
-.said { font-size: 1.1rem; color: var(--smoke); }
-.wove { font-family: var(--display); font-weight: 700; font-size: 1.35rem; line-height: 1.2; letter-spacing: -.015em; display: flex; gap: .8rem; }
-.wove svg { width: 22px; height: 22px; flex: none; margin-top: 2px; stroke: var(--coral); stroke-width: 2.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.calc { background: var(--indigo); border-radius: 28px; padding: clamp(1.5rem, 3vw, 2.25rem); color: #fff; align-self: start; }
-.calc label { display: block; font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-height: 1.25; letter-spacing: -.01em; }
-.calc-h { margin-top: 1.6rem; display: flex; align-items: baseline; gap: .6rem; }
-.calc-h output { font-family: var(--display); font-weight: 800; font-size: 4.4rem; line-height: .9; letter-spacing: -.04em; }
-.calc-h span { color: rgba(255, 255, 255, .8); }
-.range { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; margin-top: 1.4rem; border-radius: 99px; background: linear-gradient(to right, var(--coral) var(--p), rgba(255, 255, 255, .3) var(--p)); outline-offset: 8px; }
-.range::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; border-radius: 50%; background: #fff; border: 7px solid var(--coral); cursor: grab; box-shadow: 0 6px 16px rgba(0, 0, 0, .3); }
-.range::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 7px solid var(--coral); cursor: grab; }
-.range-ends { display: flex; justify-content: space-between; font-size: .78rem; margin-top: .55rem; color: rgba(255, 255, 255, .75); }
-.calc-out { margin-top: 1.75rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.calc-out div { border-top: 2px solid rgba(255, 255, 255, .4); padding-top: .7rem; }
-.calc-out b { display: block; font-family: var(--display); font-weight: 800; font-size: 2.3rem; line-height: 1; letter-spacing: -.03em; }
-.calc-out span { font-size: .88rem; color: rgba(255, 255, 255, .85); }
-.calc-note { margin-top: 1.25rem; font-size: .8rem; color: rgba(255, 255, 255, .78); }
-
-.grow { display: grid; gap: 2.5rem; }
-.steps { display: flex; align-items: flex-end; gap: 6px; height: 15rem; }
-.step { flex: 1; border-radius: 14px 14px 0 0; padding: 1rem; display: flex; flex-direction: column; justify-content: flex-end; }
-.step small { font-size: .8rem; opacity: .8; }
-.step b { font-family: var(--display); font-weight: 800; font-size: 1.15rem; line-height: 1.1; letter-spacing: -.02em; }
-.step:nth-child(1) { height: 38%; background: rgba(255, 255, 255, .1); }
-.step:nth-child(2) { height: 68%; background: rgba(255, 255, 255, .2); }
-.step:nth-child(3) { height: 100%; background: var(--coral); color: var(--ink); }
-@media (min-width: 900px) {
-  .why-two { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 5rem; }
-  .trans-row { grid-template-columns: 1fr 1fr; gap: 3rem; align-items: baseline; }
-  .grow { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 5rem; align-items: end; }
-  .steps { height: 18rem; }
-}
-
-/* Ejemplo real */
-.example { margin-top: 3.5rem; display: grid; gap: 3rem; align-items: center; }
-.demo-link { display: block; position: relative; }
-.browser { background: #fff; border-radius: 18px; box-shadow: 0 40px 70px -30px rgba(47, 50, 184, .55), 0 0 0 1px var(--line); overflow: hidden; transition: transform .6s var(--ease); }
-.demo-link:hover .browser { transform: translateY(-8px) rotate(-.6deg); }
-.browser .mini-bar { padding: .75rem 1rem; }
-.psy { background: #F9F7F4; color: #262626; padding: clamp(1.4rem, 3.5vw, 2.5rem); }
-.psy-top { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: .9rem; border-bottom: 1px solid #DDD7CC; }
-.psy-top b { font: 400 1.2rem Georgia, serif; }
-.psy-top span { font-size: .78rem; color: #5E5B56; }
-.psy h3 { margin-top: 1.4rem; font: 400 clamp(1.5rem, 3.2vw, 2.25rem)/1.15 Georgia, serif; max-width: 20ch; }
-.psy-btn { display: inline-block; margin-top: 1.4rem; background: #3D5A4C; color: #fff; font-weight: 600; font-size: .88rem; padding: .7rem 1.1rem; border-radius: 6px; }
-.psy-row { margin-top: 1.6rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
-.psy-row i { height: 56px; border-radius: 6px; background: #EFEAE1; }
-.sticker { position: absolute; right: -.6rem; top: -1rem; rotate: 5deg; background: var(--coral); color: var(--ink); font-family: var(--display); font-weight: 800; font-size: .95rem; padding: .5rem .9rem; border-radius: 10px; }
-.example-copy h3 { font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.04; letter-spacing: -.03em; }
-.example-copy p { margin-top: 1rem; color: var(--slate); max-width: 44ch; }
-.tags { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .5rem; }
-.tags li { border: 1.5px solid var(--line); border-radius: 999px; padding: .35rem .85rem; font-weight: 600; font-size: .88rem; }
-.example-copy .btn { margin-top: 2rem; }
-@media (min-width: 900px) { .example { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 5rem; } }
-
-/* Precios */
-.plans { margin-top: 3.75rem; display: grid; gap: 1.25rem; align-items: stretch; }
-.plan { display: flex; flex-direction: column; padding: 2rem 0 0; border-top: 2px solid var(--ink); }
-.plan-name { font-family: var(--display); font-weight: 800; font-size: 1.7rem; line-height: 1.05; letter-spacing: -.03em; }
-.plan-kind { font-size: .9rem; color: var(--slate); font-weight: 600; }
-.plan-for { margin-top: .6rem; color: var(--slate); }
-.price { margin-top: 1.5rem; display: flex; align-items: baseline; gap: .4rem; }
-.price small { font-size: .95rem; color: var(--slate); }
-.price b { font-family: var(--display); font-weight: 800; font-size: 3.6rem; line-height: .9; letter-spacing: -.045em; }
-.price-custom { margin-top: 1.5rem; font-family: var(--display); font-weight: 800; font-size: 2.3rem; line-height: 1; letter-spacing: -.035em; }
-.year { margin-top: 1rem; padding: .7rem .9rem; border-radius: 12px; background: var(--ice); font-size: .92rem; }
-.plan .ticks { margin-top: 1.6rem; flex: 1; align-content: start; }
-.plan-note { margin-top: 1.4rem; font-size: .88rem; color: var(--slate); }
-.plan-note s { opacity: .8; }
-.plan-note b { color: var(--ink); }
-.plan .btn { margin-top: 1.4rem; }
-.plan-main { background: var(--indigo); color: #fff; border: 0; border-radius: 28px; padding: 2.25rem 1.75rem 1.75rem; box-shadow: 0 40px 70px -35px rgba(47, 50, 184, .85); --tick: #fff; }
-.plan-main .plan-kind, .plan-main .plan-for, .plan-main .price small, .plan-main .plan-note { color: rgba(255, 255, 255, .85); }
-.plan-main .plan-note b { color: #fff; }
-.plan-main .year { background: rgba(255, 255, 255, .16); }
-.plan-flag { align-self: flex-start; margin-bottom: 1rem; background: var(--coral); color: var(--ink); font-weight: 700; font-size: .85rem; padding: .25rem .75rem; border-radius: 99px; }
-.rules { margin-top: 3.5rem; display: grid; gap: 1.5rem; }
-.rules p { padding-top: 1rem; border-top: 1px solid var(--line); font-size: .98rem; }
-.rules b { display: block; font-family: var(--display); font-size: 1.1rem; letter-spacing: -.01em; margin-bottom: .25rem; }
-.rules span { color: var(--slate); }
-@media (min-width: 960px) {
-  .plans { grid-template-columns: 1fr 1.12fr 1fr; gap: 2.5rem; }
-  .plan-main { margin-top: -1.5rem; margin-bottom: -1.5rem; padding: 2.5rem 2.25rem 2.25rem; }
-  .rules { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-}
-
-/* Proceso */
-.process { margin-top: 4rem; position: relative; display: grid; gap: 3rem; counter-reset: step; }
-.thread { display: none; }
-.p-step:not(:last-child)::after {
-  content: ""; position: absolute; left: calc(1.55rem - 2px); top: 2.1rem; width: 4px; height: calc(100% + 1.6rem);
-  background: var(--indigo); border-radius: 4px; transform: scaleY(0); transform-origin: top; transition: transform 1.2s var(--ease) .3s;
-}
-.in-view .p-step:not(:last-child)::after { transform: scaleY(1); }
-.in-view .p-step:nth-of-type(2)::after { transition-delay: 1.2s; }
-.thread line { stroke-dasharray: 1000; stroke-dashoffset: 1000; transition: stroke-dashoffset 2.4s var(--ease) .2s; }
-.in-view .thread line { stroke-dashoffset: 0; }
-.p-step { position: relative; padding-left: 4.5rem; }
-.p-step::before { content: ""; position: absolute; left: .85rem; top: .7rem; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--paper); border: 4px solid var(--indigo); }
-.p-step:last-child::before { background: var(--coral); border-color: var(--coral); }
-.p-step .p-num { margin: 0; max-width: none; font-family: var(--display); font-weight: 800; font-size: clamp(4rem, 9vw, 7rem); line-height: .85; letter-spacing: -.05em; color: #D3D5F8; }
-.p-step h3 { margin-top: -.4rem; font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-height: 1.08; letter-spacing: -.025em; position: relative; }
-.p-step p { margin-top: .6rem; color: var(--slate); max-width: 30ch; position: relative; }
-@media (min-width: 800px) {
-  .process { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-  .thread { display: block; position: absolute; left: 0; right: 0; top: 4.25rem; width: 100%; height: 4px; }
-  .p-step::after { display: none !important; }
-  .p-step { padding: 5.2rem 0 0; }
-  .p-step::before { left: 0; top: 3.78rem; }
-}
-
-/* Respaldo */
-.trust { margin-top: 2.5rem; display: grid; gap: 0; border-top: 2px solid var(--ink); }
-.trust-item { display: flex; gap: 1.1rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
-.trust-item svg { width: 28px; height: 28px; flex: none; stroke: var(--indigo); stroke-width: 1.9; fill: none; stroke-linecap: round; stroke-linejoin: round; margin-top: 2px; }
-.trust-item h3 { font-family: var(--display); font-weight: 800; font-size: 1.2rem; line-height: 1.15; letter-spacing: -.015em; }
-.trust-item p { margin-top: .4rem; color: var(--slate); font-size: .98rem; }
-.trust-item a { font-weight: 700; color: var(--ink); text-decoration: underline; text-decoration-color: rgba(76, 79, 224, .5); text-underline-offset: 4px; }
-@media (min-width: 900px) {
-  .trust { grid-template-columns: repeat(3, 1fr); }
-  .trust-item { padding: 1.75rem 2rem 0 0; border-bottom: 0; }
-  .trust-item + .trust-item { padding-left: 2rem; border-left: 1px solid var(--line); }
-}
-
-/* Cierre */
-.finale {
-  position: relative; margin-top: 2rem;
-  background: var(--coral); color: var(--ink);
-  padding: calc(var(--cut) + 3.5rem) 0 clamp(4rem, 8vw, 6.5rem);
-  clip-path: polygon(0 var(--cut), 25% 0, 50% calc(var(--cut) * .85), 75% 0, 100% var(--cut), 100% 100%, 0 100%);
-}
-.finale .wrap { display: grid; gap: 2.5rem; }
-.finale h2 { font-family: var(--display); font-weight: 800; font-size: clamp(2.8rem, 8.2vw, 6.6rem); line-height: .95; letter-spacing: -.045em; max-width: 13ch; }
-.finale p.sub { font-size: 1.25rem; max-width: 34ch; font-weight: 500; }
-.finale-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem 2rem; }
-.finale-contact { font-weight: 600; }
-.finale-contact a { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
-
-.footer { background: var(--ink); color: var(--smoke); padding: 3rem 0 2.25rem; }
-.footer-top { display: flex; flex-direction: column; gap: 2rem; }
-.footer .brand { color: #fff; }
-.footer nav ul { display: flex; flex-wrap: wrap; gap: .75rem 1.75rem; font-size: .95rem; }
-.footer nav a:hover { color: #fff; }
-.footer-bottom { margin-top: 2.25rem; padding-top: 1.5rem; border-top: 1px solid rgba(245, 246, 250, .12); display: flex; flex-direction: column; gap: .5rem; font-size: .88rem; }
-@media (min-width: 800px) {
-  .footer-top { flex-direction: row; justify-content: space-between; align-items: center; }
-  .footer-bottom { flex-direction: row; justify-content: space-between; }
-}
-
-/* Movimiento reducido */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; }
-  html { scroll-behavior: auto; }
+.close-cta { padding: 6.5rem 0; }
+.close-cta .title { max-width: 16ch; }
+.contact { margin-top: 1.6rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.8rem; }
+.foot { background: var(--ink); color: var(--on-primary); padding: 2.5rem 0; }
+.foot-in { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; align-items: center; font-size: .9rem; color: var(--ink-on-dark-muted); }
+.foot .brand { color: var(--on-primary); }
+@media (max-width: 759px) {
+  .hero { padding-top: 2rem; }
+  .cover { min-height: 16rem; }
+  .block { padding-top: 4.5rem; }
+  .card { padding: var(--space-6) var(--space-5); }
 }
 </style>
 </head>
-
 <body>
-<a class="skip" href="#inicio">Saltar al contenido</a>
+<a class="skip" href="#queremos">Saltar al contenido</a>
 
-<!-- ═══════════ NAVEGACIÓN ═══════════ -->
-<header class="nav" id="nav">
+<header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#inicio" aria-label="Weaver, inicio">
-      <svg viewBox="0 0 36 36" aria-hidden="true"><polyline class="w-line" points="7,11 12.5,25 18,13 23.5,25 29,11" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="13" r="2.8" fill="#FF6B4A"/></svg>
-      Weaver
-    </a>
-    <ul class="nav-links">
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#ventajas">Por qué Weaver</a></li>
-      <li><a href="#casos">Ejemplos</a></li>
-      <li><a href="#precios">Precios</a></li>
-    </ul>
-    <div class="nav-right">
-      <span class="nav-status"><span class="dot-live"></span>Disponibles para nuevos proyectos</span>
-      <a class="btn btn-coral" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20agendar%20una%20demo%20para%20mi%20negocio." target="_blank" rel="noopener">Agenda una demo</a>
-      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path id="burger-path" d="M4 7h16M4 12h16M4 17h10"/></svg>
-      </button>
-    </div>
-  </div>
-  <div class="menu" id="menu">
-    <div class="wrap">
-      <a href="#servicios">Servicios</a>
-      <a href="#ventajas">Por qué Weaver</a>
-      <a href="#casos">Ejemplos</a>
-      <a href="#precios">Precios</a>
-      <a class="btn btn-coral" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20agendar%20una%20demo%20para%20mi%20negocio." target="_blank" rel="noopener">Agenda una demo</a>
-    </div>
+    <a class="brand" href="#top" aria-label="Weaver, inicio"><img src="assets/logos/weaver-mark.svg" alt="" width="34" height="34">Weaver</a>
+    <nav aria-label="Principal"><ul class="nav-links">
+      <li><a href="#pensamos">Cómo pensamos</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul></nav>
+    <a class="btn" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20conocer%20m%C3%A1s." target="_blank" rel="noopener">Escríbenos</a>
   </div>
 </header>
 
-<main id="inicio">
-
-<!-- ═══════════ HERO ═══════════ -->
-<section class="hero">
+<main id="top">
+<section class="hero" id="queremos">
   <div class="wrap hero-grid">
     <div>
-      <h1>Tu negocio, conectado con tecnología simple.</h1>
-      <p class="lede">Páginas web que convierten visitas en conversaciones de WhatsApp. Listas en semanas, sin jerga técnica ni procesos eternos.</p>
+      <h1>Software simple para decidir mejor.</h1>
+      <p class="lede">Weaver convierte los datos de un negocio en decisiones, un sector a la vez. Conectamos ideas. Tejemos soluciones simples.</p>
       <div class="cta-row">
-        <a class="btn btn-coral" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20agendar%20una%20demo%20para%20mi%20negocio." target="_blank" rel="noopener">
-          <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
-          Agenda una demo
-        </a>
-        <a class="link-under" href="#servicios">Explorar servicios</a>
+        <a class="btn" href="hilo/">Conoce Hilo</a>
+        <a class="link" href="#pensamos">Cómo pensamos</a>
       </div>
-      <dl class="facts">
-        <div><dt>Primer avance</dt><dd>Semana 1</dd></div>
-        <div><dt>Landing lista</dt><dd>1–2 sem</dd></div>
-        <div><dt>Diagnóstico</dt><dd>Gratis</dd></div>
-      </dl>
     </div>
-
-    <div class="stage">
-      <div class="phone" id="phone" data-scene="0" role="img" aria-label="Así llega un cliente a tu negocio: busca en Google, visita tu web, te escribe por WhatsApp con el mensaje ya listo y la cita queda confirmada.">
-        <div class="screen" aria-hidden="true">
-          <!-- 1 · Búsqueda -->
-          <div class="scene scene-0">
-            <div class="s-search">
-              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-              <span id="typed" class="caret"></span>
-            </div>
-            <div class="s-result" id="result">
-              <p class="s-url">tunegocio.com</p>
-              <p class="s-title">Tu Negocio, psicología clínica en zona 10</p>
-              <p class="s-meta"><span><b>★ 4.9</b></span><span>Abierto ahora</span></p>
-            </div>
-            <div class="skel"><i></i><i></i><i></i></div>
-            <div class="skel"><i></i><i></i><i></i></div>
-          </div>
-          <!-- 2 · Tu web -->
-          <div class="scene scene-1">
-            <div class="s-site-nav">Tu Negocio<span>Carga en 1 s</span></div>
-            <div class="s-site-body">
-              <h4>Agenda tu primera sesión</h4>
-              <p>Horarios, precios y ubicación en un solo lugar.</p>
-              <span class="s-wa" id="swa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Escribir por WhatsApp</span>
-              <div class="s-blocks"><i></i><i></i><i></i><i></i></div>
-            </div>
-          </div>
-          <!-- 3 · WhatsApp -->
-          <div class="scene scene-2">
-            <div class="wa-head"><span class="wa-av">TN</span><div><b>Tu Negocio</b><small>en línea</small></div></div>
-            <div class="wa-body">
-              <div class="bub out" data-b="1">Hola, quiero agendar una primera sesión para mañana.</div>
-              <div class="bub typing" data-b="t" hidden><i></i><i></i><i></i></div>
-              <div class="bub in" data-b="2">¡Hola! Tenemos espacio mañana a las 10:30. ¿Te lo reservo?</div>
-              <div class="bub out" data-b="3">Sí, por favor.</div>
-              <div class="bub ok" data-b="4">
-                <span class="chk"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-                <div><b>Cita confirmada</b><span>Mañana, 10:30 AM</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <ol class="rail" id="rail" aria-hidden="true">
-        <li>Búsqueda en Google</li>
-        <li>Visita a tu web</li>
-        <li>Mensaje en WhatsApp</li>
-        <li>Cita confirmada</li>
-      </ol>
-      <button class="replay" id="replay" type="button">Ver otra vez</button>
+    <div class="cover" aria-hidden="true">
+      <div class="tile slab"><svg viewBox="0 0 120 120"><g fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1"><circle cx="60" cy="60" r="52"/><circle cx="60" cy="60" r="36"/><circle cx="60" cy="60" r="20"/><path d="M60 8V112M8 60H112M23 23L97 97M97 23L23 97"/></g><polyline points="16,38 36,92 60,46 84,92 104,38" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><g fill="#fff"><circle cx="16" cy="38" r="5"/><circle cx="36" cy="92" r="5"/><circle cx="84" cy="92" r="5"/><circle cx="104" cy="38" r="5"/></g><circle cx="60" cy="46" r="6" fill="#FF6B4A"/></svg></div>
+      <div class="tile ink"><svg viewBox="0 0 80 80"><g fill="none" stroke="#fff" stroke-width="1"><circle cx="40" cy="40" r="14"/><circle cx="40" cy="40" r="28"/><path d="M40 8V72M8 40H72"/></g></svg></div>
+      <a class="tile hilo" href="hilo/" tabindex="-1"><b>Hilo</b><span>Alquileres →</span></a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ SERVICIOS ═══════════ -->
-<section class="band" id="servicios" aria-labelledby="servicios-t">
+<section class="block" id="pensamos">
   <div class="wrap">
-    <h2 class="title" id="servicios-t">Una red hecha a la medida de tu negocio</h2>
-    <p class="intro">Elige un servicio para ver qué incluye y en cuánto tiempo lo entregamos.</p>
-
-    <div class="acc" id="acc">
-      <!-- 0 -->
-      <div class="acc-item is-open">
-        <h3><button class="acc-btn" type="button" aria-expanded="true" aria-controls="p0" id="b0">
-          <span class="acc-name">Landing Pages &amp; Presencia Web</span>
-          <span class="acc-time">Entrega en 1 a 2 semanas</span>
-          <svg class="acc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>
-        </button></h3>
-        <div class="acc-panel" id="p0" role="region" aria-labelledby="b0"><div class="acc-inner"><div class="acc-body">
-          <div class="acc-text">
-            <p class="acc-lead">Que te encuentren y te escriban.</p>
-            <p>Landing pages rápidas, visibles en Google y pensadas para una sola cosa: que tu cliente te escriba. Menos visitas perdidas, más conversaciones reales.</p>
-            <ul class="ticks">
-              <li>Landing page rápida y adaptada al celular</li>
-              <li>SEO local básico para aparecer en Google</li>
-              <li>Botón directo a WhatsApp en cada sección</li>
-            </ul>
-            <a class="btn btn-indigo" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20cotizar%3A%20Landing%20Pages%20%26%20Presencia%20Web" target="_blank" rel="noopener">Cotizar esta solución</a>
-          </div>
-          <div class="well">
-            <div class="mini">
-              <div class="mini-bar"><i></i><i></i><i></i><span>tunegocio.com</span></div>
-              <div class="mini-pad speed">
-                <div class="ring">
-                  <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="#E4E5EC" stroke-width="3.5"/><circle cx="18" cy="18" r="15" fill="none" stroke="#4C4FE0" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="93.3 94.25"/></svg>
-                  <b>99</b>
-                </div>
-                <div><small>Velocidad móvil</small><strong>99/100</strong></div>
-              </div>
-            </div>
-            <p class="well-note">Cada visita queda a un clic de una conversación.</p>
-          </div>
-        </div></div></div>
-      </div>
-
-      <!-- 1 -->
-      <div class="acc-item">
-        <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="p1" id="b1">
-          <span class="acc-name">WhatsApp Inteligente &amp; Google Maps</span>
-          <span class="acc-time">Listo junto con tu web</span>
-          <svg class="acc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>
-        </button></h3>
-        <div class="acc-panel" id="p1" role="region" aria-labelledby="b1"><div class="acc-inner" inert><div class="acc-body">
-          <div class="acc-text">
-            <p class="acc-lead">Cada clic, una conversación.</p>
-            <p>Botones que abren WhatsApp con el mensaje ya escrito según lo que tu cliente eligió, y tu negocio en Google Maps para que te encuentren y lleguen.</p>
-            <ul class="ticks">
-              <li>Mensajes prellenados por servicio o producto</li>
-              <li>Ficha y ubicación en Google Maps</li>
-              <li>Horarios y botón de llamar en un toque</li>
-            </ul>
-            <a class="btn btn-indigo" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20cotizar%3A%20WhatsApp%20Inteligente%20%26%20Google%20Maps" target="_blank" rel="noopener">Cotizar esta solución</a>
-          </div>
-          <div class="well">
-            <div class="mini mini-pad">
-              <small style="color:var(--slate);font-size:.82rem">El cliente elige qué necesita:</small>
-              <div class="chip-row" id="chips" role="group" aria-label="Elige qué necesita el cliente">
-                <button class="chip" type="button" aria-pressed="true" data-msg="Hola, quiero agendar una cita. ¿Qué horarios tienen disponibles?">Agendar cita</button>
-                <button class="chip" type="button" aria-pressed="false" data-msg="Hola, quiero saber el precio de sus servicios. ¿Me pueden ayudar?">Pedir precio</button>
-                <button class="chip" type="button" aria-pressed="false" data-msg="Hola, ¿me pueden compartir su ubicación y horario de atención?">Ver ubicación</button>
-              </div>
-              <small class="cap">Se abre WhatsApp con este mensaje ya escrito:</small>
-              <div class="bubble-prev" id="chip-msg" aria-live="polite">Hola, quiero agendar una cita. ¿Qué horarios tienen disponibles?</div>
-              <small class="cap">Google Maps: ★ 4.9, abierto hasta las 6:00 PM</small>
-            </div>
-          </div>
-        </div></div></div>
-      </div>
-
-      <!-- 2 -->
-      <div class="acc-item">
-        <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="p2" id="b2">
-          <span class="acc-name">Sitios Multipágina &amp; Catálogos</span>
-          <span class="acc-time">Entrega en 2 a 3 semanas</span>
-          <svg class="acc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>
-        </button></h3>
-        <div class="acc-panel" id="p2" role="region" aria-labelledby="b2"><div class="acc-inner" inert><div class="acc-body">
-          <div class="acc-text">
-            <p class="acc-lead">Todo tu negocio, con cotizador a WhatsApp.</p>
-            <p>Un sitio completo con una página por servicio, o un catálogo de productos. Tu cliente elige lo que quiere y te llega la cotización armada a WhatsApp.</p>
-            <ul class="ticks">
-              <li>Varias páginas o catálogo de productos y servicios</li>
-              <li>Cotizador que arma el mensaje a WhatsApp</li>
-              <li>Dominio .com y hosting incluidos</li>
-            </ul>
-            <a class="btn btn-indigo" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20cotizar%3A%20Sitios%20Multip%C3%A1gina%20%26%20Cat%C3%A1logos" target="_blank" rel="noopener">Cotizar esta solución</a>
-          </div>
-          <div class="well">
-            <div class="mini mini-pad">
-              <div class="cat-grid" id="cat">
-                <button class="cat" type="button" aria-pressed="true"><b>Sesión individual</b><span>✓ En tu cotización</span></button>
-                <button class="cat" type="button" aria-pressed="false"><b>Terapia de pareja</b><span>Agregar</span></button>
-                <button class="cat" type="button" aria-pressed="false"><b>Taller grupal</b><span>Agregar</span></button>
-                <button class="cat" type="button" aria-pressed="false"><b>Primera consulta</b><span>Agregar</span></button>
-              </div>
-              <div class="quote-bar" aria-live="polite"><span id="quote-n">Cotizar 1 servicio</span><span aria-hidden="true">por WhatsApp</span></div>
-            </div>
-            <p class="well-note">Tu cliente elige y te llega la cotización armada.</p>
-          </div>
-        </div></div></div>
-      </div>
-
-      <!-- 3 -->
-      <div class="acc-item">
-        <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="p3" id="b3">
-          <span class="acc-name">Sistemas Web a Medida</span>
-          <span class="acc-time">Entrega en 4 a 6 semanas</span>
-          <svg class="acc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>
-        </button></h3>
-        <div class="acc-panel" id="p3" role="region" aria-labelledby="b3"><div class="acc-inner" inert><div class="acc-body">
-          <div class="acc-text">
-            <p class="acc-lead">Tu agenda o inventario, sin cuadernos.</p>
-            <p>Web apps sencillas para llevar citas, pedidos o inventarios. Adiós a los cuadernos, los chats sueltos y los datos duplicados.</p>
-            <ul class="ticks">
-              <li>Agenda en línea, pedidos o inventario simple</li>
-              <li>Acceso con usuario para tu equipo</li>
-              <li>Capacitación para tu equipo</li>
-            </ul>
-            <a class="btn btn-indigo" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20cotizar%3A%20Sistemas%20Web%20a%20Medida" target="_blank" rel="noopener">Cotizar esta solución</a>
-          </div>
-          <div class="well">
-            <div class="mini">
-              <table class="tbl">
-                <thead><tr><th>Hora</th><th>Cliente</th><th>Estado</th></tr></thead>
-                <tbody id="citas"></tbody>
-              </table>
-            </div>
-            <p class="well-note">Toca un estado para actualizarlo, como lo haría tu equipo.</p>
-          </div>
-        </div></div></div>
-      </div>
+    <h2 class="title">Tres ideas que guían todo lo que hacemos.</h2>
+    <div class="ideas">
+      <div class="idea"><h3>Inteligencia, no solo registros</h3><p>Un sistema que anota no alcanza. Cada pantalla debe ayudar al dueño a decidir algo.</p></div>
+      <div class="idea"><h3>El dueño primero</h3><p>Todo negocio tiene un dueño que necesita ver cómo va todo en una mirada, desde el teléfono.</p></div>
+      <div class="idea"><h3>Un sector a la vez</h3><p>Conocemos cada sector a fondo antes de construir. Por eso cada producto de Weaver es suyo y está pensado para ese negocio.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ POR QUÉ WEAVER ═══════════ -->
-<section class="band dark on-dark" id="ventajas" aria-labelledby="why-t">
+<section class="block" id="productos">
   <div class="wrap">
-    <h2 class="title" id="why-t">Por qué los negocios en crecimiento eligen Weaver</h2>
-
-    <div class="why-grid">
-      <!-- Velocidad -->
-      <div class="speedrace" id="race">
-        <h3 class="big">Semanas, no meses.</h3>
-        <p class="why-sub">Trabajamos en ciclos cortos: ves avances reales cada semana en lugar de esperar a que termine una larga lista de requisitos.</p>
-        <div class="race">
-          <div>
-            <div class="race-head"><b>Proceso tradicional</b><span>≈ 6 meses</span></div>
-            <div class="track"><div class="bar slow" style="--w:100%"><span>Cotizaciones</span><span>Comités</span><span>Desarrollo</span><span>Cambios</span></div></div>
-          </div>
-          <div>
-            <div class="race-head"><b style="color:var(--coral)">Con Weaver</b><span>1 a 6 semanas según el proyecto</span></div>
-            <div class="track" style="--w:23%"><div class="bar fast" style="--w:23%"></div><span class="fast-tag">En producción ✓</span></div>
-          </div>
-          <div class="months"><span>Mes 1</span><span>Mes 2</span><span>Mes 3</span><span>Mes 4</span><span>Mes 5</span><span>Mes 6</span></div>
-        </div>
-      </div>
-
-      <!-- Cero jerga + calculadora -->
-      <div class="why-two">
-        <div>
-          <h3 class="big" style="font-size:clamp(2rem,4.6vw,3.4rem)">Hablamos tu idioma, no en código.</h3>
-          <p class="why-sub">Escuchamos cómo trabaja tu equipo y lo convertimos en herramientas que cualquier empleado entiende desde el primer día.</p>
-          <div class="trans">
-            <div class="trans-row">
-              <p class="said">Tú nos dices: “Se nos olvidan las citas y los pacientes no llegan.”</p>
-              <p class="wove"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg><span>Nosotros tejemos una agenda en línea donde ves cada cita del día.</span></p>
-            </div>
-            <div class="trans-row">
-              <p class="said">Tú nos dices: “Mis clientes me preguntan lo mismo todos los días por WhatsApp.”</p>
-              <p class="wove"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg><span>Nosotros tejemos una web con precios, horarios y ubicación, y un botón que abre el chat con el mensaje listo.</span></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="calc">
-          <label for="horas">¿Cuántas horas a la semana pierdes respondiendo las mismas preguntas o agendando citas a mano?</label>
-          <div class="calc-h"><output id="h-out" for="horas">8</output><span>horas / semana</span></div>
-          <input class="range" id="horas" type="range" min="2" max="25" step="1" value="8" style="--p:26%" aria-describedby="calc-nota">
-          <div class="range-ends"><span>2 h</span><span>25 h</span></div>
-          <div class="calc-out">
-            <div><b id="y-out">384</b><span>horas al año</span></div>
-            <div><b id="d-out">48</b><span>días laborales</span></div>
-          </div>
-          <p class="calc-note" id="calc-nota">Estimado con 48 semanas laborales al año y jornadas de 8 horas, si automatizamos esa tarea.</p>
-        </div>
-      </div>
-
-      <!-- Escalabilidad -->
-      <div class="grow">
-        <div>
-          <h3 class="big" style="font-size:clamp(2rem,4.6vw,3.4rem)">Crece a tu ritmo.</h3>
-          <p class="why-sub">Empieza con una landing page hoy, súmale un sitio completo o catálogo mañana y un sistema a medida cuando lo necesites.</p>
-        </div>
-        <ol class="steps">
-          <li class="step"><small>Hoy</small><b>Landing page</b></li>
-          <li class="step"><small>Mañana</small><b>Sitio completo o catálogo</b></li>
-          <li class="step"><small>Cuando escales</small><b>Sistema a medida</b></li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ EJEMPLO REAL ═══════════ -->
-<section class="band" id="casos" aria-labelledby="casos-t">
-  <div class="wrap">
-    <h2 class="title" id="casos-t">Míralo funcionando, no en una presentación</h2>
-    <p class="intro">Una landing page de ejemplo que puedes abrir y tocar desde tu celular. Así se ve la tuya antes de decidir.</p>
-
-    <div class="example">
-      <a class="demo-link" href="/demos/psicologia" aria-label="Abrir la demo de landing page para la psicóloga Yara Cabrera">
-        <span class="sticker">Demo</span>
-        <div class="browser" aria-hidden="true">
-          <div class="mini-bar"><i></i><i></i><i></i><span>tunegocio.com</span></div>
-          <div class="psy">
-            <div class="psy-top"><b>Lic. Yara Cabrera</b><span>Psicóloga clínica</span></div>
-            <h3>Psicología clínica para adultos y adolescentes en Ciudad de Guatemala</h3>
-            <span class="psy-btn">Agendar por WhatsApp</span>
-            <div class="psy-row"><i></i><i></i><i></i></div>
-          </div>
-        </div>
-      </a>
-      <div class="example-copy">
-        <h3>Landing page para psicóloga</h3>
-        <p>Ejemplo de una landing page para una psicóloga independiente: una sola página con sus servicios, horarios, preguntas frecuentes y un formulario que arma el mensaje de WhatsApp para agendar la cita.</p>
-        <ul class="tags">
-          <li>Formulario a WhatsApp</li>
-          <li>Pensada para celular</li>
-          <li>Plan Impulso Digital</li>
-        </ul>
-        <a class="btn btn-ink" href="/demos/psicologia">Abrir la demo</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ PRECIOS ═══════════ -->
-<section class="band" id="precios" aria-labelledby="precios-t" style="padding-top:clamp(2rem,5vw,4rem)">
-  <div class="wrap">
-    <h2 class="title" id="precios-t">Precios claros, en quetzales</h2>
-    <p class="intro">Sin letras pequeñas. La puesta en marcha cuesta Q800, pero es <b style="color:var(--ink)">Q0 para los primeros 5 clientes</b>.</p>
-
-    <div class="plans">
-      <article class="plan">
-        <p class="plan-kind">Suscripción mensual</p>
-        <h3 class="plan-name">Impulso Digital</h3>
-        <p class="plan-for">Para empezar a recibir mensajes de clientes ya.</p>
-        <p class="price"><small>Desde</small><b>Q200</b><small>/ mes</small></p>
-        <p class="year"><b style="color:var(--indigo)">Paga el año: Q2,000</b>, te llevas 2 meses gratis</p>
-        <ul class="ticks">
-          <li>Landing page rápida y moderna</li>
-          <li>Dominio .com y hosting incluidos</li>
-          <li>WhatsApp con mensajes prellenados y Google Maps</li>
-          <li>Soporte y hasta 2 cambios pequeños al mes</li>
-        </ul>
-        <p class="plan-note">Puesta en marcha <s>Q800</s> <b>Q0</b> para los primeros 5 clientes.</p>
-        <a class="btn btn-line" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20me%20interesa%20el%20plan%20Impulso%20Digital%20de%20Q200%2Fmes." target="_blank" rel="noopener">Empezar con Impulso</a>
+    <h2 class="title">Nuestros productos.</h2>
+    <div class="products">
+      <article class="card">
+        <div class="hilo-logo"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#14532D"/><path d="M14 11V37M34 11V37" stroke="#fff" stroke-width="4.5" stroke-linecap="round" fill="none"/><path d="M14 26C19 26 19 19 24 19S29 26 34 26" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="24" cy="19" r="3.4" fill="#F59E0B"/></svg><b>hilo</b></div>
+        <h3>Control de inquilinos para propietarios</h3>
+        <p>Cobros, quejas y cuartos libres de un edificio de alquiler en una sola vista, con una cuenta para cada rol: dueño, pagos, ventas, servicio al cliente e inquilino.</p>
+        <p class="go"><a class="link" href="hilo/">Conoce Hilo →</a> · En construcción</p>
       </article>
-
-      <article class="plan plan-main">
-        <span class="plan-flag">El más completo</span>
-        <p class="plan-kind">Suscripción mensual</p>
-        <h3 class="plan-name">Sitio Completo / Catálogo</h3>
-        <p class="plan-for">Para mostrar todos tus servicios o productos.</p>
-        <p class="price"><small>Desde</small><b>Q350</b><small>/ mes</small></p>
-        <p class="year"><b>Paga el año: Q3,500</b>, te llevas 2 meses gratis</p>
-        <ul class="ticks">
-          <li>Sitio multipágina o catálogo de productos y servicios</li>
-          <li>Cotizador directo a WhatsApp</li>
-          <li>Dominio .com, hosting y Google Maps incluidos</li>
-          <li>Soporte prioritario</li>
-        </ul>
-        <p class="plan-note">Puesta en marcha <s>Q800</s> <b>Q0</b> para los primeros 5 clientes.</p>
-        <a class="btn btn-coral" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20me%20interesa%20el%20plan%20de%20Sitio%20Completo%20%2F%20Cat%C3%A1logo." target="_blank" rel="noopener">Quiero mi sitio completo</a>
-      </article>
-
-      <article class="plan">
-        <p class="plan-kind">Pago único o por etapas</p>
-        <h3 class="plan-name">Proyecto a Medida</h3>
-        <p class="plan-for">Cuando necesitas algo hecho exactamente para tu operación.</p>
-        <p class="price-custom">Cotización a medida</p>
-        <p class="plan-note" style="margin-top:.5rem">Te decimos el precio antes de empezar.</p>
-        <ul class="ticks">
-          <li>Agenda en línea para citas o reservas</li>
-          <li>Sistema de pedidos o inventario simple</li>
-          <li>Acceso con usuario para tu equipo</li>
-          <li>Desarrollo específico para tu operación</li>
-        </ul>
-        <a class="btn btn-line" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20cotizar%20un%20proyecto%20web%20a%20medida." target="_blank" rel="noopener">Pedir cotización</a>
+      <article class="card soon">
+        <h3>Siguiente sector</h3>
+        <p>Weaver seguirá con otros negocios.</p>
       </article>
     </div>
-
-    <div class="rules">
-      <p><b>Paga el año, llévate 2 meses.</b><span>Pagas 10 mensualidades y usas el servicio 12 meses. Es la forma más económica de empezar.</span></p>
-      <p><b>Sin plazo forzoso</b><span>Cancelas cuando quieras sin penalizaciones. Al cumplir 6 meses consecutivos, el dominio <span style="white-space:nowrap">.com</span> pasa a tu nombre sin costo adicional. Si cancelas antes y deseas llevarte el dominio, solo cubres el costo de registro.</span></p>
-      <p><b>¿Quieres quedarte con el sitio?</b><span>Es tuyo pagando el equivalente a 12 mensualidades, sin hosting ni soporte.</span></p>
-    </div>
   </div>
 </section>
 
-<!-- ═══════════ PROCESO ═══════════ -->
-<section class="band" id="proceso" aria-labelledby="proceso-t">
-  <div class="wrap" id="proc-wrap">
-    <h2 class="title" id="proceso-t">Cómo tejemos tu solución</h2>
-    <ol class="process">
-      <svg class="thread" viewBox="0 0 4 1000" preserveAspectRatio="none" aria-hidden="true" id="thread-v"><line x1="2" y1="0" x2="2" y2="1000" stroke="#4C4FE0" stroke-width="4" vector-effect="non-scaling-stroke" stroke-linecap="round"/></svg>
-      <li class="p-step">
-        <p class="p-num" aria-hidden="true">01</p>
-        <h3>Diagnosticamos tu problema</h3>
-        <p>Sin costo. Escuchamos tu caso y entendemos tu cuello de botella real antes de proponer nada.</p>
-      </li>
-      <li class="p-step">
-        <p class="p-num" aria-hidden="true">02</p>
-        <h3>Prototipo y construcción</h3>
-        <p>Avances visibles desde la primera semana, para que ajustes sobre algo real.</p>
-      </li>
-      <li class="p-step">
-        <p class="p-num" aria-hidden="true">03</p>
-        <h3>Lanzamiento y evolución</h3>
-        <p>Capacitamos a tu equipo y seguimos cerca con soporte y mejoras.</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ═══════════ RESPALDO ═══════════ -->
-<section class="band-tight" id="respaldo" aria-labelledby="respaldo-t">
+<section class="close-cta" id="contacto">
   <div class="wrap">
-    <h2 class="title" id="respaldo-t" style="font-size:clamp(1.8rem,3.6vw,2.7rem)">Un negocio formal detrás de tu sitio</h2>
-    <div class="trust">
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>
-        <div><h3>Facturación formal (FEL)</h3><p>Emitimos factura electrónica en Guatemala por cada pago.</p></div>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <div><h3>Soporte en menos de 24 h hábiles</h3><p>Escríbenos con cualquier duda o cambio y te respondemos en menos de 24 horas hábiles.</p></div>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 8l9 6 9-6"/></svg>
-        <div><h3>Contacto directo</h3><p><a href="mailto:info@somosweaver.com">info@somosweaver.com</a><br>o por WhatsApp al +502 4318 2227.</p></div>
-      </div>
+    <h2 class="title">Hablemos de tu negocio.</h2>
+    <p class="block-intro">Cuéntanos cómo trabajas hoy y qué decisiones te cuesta tomar. Respondemos por WhatsApp.</p>
+    <div class="contact">
+      <a class="btn" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20conocer%20m%C3%A1s." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.2A9 9 0 1012 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.7 8.6c.3 2.6 2.9 5.4 6 6.2l1.2-1.3-2.1-1-.9.8c-1-.4-1.9-1.3-2.3-2.3l.8-.9-1-2.1z" fill="currentColor"/></svg>Escríbenos</a>
+      <a class="link" href="mailto:info@somosweaver.com">info@somosweaver.com</a>
     </div>
   </div>
 </section>
-
-<!-- ═══════════ CIERRE ═══════════ -->
-<section class="finale" id="contacto" aria-labelledby="fin-t">
-  <div class="wrap">
-    <h2 id="fin-t">Conectamos ideas. Tejemos soluciones simples.</h2>
-    <p class="sub">Cuéntanos qué te quita tiempo hoy y te decimos cómo lo resolveríamos.</p>
-    <div class="finale-row">
-      <a class="btn btn-ink" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20agendar%20una%20demo%20para%20mi%20negocio." target="_blank" rel="noopener">
-        <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
-        Hablar por WhatsApp ahora
-      </a>
-      <p class="finale-contact">WhatsApp: +502 4318 2227<br><a href="mailto:info@somosweaver.com">info@somosweaver.com</a></p>
-    </div>
-  </div>
-</section>
-
 </main>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <a class="brand" href="#inicio" aria-label="Weaver, inicio">
-        <svg viewBox="0 0 36 36" aria-hidden="true" width="34" height="34"><polyline points="7,11 12.5,25 18,13 23.5,25 29,11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="13" r="2.8" fill="#FF6B4A"/></svg>
-        Weaver
-      </a>
-      <nav aria-label="Pie de página">
-        <ul>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#ventajas">Por qué Weaver</a></li>
-          <li><a href="#casos">Ejemplos</a></li>
-          <li><a href="#precios">Precios</a></li>
-          <li><a href="#proceso">Proceso</a></li>
-          <li><a href="#respaldo">Respaldo</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      <p>Ciudad de Guatemala, Guatemala</p>
-      <p>© <span id="year">2026</span> Weaver. Todos los derechos reservados.</p>
-    </div>
+<footer class="foot on-ink">
+  <div class="wrap foot-in">
+    <a class="brand" href="#top" aria-label="Weaver, inicio"><svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true"><polyline points="6,10 16,34 24,14 32,34 42,10" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="14" r="3.6" fill="#FF6B4A"/></svg>Weaver</a>
+    <span>Guatemala · +502 4318 2227</span>
   </div>
 </footer>
-
-<script>
-(function () {
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var $ = function (s, r) { return (r || document).querySelector(s); };
-  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  /* Navegación */
-  var nav = $('#nav'), burger = $('#burger'), menu = $('#menu'), bp = $('#burger-path');
-  function onScroll() { nav.classList.toggle('is-solid', window.scrollY > 24 || menu.classList.contains('is-open')); }
-  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  function setMenu(open) {
-    menu.classList.toggle('is-open', open);
-    burger.setAttribute('aria-expanded', String(open));
-    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-    bp.setAttribute('d', open ? 'M6 6l12 12M18 6L6 18' : 'M4 7h16M4 12h16M4 17h10');
-    onScroll();
-  }
-  burger.addEventListener('click', function () { setMenu(!menu.classList.contains('is-open')); });
-  $$('a', menu).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
-
-  /* Teléfono del hero: la historia de un cliente */
-  var phone = $('#phone'), typed = $('#typed'), result = $('#result'), swa = $('#swa'),
-      rail = $$('#rail li'), bubs = $$('.bub', phone), replay = $('#replay');
-  var query = 'psicólogo en zona 10', timers = [];
-  function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
-  function setRail(n) { rail.forEach(function (li, i) { li.classList.toggle('is-on', i < n); }); }
-  function bub(k) { var b = $('[data-b="' + k + '"]', phone); if (b) { b.hidden = false; b.classList.add('is-on'); } }
-  function resetPhone() {
-    timers.forEach(clearTimeout); timers = [];
-    phone.dataset.scene = '0'; typed.textContent = ''; typed.classList.add('caret');
-    result.classList.remove('is-hit'); swa.classList.remove('is-tap');
-    bubs.forEach(function (b) { b.classList.remove('is-on'); if (b.dataset.b === 't') b.hidden = true; });
-    setRail(0); replay.classList.remove('is-show');
-  }
-  function showEnd() {
-    phone.dataset.scene = '2'; typed.textContent = query;
-    bubs.forEach(function (b) { if (b.dataset.b === 't') { b.hidden = true; } else { b.classList.add('is-on'); } });
-    setRail(4); replay.classList.remove('is-show');
-  }
-  function playPhone() {
-    resetPhone();
-    setRail(1);
-    for (var i = 1; i <= query.length; i++) (function (n) { later(function () { typed.textContent = query.slice(0, n); }, 500 + n * 65); })(i);
-    later(function () { result.classList.add('is-hit'); }, 2200);
-    later(function () { phone.dataset.scene = '1'; setRail(2); }, 3200);
-    later(function () { swa.classList.add('is-tap'); }, 4500);
-    later(function () { phone.dataset.scene = '2'; setRail(3); }, 5400);
-    later(function () { bub('1'); }, 5900);
-    later(function () { var t = $('[data-b="t"]', phone); t.hidden = false; t.classList.add('is-on'); }, 6800);
-    later(function () { $('[data-b="t"]', phone).hidden = true; bub('2'); }, 8000);
-    later(function () { bub('3'); }, 9100);
-    later(function () { bub('4'); setRail(4); }, 10000);
-    later(function () { replay.classList.add('is-show'); }, 11200);
-  }
-  replay.addEventListener('click', playPhone);
-  if (reduce) { showEnd(); } else { later(playPhone, 400); }
-
-  /* Acordeón de servicios */
-  var items = $$('.acc-item');
-  items.forEach(function (it) {
-    var btn = $('.acc-btn', it), inner = $('.acc-inner', it);
-    btn.addEventListener('click', function () {
-      var willOpen = !it.classList.contains('is-open');
-      items.forEach(function (o) {
-        var open = (o === it) ? willOpen : false;
-        o.classList.toggle('is-open', open);
-        $('.acc-btn', o).setAttribute('aria-expanded', String(open));
-        var inn = $('.acc-inner', o);
-        if (open) inn.removeAttribute('inert'); else inn.setAttribute('inert', '');
-      });
-    });
-  });
-
-  /* Demo: mensajes prellenados */
-  var chips = $$('#chips .chip'), chipMsg = $('#chip-msg');
-  chips.forEach(function (c) {
-    c.addEventListener('click', function () {
-      chips.forEach(function (o) { o.setAttribute('aria-pressed', String(o === c)); });
-      chipMsg.textContent = c.dataset.msg;
-    });
-  });
-
-  /* Demo: catálogo */
-  var cats = $$('#cat .cat'), qn = $('#quote-n');
-  cats.forEach(function (c) {
-    c.addEventListener('click', function () {
-      var on = c.getAttribute('aria-pressed') !== 'true';
-      c.setAttribute('aria-pressed', String(on));
-      $('span', c).textContent = on ? '✓ En tu cotización' : 'Agregar';
-      var n = cats.filter(function (x) { return x.getAttribute('aria-pressed') === 'true'; }).length;
-      qn.textContent = 'Cotizar ' + n + (n === 1 ? ' servicio' : ' servicios');
-    });
-  });
-
-  /* Demo: agenda */
-  var citas = [
-    { h: '9:00', c: 'Ana M.', s: 'Atendida' },
-    { h: '10:30', c: 'Carlos R.', s: 'Confirmada' },
-    { h: '12:00', c: 'Lucía G.', s: 'Pendiente' },
-    { h: '15:30', c: 'Pedro S.', s: 'Pendiente' }
-  ];
-  var order = ['Pendiente', 'Confirmada', 'Atendida'], tbody = $('#citas');
-  citas.forEach(function (r) {
-    var tr = document.createElement('tr');
-    tr.innerHTML = '<td><b>' + r.h + '</b></td><td>' + r.c + '</td><td><button type="button" class="status"></button></td>';
-    var b = $('button', tr);
-    function paint() { b.textContent = r.s; b.dataset.s = r.s; b.setAttribute('aria-label', 'Cambiar estado de la cita de las ' + r.h + ': ' + r.s); }
-    b.addEventListener('click', function () { r.s = order[(order.indexOf(r.s) + 1) % order.length]; paint(); });
-    paint(); tbody.appendChild(tr);
-  });
-
-  /* Calculadora de horas */
-  var rng = $('#horas');
-  function calc() {
-    var h = +rng.value;
-    $('#h-out').textContent = h;
-    $('#y-out').textContent = (h * 48).toLocaleString('es-GT');
-    $('#d-out').textContent = Math.round(h * 48 / 8);
-    rng.style.setProperty('--p', ((h - 2) / 23 * 100) + '%');
-  }
-  rng.addEventListener('input', calc); calc();
-
-  /* Una sola entrada animada por bloque: barras y hilo se dibujan al verse */
-  var marks = [$('#race'), $('#proc-wrap')];
-  if (reduce || !('IntersectionObserver' in window)) {
-    marks.forEach(function (m) { m.classList.add('in-view'); });
-  } else {
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
-    }, { threshold: .3 });
-    marks.forEach(function (m) { io.observe(m); });
-  }
-
-  /* El hilo del proceso se orienta según el ancho */
-  var thread = $('#thread-v');
-  function orient() {
-    var h = window.innerWidth >= 800;
-    thread.setAttribute('viewBox', h ? '0 0 1000 4' : '0 0 4 1000');
-    var ln = $('line', thread);
-    ln.setAttribute('x1', h ? 0 : 2); ln.setAttribute('x2', h ? 1000 : 2);
-    ln.setAttribute('y1', h ? 2 : 0); ln.setAttribute('y2', h ? 2 : 1000);
-  }
-  window.addEventListener('resize', orient); orient();
-})();
-</script>
 </body>
 </html>
