@@ -1,191 +1,265 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-GT">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Weaver · Conectamos ideas. Tejemos soluciones simples.</title>
-<meta name="description" content="Weaver crea software simple que convierte los datos de un negocio en decisiones, un sector a la vez. Su primer producto es Hilo, para propietarios de inmuebles en alquiler.">
-<meta name="theme-color" content="#F5F6FA">
-<link rel="canonical" href="https://somosweaver.com/">
-<meta property="og:title" content="Weaver">
-<meta property="og:description" content="Conectamos ideas. Tejemos soluciones simples.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://somosweaver.com/">
-<link rel="icon" type="image/svg+xml" href="assets/logos/weaver-icon-light.svg">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Weaver","url":"https://somosweaver.com/","email":"info@somosweaver.com","telephone":"+50243182227","areaServed":{"@type":"Country","name":"Guatemala"},"description":"Weaver desarrolla software simple que convierte los datos de un negocio en decisiones. Su primer producto es Hilo."}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="assets/tokens.css">
-<style>
-:root { --wrap: 1180px; }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scrollbar-color: var(--muted) var(--bg); }
-body { font: 400 1rem/1.55 var(--font-body); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; overflow-x: hidden; accent-color: var(--primary); caret-color: var(--primary); }
-::selection { background: var(--primary); color: var(--on-primary); }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 700; text-wrap: balance; }
-a { color: inherit; }
-ul { list-style: none; }
-svg { display: block; }
-:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
-.on-primary :focus-visible, .on-ink :focus-visible { outline-color: var(--on-primary); }
-section[id] { scroll-margin-top: 5rem; }
-.wrap { width: min(var(--wrap), 100% - 2.5rem); margin-inline: auto; }
-.skip { position: absolute; left: .75rem; top: -4rem; z-index: 100; background: var(--surface); padding: .75rem 1rem; border-radius: var(--radius-sm); font-weight: 600; box-shadow: var(--shadow-card); }
-.skip:focus { top: .75rem; }
-
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; font: 600 .95rem/1.2 var(--font-body); min-height: 2.9rem; padding: .6rem 1.4rem; background: var(--primary); color: var(--on-primary); border-radius: var(--radius-sm); text-decoration: none; transition: filter .2s; }
-.btn:hover { filter: brightness(.92); }
-.btn svg { width: 1.1rem; height: 1.1rem; }
-.link { font-weight: 600; font-size: .95rem; text-underline-offset: .3em; text-decoration-thickness: 1.5px; }
-.link:hover { color: var(--primary); }
-
-.nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: .5px solid var(--border-subtle); }
-.nav-in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 4rem; }
-.brand { display: inline-flex; align-items: center; gap: var(--space-2); font: 700 1.25rem/1 var(--font-display); text-decoration: none; }
-.brand img { width: 34px; height: 34px; }
-.nav-links { display: none; gap: 2rem; font: 500 .9rem var(--font-body); }
-.nav-links a { text-decoration: none; padding: .4rem 0; color: var(--ink-secondary); }
-.nav-links a:hover { color: var(--primary); }
-.nav .btn { min-height: 2.5rem; padding: .4rem 1rem; font-size: .9rem; }
-@media (min-width: 820px) { .nav-links { display: flex; } }
-
-.hero { padding: 3.5rem 0 0; }
-.hero-grid { display: grid; gap: 2.5rem; align-items: center; }
-h1 { font-size: clamp(2.3rem, 5.2vw, 3.8rem); line-height: 1.05; letter-spacing: -.02em; max-width: 15ch; }
-.lede { margin-top: 1.1rem; color: var(--ink-secondary); font-size: 1.1rem; max-width: 34rem; }
-.cta-row { margin-top: 1.6rem; display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.5rem; }
-@media (min-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; } }
-
-/* Composición de la portada de identidad: losa índigo + satélites */
-.cover { display: grid; gap: var(--space-4); grid-template-columns: 1.7fr 1fr; grid-template-rows: 1fr 1fr; min-height: 22rem; }
-.tile { border-radius: var(--radius-xl); position: relative; overflow: hidden; }
-.tile.slab { grid-row: span 2; background: var(--primary); display: grid; place-items: center; box-shadow: var(--shadow-card); }
-.tile.slab svg { width: 78%; height: auto; }
-.tile.ink { background: var(--ink); color: var(--on-primary); display: grid; place-items: center; }
-.tile.ink svg { width: 62%; opacity: .55; }
-.tile.hilo { background: var(--accent); color: var(--ink); padding: var(--space-4); display: flex; flex-direction: column; justify-content: flex-end; text-decoration: none; transition: filter .2s; }
-.tile.hilo:hover { filter: brightness(.95); }
-.tile.hilo b { font: 700 1.5rem/1 var(--font-display); }
-.tile.hilo span { font-size: .85rem; font-weight: 600; margin-top: .3rem; }
-
-.block { padding: 6.5rem 0 0; }
-h2.title { font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.1; letter-spacing: -.02em; max-width: 20ch; }
-.block-intro { margin-top: 1rem; color: var(--ink-secondary); font-size: 1.05rem; max-width: 38rem; }
-
-.ideas { margin-top: 2.25rem; border-top: .5px solid var(--border-subtle); }
-.idea { padding: 1.6rem 0; border-bottom: .5px solid var(--border-subtle); display: grid; gap: .5rem 3rem; }
-.idea h3 { font-size: clamp(1.2rem, 2.3vw, 1.5rem); line-height: 1.2; }
-.idea p { color: var(--ink-secondary); max-width: 44ch; }
-@media (min-width: 820px) { .idea { grid-template-columns: 1fr 1.2fr; align-items: center; } }
-
-.products { margin-top: 2.5rem; display: grid; gap: var(--space-4); }
-.card { background: var(--surface); border-radius: var(--radius-xl); box-shadow: var(--shadow-card); padding: var(--space-8); display: flex; flex-direction: column; gap: .8rem; }
-.card h3 { font-size: 1.4rem; }
-.card p { color: var(--ink-secondary); max-width: 40ch; }
-.card .hilo-logo { display: flex; align-items: center; gap: .6rem; }
-.card .hilo-logo svg { width: 40px; height: 40px; }
-.card .hilo-logo b { font: 800 1.9rem/1 "Plus Jakarta Sans", var(--font-display); letter-spacing: -.03em; color: #14532D; }
-.card .go { margin-top: auto; padding-top: 1rem; }
-.card.soon { background: transparent; box-shadow: none; border: 1.5px dashed var(--ink-secondary); justify-content: flex-end; min-height: 14rem; }
-@media (min-width: 820px) { .products { grid-template-columns: 1.5fr 1fr; } }
-
-.close-cta { padding: 6.5rem 0; }
-.close-cta .title { max-width: 16ch; }
-.contact { margin-top: 1.6rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.8rem; }
-.foot { background: var(--ink); color: var(--on-primary); padding: 2.5rem 0; }
-.foot-in { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; align-items: center; font-size: .9rem; color: var(--ink-on-dark-muted); }
-.foot .brand { color: var(--on-primary); }
-@media (max-width: 759px) {
-  .hero { padding-top: 2rem; }
-  .cover { min-height: 16rem; }
-  .block { padding-top: 4.5rem; }
-  .card { padding: var(--space-6) var(--space-5); }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weaver — Conectamos ideas. Tejemos soluciones simples.</title>
+  <meta name="description" content="Firma de software e inteligencia de negocios en Guatemala. Diseñamos productos SaaS y tableros de decisión para empresas que crecen con datos reales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="icon" type="image/svg+xml" href="assets/Logos/weaver-mark-nodes.svg">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#queremos">Saltar al contenido</a>
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#inicio" class="brand" aria-label="Weaver, inicio">
+        <img src="assets/Logos/weaver-mark-nodes.svg" alt="" width="30" height="30">
+        <span class="brand-wordmark">Weaver</span>
+      </a>
 
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="#top" aria-label="Weaver, inicio"><img src="assets/logos/weaver-mark.svg" alt="" width="34" height="34">Weaver</a>
-    <nav aria-label="Principal"><ul class="nav-links">
-      <li><a href="#pensamos">Cómo pensamos</a></li>
-      <li><a href="#productos">Productos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul></nav>
-    <a class="btn" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20conocer%20m%C3%A1s." target="_blank" rel="noopener">Escríbenos</a>
-  </div>
-</header>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#enfoque">Enfoque</a></li>
+          <li><a href="#capacidades">Capacidades</a></li>
+          <li><a href="#hilo">Hilo</a></li>
+        </ul>
+      </nav>
 
-<main id="top">
-<section class="hero" id="queremos">
-  <div class="wrap hero-grid">
-    <div>
-      <h1>Software simple para decidir mejor.</h1>
-      <p class="lede">Weaver convierte los datos de un negocio en decisiones, un sector a la vez. Conectamos ideas. Tejemos soluciones simples.</p>
-      <div class="cta-row">
-        <a class="btn" href="hilo/">Conoce Hilo</a>
-        <a class="link" href="#pensamos">Cómo pensamos</a>
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/50243182227?text=Hola%20David%2C%20vi%20la%20web%20de%20Weaver%20y%20quiero%20platicar%20sobre%20mi%20negocio."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Hablemos
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- 1. HERO: Full-bleed Oscuro Editorial + Interactive Weaver Loom Canvas -->
+    <section class="hero">
+      <canvas id="loom-canvas" class="loom-canvas" aria-hidden="true"></canvas>
+
+      <div class="wrap hero-content">
+        <h1 class="hero-headline">
+          Conectamos ideas. Tejemos soluciones <span class="indigo-word">simples.</span>
+        </h1>
+
+        <div class="hero-foot">
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <p class="hero-lead">
+              Firma de software e inteligencia de negocios en Guatemala. Diseñamos productos SaaS y tableros de decisión para empresas que crecen con datos reales, no con suposiciones.
+            </p>
+            <div class="hero-meta-strip">
+              <span><span class="live-dot" aria-hidden="true"></span>Guatemala · LATAM</span>
+              <span>Software SaaS + Inteligencia de Negocios</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-row">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/50243182227?text=Hola%20David%2C%20vi%20la%20web%20de%20Weaver%20y%20quiero%20agendar%20una%20conversaci%C3%B3n."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agendar conversación
+            </a>
+            <a href="#enfoque" class="btn btn-ghost-dark">
+              Cómo tejemos datos ↓
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="cover" aria-hidden="true">
-      <div class="tile slab"><svg viewBox="0 0 120 120"><g fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1"><circle cx="60" cy="60" r="52"/><circle cx="60" cy="60" r="36"/><circle cx="60" cy="60" r="20"/><path d="M60 8V112M8 60H112M23 23L97 97M97 23L23 97"/></g><polyline points="16,38 36,92 60,46 84,92 104,38" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><g fill="#fff"><circle cx="16" cy="38" r="5"/><circle cx="36" cy="92" r="5"/><circle cx="84" cy="92" r="5"/><circle cx="104" cy="38" r="5"/></g><circle cx="60" cy="46" r="6" fill="#FF6B4A"/></svg></div>
-      <div class="tile ink"><svg viewBox="0 0 80 80"><g fill="none" stroke="#fff" stroke-width="1"><circle cx="40" cy="40" r="14"/><circle cx="40" cy="40" r="28"/><path d="M40 8V72M8 40H72"/></g></svg></div>
-      <a class="tile hilo" href="hilo/" tabindex="-1"><b>Hilo</b><span>Alquileres →</span></a>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="block" id="pensamos">
-  <div class="wrap">
-    <h2 class="title">Tres ideas que guían todo lo que hacemos.</h2>
-    <div class="ideas">
-      <div class="idea"><h3>Inteligencia, no solo registros</h3><p>Un sistema que anota no alcanza. Cada pantalla debe ayudar al dueño a decidir algo.</p></div>
-      <div class="idea"><h3>El dueño primero</h3><p>Todo negocio tiene un dueño que necesita ver cómo va todo en una mirada, desde el teléfono.</p></div>
-      <div class="idea"><h3>Un sector a la vez</h3><p>Conocemos cada sector a fondo antes de construir. Por eso cada producto de Weaver es suyo y está pensado para ese negocio.</p></div>
-    </div>
-  </div>
-</section>
+    <!-- 2. INTERACTIVE DATA-WEAVING ENGINE -->
+    <section id="enfoque" class="engine-band">
+      <div class="wrap">
+        <div class="engine-header">
+          <h2 class="display-h2">
+            Tu operación ya produce respuestas. Solo faltaba tejerlas.
+          </h2>
+          <p class="engine-lead">
+            En la mayoría de empresas los datos existen, pero viven rotos entre chats, hojas de cálculo y bancos. Weaver convierte ese ruido diario en visibilidad exacta.
+          </p>
+        </div>
 
-<section class="block" id="productos">
-  <div class="wrap">
-    <h2 class="title">Nuestros productos.</h2>
-    <div class="products">
-      <article class="card">
-        <div class="hilo-logo"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#14532D"/><path d="M14 11V37M34 11V37" stroke="#fff" stroke-width="4.5" stroke-linecap="round" fill="none"/><path d="M14 26C19 26 19 19 24 19S29 26 34 26" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="24" cy="19" r="3.4" fill="#F59E0B"/></svg><b>hilo</b></div>
-        <h3>Control de inquilinos para propietarios</h3>
-        <p>Cobros, quejas y cuartos libres de un edificio de alquiler en una sola vista, con una cuenta para cada rol: dueño, pagos, ventas, servicio al cliente e inquilino.</p>
-        <p class="go"><a class="link" href="hilo/">Conoce Hilo →</a> · En construcción</p>
-      </article>
-      <article class="card soon">
-        <h3>Siguiente sector</h3>
-        <p>Weaver seguirá con otros negocios.</p>
-      </article>
-    </div>
-  </div>
-</section>
+        <div class="flow-tabs" role="tablist" aria-label="Explorar flujos de datos de Weaver">
+          <button type="button" class="flow-tab" role="tab" aria-selected="true" data-flow-tab="caja">
+            Caja y Cobros
+          </button>
+          <button type="button" class="flow-tab" role="tab" aria-selected="false" data-flow-tab="operacion">
+            Operación Diaria
+          </button>
+          <button type="button" class="flow-tab" role="tab" aria-selected="false" data-flow-tab="rentabilidad">
+            Rentabilidad
+          </button>
+        </div>
 
-<section class="close-cta" id="contacto">
-  <div class="wrap">
-    <h2 class="title">Hablemos de tu negocio.</h2>
-    <p class="block-intro">Cuéntanos cómo trabajas hoy y qué decisiones te cuesta tomar. Respondemos por WhatsApp.</p>
-    <div class="contact">
-      <a class="btn" href="https://wa.me/50243182227?text=Hola%20Weaver%2C%20quiero%20conocer%20m%C3%A1s." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.2A9 9 0 1012 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.7 8.6c.3 2.6 2.9 5.4 6 6.2l1.2-1.3-2.1-1-.9.8c-1-.4-1.9-1.3-2.3-2.3l.8-.9-1-2.1z" fill="currentColor"/></svg>Escríbenos</a>
-      <a class="link" href="mailto:info@somosweaver.com">info@somosweaver.com</a>
-    </div>
-  </div>
-</section>
-</main>
+        <div class="engine-stage" aria-live="polite">
+          <div>
+            <div class="engine-col-label">Fuentes dispersas hoy</div>
+            <div id="engine-sources" class="source-nodes"></div>
+          </div>
 
-<footer class="foot on-ink">
-  <div class="wrap foot-in">
-    <a class="brand" href="#top" aria-label="Weaver, inicio"><svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true"><polyline points="6,10 16,34 24,14 32,34 42,10" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="14" r="3.6" fill="#FF6B4A"/></svg>Weaver</a>
-    <span>Guatemala · +502 4318 2227</span>
-  </div>
-</footer>
+          <div class="weaver-core" aria-hidden="true">
+            <svg class="weaver-core-svg" viewBox="0 0 220 140" fill="none">
+              <path class="weaver-thread-pulse" d="M8 22 C65 22, 75 70, 110 70" stroke="#4C4FE0" stroke-width="1.6"></path>
+              <path class="weaver-thread-pulse" d="M8 54 C65 54, 75 70, 110 70" stroke="#4C4FE0" stroke-width="1.6"></path>
+              <path class="weaver-thread-pulse" d="M8 86 C65 86, 75 70, 110 70" stroke="#4C4FE0" stroke-width="1.6"></path>
+              <path class="weaver-thread-pulse" d="M8 118 C65 118, 75 70, 110 70" stroke="#4C4FE0" stroke-width="1.6"></path>
+
+              <path class="weaver-thread-pulse" d="M110 70 C145 70, 155 40, 212 40" stroke="#7D80FF" stroke-width="2"></path>
+              <path class="weaver-thread-pulse" d="M110 70 C145 70, 155 100, 212 100" stroke="#7D80FF" stroke-width="2"></path>
+
+              <rect x="84" y="44" width="52" height="52" rx="14" fill="#4C4FE0"></rect>
+              <polyline points="94,58 102,82 110,63 118,82 126,58" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"></polyline>
+              <circle cx="110" cy="63" r="3.4" fill="#FF6B4A"></circle>
+            </svg>
+          </div>
+
+          <div>
+            <div class="engine-col-label">Claridad en tiempo real</div>
+            <div class="output-panels">
+              <div class="output-metric output-metric-highlight">
+                <span id="out-1-label" class="output-metric-label">Ingresos verificados del mes</span>
+                <span id="out-1-value" class="output-metric-value num">Q48,920</span>
+                <span id="out-1-note" class="output-metric-note">94% cobrado · Conciliación en un clic</span>
+              </div>
+              <div class="output-metric">
+                <span id="out-2-label" class="output-metric-label">Alertas tempranas detectadas</span>
+                <span id="out-2-value" class="output-metric-value num">Q2,850</span>
+                <span id="out-2-note" class="output-metric-note">3 saldos con atraso identificados antes del cierre</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CAPACIDADES (Swiss Editorial Index — Zero Cards) -->
+    <section id="capacidades" class="index-band">
+      <div class="wrap">
+        <h2 class="display-h2">
+          Tres principios. Cero complejidad innecesaria.
+        </h2>
+
+        <div class="editorial-list">
+          <div class="editorial-row">
+            <span class="editorial-num num">01</span>
+            <h3 class="editorial-title">Software SaaS construido para adopción real</h3>
+            <p class="editorial-desc">
+              Creamos productos propios enfocados en industrias desatendidas en Latinoamérica. Interfaces directas que cualquier equipo entiende desde el primer día, sin manuales eternos.
+            </p>
+          </div>
+
+          <div class="editorial-row">
+            <span class="editorial-num num">02</span>
+            <h3 class="editorial-title">Inteligencia de negocios aterrizada</h3>
+            <p class="editorial-desc">
+              No vendemos gráficas decorativas ni jerga técnica. Cada acción operativa alimenta respuestas concretas: flujo de caja real, capacidad ociosa y fugas de ingresos.
+            </p>
+          </div>
+
+          <div class="editorial-row">
+            <span class="editorial-num num">03</span>
+            <h3 class="editorial-title">Acompañamiento cercano y evolución continua</h3>
+            <p class="editorial-desc">
+              No desaparecemos después de implementar. Trabajamos de cerca con tu operación en Guatemala para que el software y tus indicadores crezcan al ritmo de tu negocio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. LIGHT ARCHITECTURAL BAND — Primer Producto: Hilo -->
+    <section id="hilo" class="light-band">
+      <div class="wrap hilo-spotlight">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 16px; margin-bottom: 18px;">
+            <img src="assets/Logos/hilo-mark-nodes.svg" alt="Logo Hilo" width="52" height="52">
+            <h2 class="hilo-mark-title" style="margin-bottom: 0;">Hilo</h2>
+          </div>
+          <p class="hilo-sub">
+            Nuestro primer producto SaaS. Gestión inteligente de habitaciones, coliving y alquileres en Guatemala: centraliza cobros, disponibilidad para vendedores y reportes de inquilinos en un solo tablero.
+          </p>
+          <a href="hilo/" class="btn btn-dark-solid">
+            Explorar Hilo →
+          </a>
+        </div>
+
+        <div class="hilo-artifact" aria-label="Muestra del tablero de Hilo">
+          <div class="hilo-artifact-head">
+            <span class="hilo-artifact-title">Hilo · por Weaver</span>
+            <span class="hilo-artifact-tag">Producto SaaS activo</span>
+          </div>
+          <div class="hilo-stat-row">
+            <div class="hilo-stat">
+              <div class="hilo-stat-label">Cobrado del mes</div>
+              <div class="hilo-stat-val hilo-stat-val-primary num">Q42,600</div>
+            </div>
+            <div class="hilo-stat">
+              <div class="hilo-stat-label">Dinero estancado</div>
+              <div class="hilo-stat-val num">Q4,800</div>
+            </div>
+          </div>
+          <p style="font-size: 14px; color: var(--ink-dark-muted); line-height: 1.55;">
+            Diseñado para dueños de 10 a 100+ habitaciones que quieren dejar de perseguir comprobantes por WhatsApp y ver el rendimiento real de cada propiedad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. MANIFIESTO + CIERRE -->
+    <section class="closing-band">
+      <div class="wrap">
+        <h2 class="manifesto-statement">
+          Software simple por fuera. Inteligencia seria por dentro.
+        </h2>
+        <p class="closing-lead">
+          Si diriges un negocio en Guatemala o Latinoamérica y quieres ordenar tu operación con datos claros, conversemos directo por WhatsApp.
+        </p>
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/50243182227?text=Hola%20David%2C%20vi%20la%20web%20de%20Weaver%20y%20quiero%20platicar%20sobre%20mi%20negocio."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hablemos por WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="brand">
+        <img src="assets/Logos/weaver-mark.svg" alt="" width="24" height="24">
+        <span class="brand-wordmark" style="font-size: 16px;">Weaver</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="#enfoque">Enfoque</a>
+        <a href="#capacidades">Capacidades</a>
+        <a href="hilo/">Hilo</a>
+        <a
+          href="https://wa.me/50243182227?text=Hola%20David%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20Weaver."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          +502 4318-2227
+        </a>
+      </div>
+
+      <p class="footer-meta">somosweaver.com · Guatemala</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
