@@ -1,0 +1,133 @@
+/* Weaver — generated from tokens.json */
+:root, [data-theme="light"] {
+  --bg: #f5f6fa; /* Niebla. Fondo de página y de secciones; también el fondo del icono en versión clara. */
+  --surface: #ffffff; /* Superficie de tarjetas sobre bg. */
+  --ink: #15171e; /* Grafito. Texto principal sobre bg y surface; fondo de la versión oscura del logo y de la tarjeta de presentación. */
+  --ink-secondary: #5b5e6b; /* Texto de apoyo (subtítulos del hero) sobre bg y surface. Pasa 4.5:1. */
+  --muted: #8a8d98; /* Etiquetas en mayúsculas, códigos hex y pies. OJO: 3.3:1 sobre surface y 3.1:1 sobre bg; no llega a 4.5:1 en texto pequeño. Úsalo solo en texto no esencial o a 24px+; para texto que se debe leer usa ink-secondary. */
+  --primary: #4c4fe0; /* Índigo. Color principal: botones, marca W, bloque del eslogan. Texto blanco encima pasa 4.5:1. */
+  --on-primary: #ffffff; /* Texto e iconos sobre primary e ink. */
+  --on-primary-muted: rgba(255,255,255,0.7); /* Etiquetas secundarias sobre primary. */
+  --accent: #ff6b4a; /* Coral. Acento puntual: nodo destacado de la W, eyebrow 'Brand Board'. Texto blanco sobre coral NO pasa (2.8:1): pon ink encima. Como texto sobre bg (2.6:1) solo a 24px+ o decorativo. */
+  --ink-on-dark-muted: #c9cbd4; /* Texto secundario sobre ink (datos de contacto en la tarjeta oscura). */
+  --chrome: #f0f0f4; /* Barra de navegador en mockups. */
+  --chrome-dot: #e0e0e6; /* Puntos de ventana en la barra de navegador. */
+  --hairline: rgba(20,20,30,0.08); /* Borde de 0.5px en swatches y en el icono claro. */
+  --border-subtle: rgba(20,20,30,0.1); /* Borde de marcos de mockup. */
+  --shadow-card: 0 1px 2px rgba(20,20,30,0.05), 0 10px 28px rgba(20,20,30,0.07); /* Tarjetas sobre bg. Única sombra del sistema. */
+}
+:root {
+  --space-1: 4px; /* Separación mínima entre líneas de un bloque de texto. */
+  --space-2: 8px; /* Icono y wordmark; gap dentro de la barra del navegador. */
+  --space-3: 12px; /* Logo y su nombre. */
+  --space-4: 16px; /* Entre swatches; padding horizontal del botón. */
+  --space-5: 20px; /* Entre tarjetas de presentación. */
+  --space-6: 24px; /* Gap de la cuadrícula de tarjetas; padding de tarjeta de presentación. */
+  --space-7: 28px; /* Entre header y contenido. */
+  --space-8: 32px; /* Padding de tarjeta. */
+  --space-12: 48px; /* Entre variantes de logo. */
+  --space-16: 64px; /* Margen de página. */
+  --radius-sm: 10px; /* Botones. */
+  --radius-md: 16px; /* Swatches y marcos de mockup. */
+  --radius-lg: 18px; /* Tarjetas de presentación. */
+  --radius-xl: 28px; /* Tarjetas principales. */
+  --radius-full: 50%; /* Contenedor circular del icono, puntos y nodos. */
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --text-display: 700 64px/1 var(--font-display); /* Muestra tipográfica, cifras grandes. */
+  --text-h1: 700 44px/1 var(--font-display); /* Título de página. */
+  --text-slogan: 600 30px/1.25 var(--font-display); /* Eslogan y frases destacadas. */
+  --text-h2: 700 26px/1.2 var(--font-display); /* Titular del hero. */
+  --text-h3: 700 16px/1.25 var(--font-display); /* Wordmark junto a la W, nombres en tarjetas. */
+  --text-eyebrow: 700 13px/1.2 var(--font-display); /* Antetítulo en MAYÚSCULAS, en accent. */
+  --text-label: 600 13px/1.2 var(--font-display); /* Etiqueta de tarjeta en MAYÚSCULAS, en muted. */
+  --text-body: 400 15px/1.5 var(--font-body); /* Cuerpo de texto. */
+  --text-body-strong: 600 13px/1.4 var(--font-body); /* Botones y nombres de swatch. */
+  --text-body-sm: 400 13px/1.4 var(--font-body); /* Navegación y texto de apoyo. */
+  --text-caption: 400 12px/1.4 var(--font-body); /* Códigos y notas. */
+  --text-micro: 400 11px/1.4 var(--font-body); /* Datos de contacto, pies de logo. */
+}
+.display {
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h1 {
+  font-family: var(--font-display);
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.slogan {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.h2 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body-strong {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.body-sm {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.caption {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.micro {
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+}

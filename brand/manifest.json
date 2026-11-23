@@ -1,0 +1,83 @@
+{
+  "manifestVersion": 3,
+  "name": "Weaver",
+  "namespace": "Weaver",
+  "files": [
+    "assets/Logos/README.md",
+    "components/Button/README.md",
+    "components/Card/README.md",
+    "tokens.css"
+  ],
+  "libraries": [],
+  "components": [
+    {
+      "name": "Button",
+      "group": "Acciones",
+      "summary": "Botón principal de Weaver: fondo primary, texto on-primary en Plus Jakarta Sans 600 a 13px, radius-sm, padding space-2 × space-4."
+    },
+    {
+      "name": "Card",
+      "group": "Contenedores",
+      "summary": "Contenedor base del sistema: surface sobre bg, radius-xl, padding space-8, shadow-card y 18px entre elementos."
+    }
+  ],
+  "assetGroups": [
+    {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "weaver-icon-light.svg",
+        "weaver-icon-dark.svg",
+        "weaver-mark.svg",
+        "weaver-mark-nodes.svg"
+      ],
+      "files": [
+        {
+          "path": "assets/Logos/weaver-icon-light.svg",
+          "id": "4096df499d5528402cd4ebe8be1ebd19"
+        },
+        {
+          "path": "assets/Logos/weaver-icon-dark.svg",
+          "id": "5d794b0f95b97a9efad5d01b76efc3f4"
+        },
+        {
+          "path": "assets/Logos/weaver-mark.svg",
+          "id": "f4fea6d73b26116e2813fe239db2100f"
+        },
+        {
+          "path": "assets/Logos/weaver-mark-nodes.svg",
+          "id": "135941fdf5a901647045e895fbe30725"
+        }
+      ]
+    }
+  ],
+  "storage": {
+    "files": {
+      "assets/Logos/weaver-icon-dark.svg": {
+        "store": "blob",
+        "id": "5d794b0f95b97a9efad5d01b76efc3f4",
+        "bytes": 1198,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/weaver-icon-light.svg": {
+        "store": "blob",
+        "id": "4096df499d5528402cd4ebe8be1ebd19",
+        "bytes": 1197,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/weaver-mark-nodes.svg": {
+        "store": "blob",
+        "id": "135941fdf5a901647045e895fbe30725",
+        "bytes": 810,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/weaver-mark.svg": {
+        "store": "blob",
+        "id": "f4fea6d73b26116e2813fe239db2100f",
+        "bytes": 281,
+        "type": "image/svg+xml"
+      }
+    },
+    "blobBytesUsed": 3486
+  }
+}

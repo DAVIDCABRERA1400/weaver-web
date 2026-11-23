@@ -1,0 +1,15 @@
+# Local AI agent & design tooling (keep local, do not publish to GitHub Pages)
+.agent/
+.agents/
+.claude/
+.gemini/
+.impeccable/
+
+# Internal planning docs
+PRODUCT.md
+DESIGN.md
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.log

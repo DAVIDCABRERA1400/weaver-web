@@ -1,0 +1,38 @@
+<!-- @dsCard height=300 -->
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0;background:var(--bg)}
+.cover{position:relative;width:960px;height:300px;overflow:hidden;background:var(--bg)}
+svg{position:absolute;left:0;top:0}
+.b-primary{fill:var(--primary)}
+.b-ink{fill:var(--ink)}
+.b-accent{fill:var(--accent)}
+.tile{rx:var(--radius-xl);ry:var(--radius-xl)}
+.thread{fill:none;stroke:var(--on-primary);stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+.web{fill:none;stroke:var(--on-primary);stroke-width:1.5;opacity:.3}
+.node{fill:var(--on-primary)}
+.node-accent{fill:var(--accent)}
+.text{position:absolute;left:40px;bottom:40px;max-width:440px}
+.name{margin:0;font-family:var(--font-display);font-size:120px;font-weight:700;line-height:.92;color:var(--ink);letter-spacing:-0.02em}
+.tag{margin:12px 0 0;font-family:var(--font-body);font-size:14px;color:var(--ink-secondary)}
+</style></head>
+<body><div class="cover">
+<svg width="960" height="300" viewBox="0 0 960 300" aria-hidden="true">
+<!-- blocks: primary 256x236, ink 152x112, accent 152x108 (rx radius-xl 28) -->
+<!-- arrangement: one tall indigo slab with two satellites stacked right, gaps space-4 (16), top/bottom inset space-8 (32) -->
+<!-- pattern: literal motif (weaving/web): the W thread with nodes on primary, accent node centre; a few web rings on ink. Brand = "Tejemos": threads + nodes. -->
+<!-- steps: space-4 16, space-8 32, space-6 24 node pitch; radius-xl 28, radius-full nodes -->
+<rect class="b-primary tile" x="520" y="32" width="256" height="236"/>
+<rect class="b-ink tile" x="792" y="32" width="152" height="112"/>
+<rect class="b-accent tile" x="792" y="160" width="152" height="108"/>
+<polyline class="thread" points="560,88 604,220 648,112 692,220 736,88"/>
+<circle class="node" cx="560" cy="88" r="10"/>
+<circle class="node" cx="604" cy="220" r="10"/>
+<circle class="node-accent" cx="648" cy="112" r="12"/>
+<circle class="node" cx="692" cy="220" r="10"/>
+<circle class="node" cx="736" cy="88" r="10"/>
+<g class="web"><circle cx="868" cy="88" r="16"/><circle cx="868" cy="88" r="32"/><line x1="828" y1="88" x2="908" y2="88"/><line x1="868" y1="48" x2="868" y2="128"/></g>
+</svg>
+<div class="text"><h1 class="name">Weaver</h1><p class="tag">Conectamos ideas. Tejemos soluciones simples.</p></div>
+</div></body></html>
