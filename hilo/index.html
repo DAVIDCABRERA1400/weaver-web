@@ -227,6 +227,89 @@
       box-shadow: var(--shadow-card);
     }
 
+    .plan-slider-wrap {
+      position: relative;
+      padding-bottom: 22px;
+    }
+
+    .plan-ticks {
+      position: absolute;
+      left: 13px;
+      right: 13px;
+      bottom: 0;
+      height: 18px;
+      font-size: 12px;
+      color: var(--ink-dark-muted);
+    }
+
+    .plan-ticks span {
+      position: absolute;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .plan-ticks span.is-break {
+      font-weight: 700;
+      color: var(--ink-dark);
+    }
+
+    .rate-ladder {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .rate-step {
+      padding: 12px 10px;
+      border: 0.5px solid var(--light-border);
+      border-radius: var(--radius-el);
+      background-color: var(--light-surface);
+      text-align: center;
+      transition: border-color 0.16s ease, background-color 0.16s ease;
+    }
+
+    .rate-step small {
+      display: block;
+      font-size: 11px;
+      color: var(--ink-dark-muted);
+    }
+
+    .rate-step strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--ink-dark);
+      margin: 2px 0;
+    }
+
+    .rate-step.is-active {
+      border: 1.5px solid var(--primary);
+      background-color: rgba(91, 95, 239, 0.06);
+    }
+
+    .rate-step.is-active strong {
+      color: var(--primary);
+    }
+
+    .plan-savings {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 0.5px solid var(--light-border);
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--ink-dark);
+    }
+
+    .plan-savings strong {
+      color: var(--primary);
+    }
+
+    .plan-hint {
+      font-size: 13px;
+      color: var(--ink-dark-muted);
+      margin-top: 4px;
+    }
+
     .plan-founders {
       background-color: var(--primary);
       color: var(--on-primary);
@@ -605,7 +688,7 @@
           Un precio claro que crece con tus propiedades.
         </h2>
         <p class="hilo-sub" style="margin-top: 12px; margin-bottom: 0;">
-          Cobro mínimo desde Q300/mes (hasta 15 habitaciones) y tarifa decreciente por habitación conforme creces. Empieza con 30 días de prueba gratis.
+          Pagas por habitación activa, por escalones: las primeras 15 a Q30, de la 16 a la 40 a Q25 y de la 41 en adelante a Q20. Entre más creces, menos te cuesta cada habitación. Empieza con 30 días de prueba gratis.
         </p>
 
         <div class="plan-grid">
@@ -617,32 +700,57 @@
               <span id="hilo-rooms-out" class="num" style="font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--primary); line-height: 1;">25</span>
             </div>
 
-            <input
-              id="hilo-rooms-slider"
-              class="plan-slider"
-              type="range"
-              min="10"
-              max="100"
-              step="1"
-              value="25"
-              aria-label="Cantidad de habitaciones activas"
-            >
+            <div class="plan-slider-wrap">
+              <input
+                id="hilo-rooms-slider"
+                class="plan-slider"
+                type="range"
+                min="1"
+                max="120"
+                step="1"
+                value="25"
+                aria-label="Cantidad de habitaciones activas"
+              >
+              <div class="plan-ticks num" aria-hidden="true">
+                <span style="left: 0%;">1</span>
+                <span class="is-break" style="left: 11.76%;">15</span>
+                <span class="is-break" style="left: 32.77%;">40</span>
+                <span style="left: 57.98%;">70</span>
+                <span style="left: 100%; transform: translateX(-100%);">120 hab.</span>
+              </div>
+            </div>
 
-            <div class="num" style="display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-dark-muted);">
-              <span>10</span>
-              <span>25</span>
-              <span>40</span>
-              <span>70</span>
-              <span>100 hab.</span>
+            <!-- Escalera de tarifas: muestra qué precio por habitación aplica -->
+            <div class="rate-ladder num">
+              <div class="rate-step" data-step="basico">
+                <small>Hab. 1 a 15</small>
+                <strong>Q30</strong>
+                <small>por habitación</small>
+              </div>
+              <div class="rate-step" data-step="crecimiento">
+                <small>Hab. 16 a 40</small>
+                <strong>Q25</strong>
+                <small>por habitación</small>
+              </div>
+              <div class="rate-step" data-step="multi">
+                <small>Hab. 41 en adelante</small>
+                <strong>Q20</strong>
+                <small>por habitación</small>
+              </div>
             </div>
 
             <div style="background-color: var(--light-bg); border: 0.5px solid var(--light-border); border-radius: var(--radius-el); padding: 18px;">
               <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px;">
                 <span id="hilo-tier-name" class="tier-badge">Plan Crecimiento</span>
-                <span id="hilo-tier-cap" class="num" style="font-size: 12px; font-weight: 600; color: var(--ink-dark-muted);">Hasta 40 habitaciones</span>
+                <span id="hilo-tier-cap" class="num" style="font-size: 12px; font-weight: 600; color: var(--ink-dark-muted);">16 a 40 habitaciones</span>
               </div>
+              <div style="font-size: 12px; color: var(--ink-dark-muted);">Tu pago mensual</div>
               <div id="hilo-price-out" class="num" style="font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--ink-dark); line-height: 1.05;">Q700 / mes</div>
-              <div id="hilo-formula-out" class="num" style="font-size: 14px; color: var(--ink-dark-muted); margin-top: 6px;">Equivale a Q28.00 por habitación al mes</div>
+              <div id="hilo-formula-out" class="num" style="font-size: 14px; color: var(--ink-dark-muted); margin-top: 6px;">15 × Q30 + 10 × Q25 = Q700 · promedio Q28.00 por habitación</div>
+              <div class="plan-savings num">
+                <div id="hilo-savings-out">Ahorras <strong>Q50 al mes</strong> frente a la tarifa Básico (Q30 por habitación).</div>
+                <div id="hilo-hint-out" class="plan-hint">Desde la habitación 41, cada una adicional cuesta Q20.</div>
+              </div>
             </div>
           </div>
 
@@ -659,7 +767,7 @@
             <a
               id="hilo-calc-wa"
               class="btn plan-founders-cta"
-              href="https://wa.me/50243182227?text=Hola%20David%2C%20administro%2025%20habitaciones%20y%20me%20interesa%20probar%20Hilo%20(Plan%20Crecimiento%20-%20Q700%2Fmes)."
+              href="https://wa.me/50243182227?text=Hola%20David%2C%20administro%2025%20habitaciones%20y%20me%20interesa%20probar%20Hilo%20(Plan%20Crecimiento%2C%20Q700%2Fmes)."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -676,8 +784,8 @@
                 <h3>Plan Básico</h3>
               </div>
               <div class="tier-price-block">
-                <div class="tier-price num">Q300 <span>/ mes</span></div>
-                <div class="tier-cap num">Mínimo · Hasta 15 hab. · Q20.00/hab.</div>
+                <div class="tier-price num">Q30 <span>/ habitación al mes</span></div>
+                <div class="tier-cap num">Hab. 1 a 15 · hasta Q450/mes en total</div>
               </div>
               <p class="tier-desc">Ideal para dueños independientes que salen del cuaderno o Excel.</p>
               <ul class="tier-list">
@@ -701,7 +809,7 @@
             </div>
             <a
               class="btn btn-tier-outline"
-              href="https://wa.me/50243182227?text=Hola%20David%2C%20me%20interesa%20el%20Plan%20B%C3%A1sico%20de%20Hilo%20(Q300%2Fmes)%20y%20probar%2030%20d%C3%ADas%20gratis."
+              href="https://wa.me/50243182227?text=Hola%20David%2C%20me%20interesa%20el%20Plan%20B%C3%A1sico%20de%20Hilo%20(Q30%20por%20habitaci%C3%B3n)%20y%20probar%2030%20d%C3%ADas%20gratis."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -716,8 +824,8 @@
                 <span class="tier-badge">Recomendado</span>
               </div>
               <div class="tier-price-block">
-                <div class="tier-price num">Q700 <span>/ mes</span></div>
-                <div class="tier-cap num">Hasta 40 habitaciones · Q17.50/hab.</div>
+                <div class="tier-price num">Q25 <span>/ hab. adicional al mes</span></div>
+                <div class="tier-cap num">Hab. 16 a 40 · de Q475 a Q1,075/mes en total</div>
               </div>
               <p class="tier-desc">Para operadores con varias casas, equipo de ventas y gestión de quejas.</p>
               <ul class="tier-list">
@@ -742,7 +850,7 @@
             <a
               class="btn btn-primary"
               style="width: 100%;"
-              href="https://wa.me/50243182227?text=Hola%20David%2C%20me%20interesa%20el%20Plan%20Crecimiento%20de%20Hilo%20(Q700%2Fmes)%20y%20probar%2030%20d%C3%ADas%20gratis."
+              href="https://wa.me/50243182227?text=Hola%20David%2C%20me%20interesa%20el%20Plan%20Crecimiento%20de%20Hilo%20(Q25%20por%20habitaci%C3%B3n)%20y%20probar%2030%20d%C3%ADas%20gratis."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -756,8 +864,8 @@
                 <h3>Plan Multi-Propiedad</h3>
               </div>
               <div class="tier-price-block">
-                <div class="tier-price num">Q1,400 <span>/ mes</span></div>
-                <div class="tier-cap num">41 a 100 habitaciones · Q14.00/hab.</div>
+                <div class="tier-price num">Q20 <span>/ hab. adicional al mes</span></div>
+                <div class="tier-cap num">Hab. 41 en adelante · desde Q1,095/mes en total</div>
               </div>
               <p class="tier-desc">Para administradoras o complejos con múltiples zonas y reportes consolidados.</p>
               <ul class="tier-list">
@@ -781,7 +889,7 @@
             </div>
             <a
               class="btn btn-tier-outline"
-              href="https://wa.me/50243182227?text=Hola%20David%2C%20me%20interesa%20el%20Plan%20Multi-Propiedad%20de%20Hilo%20(Q1%2C400%2Fmes)%20y%20probar%2030%20d%C3%ADas%20gratis."
+              href="https://wa.me/50243182227?text=Hola%20David%2C%20me%20interesa%20el%20Plan%20Multi-Propiedad%20de%20Hilo%20(Q20%20por%20habitaci%C3%B3n)%20y%20probar%2030%20d%C3%ADas%20gratis."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -897,35 +1005,80 @@
       const formulaOut = document.getElementById("hilo-formula-out");
       const calcWa = document.getElementById("hilo-calc-wa");
       const tierCards = document.querySelectorAll("[data-tier]");
+      const rateSteps = document.querySelectorAll("[data-step]");
+      const savingsOut = document.getElementById("hilo-savings-out");
+      const hintOut = document.getElementById("hilo-hint-out");
+
+      // Cobro por escalones: cada habitación se cobra a la tarifa de su escalón.
+      // Hab. 1–15 a Q30, hab. 16–40 a Q25, hab. 41 en adelante a Q20.
+      const BASE_RATE = 30;
+      const TIERS = [
+        { id: "basico", name: "Plan Básico", range: "1 a 15 habitaciones", from: 1, max: 15, rate: 30,
+          next: "Desde la habitación 16, cada una adicional cuesta Q25." },
+        { id: "crecimiento", name: "Plan Crecimiento", range: "16 a 40 habitaciones", from: 16, max: 40, rate: 25,
+          next: "Desde la habitación 41, cada una adicional cuesta Q20." },
+        { id: "multi", name: "Plan Multi-Propiedad", range: "41 habitaciones o más", from: 41, max: Infinity, rate: 20,
+          next: "Cada habitación adicional ya está en la tarifa más baja." }
+      ];
+
+      function q(n) {
+        return "Q" + n.toLocaleString("en-US");
+      }
+
+      function breakdown(rooms) {
+        const parts = [];
+        let total = 0;
+        TIERS.forEach(function (t) {
+          const count = Math.max(0, Math.min(rooms, t.max) - t.from + 1);
+          if (count > 0) {
+            parts.push({ count: count, rate: t.rate });
+            total += count * t.rate;
+          }
+        });
+        return { parts: parts, total: total };
+      }
 
       function updatePlanCalc() {
         const rooms = parseInt(slider.value, 10);
-        let tier = { id: "multi", name: "Plan Multi-Propiedad", cap: "41 a 100 habitaciones", price: 1400 };
-        if (rooms <= 15) {
-          tier = { id: "basico", name: "Plan Básico", cap: "Mínimo · Hasta 15 habitaciones", price: 300 };
-        } else if (rooms <= 40) {
-          tier = { id: "crecimiento", name: "Plan Crecimiento", cap: "Hasta 40 habitaciones", price: 700 };
-        }
-
-        const effective = (tier.price / rooms).toFixed(2);
-        const priceFormatted = "Q" + tier.price.toLocaleString("en-US");
+        const tier = TIERS.find(function (t) { return rooms <= t.max; });
+        const b = breakdown(rooms);
+        const total = b.total;
+        const savings = rooms * BASE_RATE - total;
+        const word = rooms === 1 ? " habitación" : " habitaciones";
+        const avg = total / rooms;
 
         roomsOut.textContent = String(rooms);
         tierNameOut.textContent = tier.name;
-        tierCapOut.textContent = tier.cap;
-        priceOut.textContent = priceFormatted + " / mes";
-        formulaOut.textContent = "Equivale a Q" + effective + " por habitación al mes";
+        tierCapOut.textContent = tier.range;
+        priceOut.textContent = q(total) + " / mes";
+        const formula = b.parts
+          .map(function (p) { return p.count + " × Q" + p.rate; })
+          .join(" + ");
+        formulaOut.textContent =
+          (b.parts.length > 1 ? formula + " = " + q(total) : rooms + word + " × Q30 = " + q(total)) +
+          (b.parts.length > 1 ? " · promedio Q" + avg.toFixed(2) + " por habitación" : "");
+
+        if (savings > 0) {
+          savingsOut.innerHTML =
+            "Ahorras <strong>" + q(savings) + " al mes</strong> frente a la tarifa Básico (Q30 por habitación).";
+        } else {
+          savingsOut.textContent = "Tarifa Básico: Q30 por habitación.";
+        }
+        hintOut.textContent = tier.next;
+
+        const pct = ((rooms - slider.min) / (slider.max - slider.min)) * 100;
+        slider.style.background =
+          "linear-gradient(to right, var(--primary) " + pct + "%, #E6E7EE " + pct + "%)";
+
+        rateSteps.forEach(function (s) {
+          s.classList.toggle("is-active", s.getAttribute("data-step") === tier.id);
+        });
 
         const msg =
-          "Hola David, administro " +
-          rooms +
-          " habitaciones y me interesa probar Hilo (" +
-          tier.name +
-          " - " +
-          priceFormatted +
-          "/mes).";
+          "Hola David, administro " + rooms + word + " y me interesa probar Hilo (" +
+          tier.name + ", " + q(total) + "/mes).";
         calcWa.href = "https://wa.me/50243182227?text=" + encodeURIComponent(msg);
-        calcWa.textContent = "Cotizar para " + rooms + " habitaciones por WhatsApp";
+        calcWa.textContent = "Cotizar para " + rooms + word + " por WhatsApp";
 
         tierCards.forEach(function (card) {
           card.classList.toggle("is-highlighted", card.getAttribute("data-tier") === tier.id);
