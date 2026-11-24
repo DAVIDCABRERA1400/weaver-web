@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="164" height="40" viewBox="0 0 164 40" role="img" aria-label="weaver">
+  <!-- w -->
+  <path d="M 6 12 L 12 29.5 L 18 14.5 L 24 29.5 L 30 12" fill="none" stroke="#15171E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- e -->
+  <path d="M 38 21.5 L 55 21.5 C 55 15.2 51.2 11.8 46.5 11.8 C 41.2 11.8 37.5 15.6 37.5 21.2 C 37.5 26.8 41.2 30.2 46.8 30.2 C 50.2 30.2 52.8 29 54.4 27.2" fill="none" stroke="#15171E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- a -->
+  <circle cx="71.5" cy="21" r="8.8" fill="none" stroke="#15171E" stroke-width="4"/>
+  <path d="M 80.3 12.2 L 80.3 29.8" fill="none" stroke="#15171E" stroke-width="4" stroke-linecap="round"/>
+  <!-- v -->
+  <path d="M 89.5 12.2 L 96.5 29.8 L 103.5 12.2" fill="none" stroke="#15171E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- e -->
+  <path d="M 111 21.5 L 128 21.5 C 128 15.2 124.2 11.8 119.5 11.8 C 114.2 11.8 110.5 15.6 110.5 21.2 C 110.5 26.8 114.2 30.2 119.8 30.2 C 123.2 30.2 125.8 29 127.4 27.2" fill="none" stroke="#15171E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- r con remate coral -->
+  <path d="M 137.5 12.2 L 137.5 29.8 M 137.5 19.5 C 137.5 14.5 141.2 12 146 12" fill="none" stroke="#15171E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="152.5" cy="12" r="2.7" fill="#FF6B4A"/>
+</svg>

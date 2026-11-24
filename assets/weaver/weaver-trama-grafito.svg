@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Trama ortogonal urdimbre/trama al 12% blanco sobre Grafito -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.12" stroke-linecap="round">
+    <path d="M 0 16 L 44 16 M 52 16 L 64 16"/>
+    <path d="M 0 48 L 12 48 M 20 48 L 64 48"/>
+    <path d="M 16 0 L 16 12 M 16 20 L 16 64"/>
+    <path d="M 48 0 L 48 44 M 48 52 L 48 64"/>
+  </g>
+</svg>

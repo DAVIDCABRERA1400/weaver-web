@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Trama ortogonal urdimbre/trama al 16% índigo sobre Niebla -->
+  <g fill="none" stroke="#4C4FE0" stroke-width="1.2" stroke-opacity="0.16" stroke-linecap="round">
+    <!-- Hilos horizontales (fila 16 pasa por encima en x=16, debajo en x=48) -->
+    <path d="M 0 16 L 44 16 M 52 16 L 64 16"/>
+    <!-- Fila 48 pasa por debajo en x=16, encima en x=48 -->
+    <path d="M 0 48 L 12 48 M 20 48 L 64 48"/>
+    <!-- Hilos verticales (col 16 pasa debajo en y=16, encima en y=48) -->
+    <path d="M 16 0 L 16 12 M 16 20 L 16 64"/>
+    <!-- Col 48 pasa encima en y=16, debajo en y=48 -->
+    <path d="M 48 0 L 48 44 M 48 52 L 48 64"/>
+  </g>
+</svg>

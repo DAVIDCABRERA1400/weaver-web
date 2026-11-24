@@ -1,1 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 48 48" role="img" aria-label="Weaver, marca W con nodos sobre índigo"><rect width="48" height="48" rx="8" fill="#4C4FE0"></rect><g transform="translate(4.8 4.8) scale(0.8)"><line x1="6" y1="10" x2="42" y2="10" stroke="#FF6B4A" stroke-width="1.5" stroke-linecap="round" opacity="0.5"></line><polyline points="6,10 16,34 24,14 32,34 42,10" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"></polyline><circle cx="6" cy="10" r="4.5" fill="#FFFFFF"></circle><circle cx="16" cy="34" r="4.5" fill="#FFFFFF"></circle><circle cx="24" cy="14" r="4.5" fill="#FF6B4A"></circle><circle cx="32" cy="34" r="4.5" fill="#FFFFFF"></circle><circle cx="42" cy="10" r="4.5" fill="#FFFFFF"></circle></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="Ícono de Weaver sobre índigo">
+  <defs>
+    <mask id="weaver-cruce-nodes" maskUnits="userSpaceOnUse">
+      <rect width="48" height="48" fill="#FFFFFF"/>
+      <path
+        d="M 20.5 17.5 L 29.5 34.2 Q 31.8 38.2 34.1 34.2 L 40.5 13.5"
+        fill="none"
+        stroke="#000000"
+        stroke-width="9.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </mask>
+  </defs>
+  <rect width="48" height="48" rx="11" fill="#4C4FE0"/>
+  <g transform="translate(5.5, 5.5) scale(0.77)">
+    <path
+      d="M 7.5 13.5 L 13.9 34.2 Q 16.2 38.2 18.5 34.2 L 28.2 16.2"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="5.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      mask="url(#weaver-cruce-nodes)"
+    />
+    <path
+      d="M 19.8 16.2 L 29.5 34.2 Q 31.8 38.2 34.1 34.2 L 39.2 17.8"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="5.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <circle cx="40.8" cy="11.2" r="3.6" fill="#FF6B4A"/>
+  </g>
+</svg>

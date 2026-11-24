@@ -1,0 +1,1123 @@
+/* ==========================================================================
+   HILO, POR WEAVER — Sistema de diseño v1 (noviembre de 2026)
+   Superficies planas con bordes de 1px: cero degradados, cero blur/glass,
+   cero sombras de neón. Niebla (#F5F6FA), Superficie (#FFFFFF),
+   Algodón (#FFF1EC), Grafito (#15171E), Gris apoyo (#5B5E6B),
+   Índigo (#4C4FE0), Remate (#A63A22), Coral (#FF6B4A).
+   ========================================================================== */
+
+:root {
+  --hilo-niebla: #F5F6FA;
+  --hilo-superficie: #FFFFFF;
+  --hilo-grafito: #15171E;
+  --hilo-gris: #5B5E6B;
+  --hilo-indigo: #4C4FE0;
+  --hilo-indigo-hover: #3F42C7;
+  --hilo-on-indigo: #FFFFFF;
+  --hilo-coral: #FF6B4A;
+
+  --hilo-algodon: #FFF1EC;
+  --hilo-algodon-border: #F6D5CA;
+  --hilo-remate: #A63A22;
+
+  /* Estados de cobro (ícono + palabra, >= 8:1 WCAG) */
+  --status-verified-bg: #E6F7EC;
+  --status-verified-border: #B6E6C9;
+  --status-verified-ink: #115E34;
+
+  --status-review-bg: #E8F1FF;
+  --status-review-border: #BDD6FF;
+  --status-review-ink: #16448C;
+
+  --status-overdue-bg: #FDECEB;
+  --status-overdue-border: #F7C5C2;
+  --status-overdue-ink: #8E1F1A;
+
+  /* Bordes */
+  --hilo-border: rgba(21, 23, 30, 0.1);
+  --hilo-border-strong: rgba(21, 23, 30, 0.2);
+  --hilo-divider: #C6C9D8;
+
+  /* Radios y tipografía */
+  --radius-btn: 10px;
+  --radius-el: 14px;
+  --radius-card: 24px;
+  --radius-pill: 999px;
+
+  --font-display: "Sora", system-ui, -apple-system, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.hilo-page {
+  margin: 0;
+  background-color: var(--hilo-niebla);
+  color: var(--hilo-grafito);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.625;
+  color-scheme: light;
+  overflow-x: hidden;
+  caret-color: var(--hilo-indigo);
+}
+
+::selection {
+  background-color: var(--hilo-indigo);
+  color: var(--hilo-on-indigo);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+button {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 3px solid var(--hilo-indigo);
+  outline-offset: 3px;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Skip Link & Screen Reader Helpers ---------- */
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: var(--radius-btn);
+  background-color: var(--hilo-grafito);
+  color: var(--hilo-superficie);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ---------- Layout ---------- */
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1160px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.hilo-hero-grid > *,
+.flow-step > *,
+.pricing-grid > * {
+  min-width: 0;
+}
+
+/* ---------- Buttons & Inline Links ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 12px 22px;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.14s ease,
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    color 0.16s ease;
+}
+
+.btn:active {
+  transform: scale(0.985);
+}
+
+.btn-primary {
+  background-color: var(--hilo-indigo);
+  color: var(--hilo-on-indigo);
+}
+
+.btn-primary:hover {
+  background-color: var(--hilo-indigo-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.72;
+  cursor: default;
+}
+
+.btn-secondary {
+  background-color: var(--hilo-superficie);
+  color: var(--hilo-grafito);
+  border-color: var(--hilo-border-strong);
+}
+
+.btn-secondary:hover {
+  background-color: var(--hilo-niebla);
+  border-color: var(--hilo-grafito);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hilo-indigo);
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Sticky Light Navbar (Solid Niebla, cero glassmorphism) ---------- */
+.hilo-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--hilo-niebla);
+  border-bottom: 1px solid var(--hilo-border);
+}
+
+.hilo-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 64px;
+}
+
+.hilo-brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-block: 4px;
+}
+
+.hilo-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding-inline: 2px;
+}
+
+.hilo-nav .hilo-logo-link img:first-child {
+  width: 24px;
+  height: 24px;
+}
+
+.hilo-nav .hilo-logo-link img:last-child {
+  width: 42px;
+  height: 24px;
+}
+
+.hilo-brand-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--hilo-divider);
+}
+
+.hilo-brand-by {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--hilo-gris);
+  transition: color 0.15s ease;
+}
+
+.hilo-brand-by:hover {
+  color: var(--hilo-grafito);
+}
+
+.hilo-nav-links {
+  display: none;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hilo-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--hilo-gris);
+  transition: color 0.15s ease;
+}
+
+.hilo-nav-links a:hover {
+  color: var(--hilo-grafito);
+}
+
+.hilo-nav .btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+/* ---------- Section Separator (Hilo loop + right coral knot) ---------- */
+.hilo-separator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1160px;
+  margin-inline: auto;
+  padding-inline: 16px;
+  height: 24px;
+  color: var(--hilo-divider);
+}
+
+.hilo-separator-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--hilo-divider);
+}
+
+.hilo-separator-loop {
+  flex-shrink: 0;
+  width: 28px;
+  height: 20px;
+  display: block;
+}
+
+.hilo-separator-knot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--hilo-coral);
+}
+
+/* ---------- Status Pills (Icon + Word, >= 8:1 WCAG) ---------- */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.status-pill svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.status-pill--verified {
+  background-color: var(--status-verified-bg);
+  border-color: var(--status-verified-border);
+  color: var(--status-verified-ink);
+}
+
+.status-pill--review {
+  background-color: var(--status-review-bg);
+  border-color: var(--status-review-border);
+  color: var(--status-review-ink);
+}
+
+.status-pill--overdue {
+  background-color: var(--status-overdue-bg);
+  border-color: var(--status-overdue-border);
+  color: var(--status-overdue-ink);
+}
+
+/* ---------- 1. HERO ASIMÉTRICO ---------- */
+.hilo-hero {
+  padding: 36px 0 48px;
+  background-color: var(--hilo-niebla);
+}
+
+.hilo-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.hilo-h1 {
+  font-size: clamp(36px, 5.4vw, 52px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--hilo-grafito);
+  margin-bottom: 14px;
+  max-width: 13ch;
+}
+
+.hilo-hero-lead {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--hilo-gris);
+  max-width: 44ch;
+  margin-bottom: 24px;
+}
+
+.hilo-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+}
+
+.hilo-hero-actions .btn {
+  width: 100%;
+}
+
+/* Tarjeta hiperrealista de la app */
+.hero-app-card {
+  background-color: var(--hilo-superficie);
+  border: 1px solid var(--hilo-border);
+  border-radius: var(--radius-card);
+  padding: 20px;
+}
+
+.app-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--hilo-border);
+  margin-bottom: 14px;
+}
+
+.app-card-kicker {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--hilo-gris);
+  margin-bottom: 2px;
+}
+
+.app-card-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--hilo-grafito);
+}
+
+.algodon-notice {
+  background-color: var(--hilo-algodon);
+  border: 1px solid var(--hilo-algodon-border);
+  border-radius: var(--radius-el);
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--hilo-grafito);
+  margin-bottom: 14px;
+}
+
+.remate-text {
+  color: var(--hilo-remate);
+  font-weight: 600;
+}
+
+.ledger-list {
+  margin: 0;
+  padding: 0;
+}
+
+.ledger-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--hilo-border);
+  font-size: 14px;
+  color: var(--hilo-gris);
+}
+
+.ledger-row strong {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--hilo-grafito);
+}
+
+.ledger-total-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0 4px;
+}
+
+.ledger-total-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hilo-grafito);
+}
+
+.ledger-total-amount {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 6vw, 30px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--hilo-grafito);
+}
+
+.app-card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--hilo-border);
+}
+
+.app-card-substrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background-color: var(--hilo-niebla);
+  border: 1px solid var(--hilo-border);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--hilo-gris);
+}
+
+.app-card-meta {
+  font-size: 12px;
+  color: var(--hilo-gris);
+}
+
+.inline-toggle-btn {
+  background: transparent;
+  border: 0;
+  padding: 6px 4px;
+  min-height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--hilo-indigo);
+  cursor: pointer;
+}
+
+.inline-toggle-btn:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 2. FLUJO EN 3 PASOS VISUALES REALES ---------- */
+.hilo-section {
+  padding: 48px 0;
+}
+
+.section-header {
+  max-width: 56ch;
+  margin-bottom: 32px;
+}
+
+.section-h2 {
+  font-size: clamp(26px, 3.6vw, 34px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--hilo-grafito);
+  margin-bottom: 8px;
+}
+
+.section-lead {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--hilo-gris);
+}
+
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.flow-step {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid var(--hilo-border);
+  align-items: center;
+}
+
+.flow-step-num {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background-color: var(--hilo-superficie);
+  border: 1px solid var(--hilo-border);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--hilo-indigo);
+  margin-bottom: 12px;
+}
+
+.flow-step-title {
+  font-size: clamp(20px, 2.8vw, 24px);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--hilo-grafito);
+  margin-bottom: 10px;
+}
+
+.flow-step-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--hilo-gris);
+  max-width: 44ch;
+  margin-bottom: 16px;
+}
+
+.step-visual-card {
+  background-color: var(--hilo-superficie);
+  border: 1px solid var(--hilo-border);
+  border-radius: var(--radius-card);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.phone-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  max-width: 260px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.phone-frame {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--hilo-border);
+  overflow: hidden;
+  background-color: var(--hilo-niebla);
+}
+
+.shot-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.shot-trigger img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.desktop-frame {
+  border-radius: var(--radius-el);
+  border: 1px solid var(--hilo-border);
+  overflow: hidden;
+  background-color: var(--hilo-niebla);
+}
+
+.step-validate-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  border-radius: var(--radius-el);
+  border: 1px solid var(--hilo-border);
+  background-color: var(--hilo-niebla);
+}
+
+.step-validate-row.is-done {
+  background-color: var(--hilo-superficie);
+  border-color: var(--status-verified-border);
+}
+
+.step-room-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--hilo-grafito);
+}
+
+.step-room-meta {
+  font-size: 13px;
+  color: var(--hilo-gris);
+  margin-top: 2px;
+}
+
+.step-validate-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.wa-confirm-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-el);
+  background-color: var(--hilo-niebla);
+  border: 1px solid var(--hilo-border);
+}
+
+.wa-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.wa-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wa-bubble-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--hilo-grafito);
+}
+
+.wa-bubble-text {
+  font-size: 13px;
+  color: var(--hilo-gris);
+  margin-top: 2px;
+}
+
+.step-month-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius-el);
+  background-color: var(--hilo-niebla);
+  border: 1px solid var(--hilo-border);
+}
+
+.step-month-figure {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 5vw, 28px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--hilo-indigo);
+}
+
+.step-month-sub {
+  font-size: 14px;
+  color: var(--hilo-grafito);
+}
+
+.step-foot-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* ---------- 3. CIERRE SIMPLE: PRECIO POR HABITACIÓN + WHATSAPP ---------- */
+.pricing-card {
+  background-color: var(--hilo-superficie);
+  border: 1px solid var(--hilo-border);
+  border-radius: var(--radius-card);
+  padding: 20px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.rate-table {
+  margin-top: 18px;
+  border-top: 1px solid var(--hilo-border);
+}
+
+.rate-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--hilo-border);
+  font-size: 15px;
+  color: var(--hilo-gris);
+}
+
+.rate-row strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--hilo-grafito);
+}
+
+.pricing-trial-note {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--hilo-gris);
+}
+
+.calc-panel {
+  background-color: var(--hilo-niebla);
+  border: 1px solid var(--hilo-border);
+  border-radius: var(--radius-el);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.calc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.calc-label {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--hilo-grafito);
+}
+
+.calc-rooms-val {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--hilo-indigo);
+}
+
+.calc-slider {
+  accent-color: var(--hilo-indigo);
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+}
+
+.calc-total-price {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 6vw, 34px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--hilo-grafito);
+}
+
+.calc-cta {
+  width: 100%;
+}
+
+/* ---------- Lightbox Dialog (Solid backdrop, cero glassmorphism) ---------- */
+.hilo-lightbox {
+  width: min(96vw, 1100px);
+  max-height: 92svh;
+  margin: auto;
+  padding: 16px;
+  border: 1px solid var(--hilo-border);
+  border-radius: 20px;
+  background-color: var(--hilo-superficie);
+  color: var(--hilo-grafito);
+  overflow: auto;
+}
+
+.hilo-lightbox[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hilo-lightbox::backdrop {
+  background-color: rgba(21, 23, 30, 0.72);
+}
+
+.hilo-lightbox-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hilo-lightbox-head h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--hilo-grafito);
+}
+
+.hilo-lightbox-img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(92svh - 104px);
+  width: auto;
+  height: auto;
+  margin-inline: auto;
+  border-radius: 12px;
+  border: 1px solid var(--hilo-border);
+}
+
+/* ---------- Footer (Grafito #15171E) ---------- */
+.hilo-footer {
+  background-color: var(--hilo-grafito);
+  color: var(--hilo-superficie);
+  padding: 36px 0;
+}
+
+.hilo-footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hilo-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  font-size: 14px;
+  color: #C9CBD4;
+}
+
+.hilo-footer-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.hilo-footer-links a:hover {
+  color: var(--hilo-superficie);
+}
+
+.hilo-footer-meta {
+  font-size: 13px;
+  color: #C9CBD4;
+}
+
+.hilo-footer :focus-visible {
+  outline-color: var(--hilo-superficie);
+}
+
+/* ---------- Responsive (480px, 640px, 768px & 1024px) ---------- */
+@media (min-width: 480px) {
+  .hilo-hero-actions .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 640px) {
+  .phone-pair {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrap,
+  .hilo-separator {
+    padding-inline: 40px;
+  }
+
+  .hilo-nav-inner {
+    gap: 16px;
+    min-height: 76px;
+  }
+
+  .hilo-brand-lockup {
+    gap: 12px;
+    padding-block: 6px;
+  }
+
+  .hilo-logo-link {
+    gap: 8px;
+    padding-inline: 4px;
+  }
+
+  .hilo-nav .hilo-logo-link img:first-child {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hilo-nav .hilo-logo-link img:last-child {
+    width: 52px;
+    height: 30px;
+  }
+
+  .hilo-brand-divider {
+    height: 22px;
+  }
+
+  .hilo-brand-by {
+    font-size: 13px;
+    padding-inline: 4px;
+  }
+
+  .hilo-nav .btn {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  .hilo-nav-links {
+    display: flex;
+  }
+
+  .hilo-hero {
+    padding: 56px 0 68px;
+  }
+
+  .hilo-section {
+    padding: 68px 0;
+  }
+
+  .hero-app-card,
+  .step-visual-card,
+  .pricing-card {
+    padding: 28px;
+  }
+
+  .flow-step {
+    padding: 40px 0;
+  }
+
+  .hilo-footer-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap,
+  .hilo-separator {
+    padding-inline: 56px;
+  }
+
+  .hilo-hero {
+    padding: 72px 0 80px;
+  }
+
+  .hilo-hero-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+  }
+
+  .flow-step {
+    grid-template-columns: 0.88fr 1.12fr;
+    gap: 48px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* ---------- Forced Colors Mode ---------- */
+@media (forced-colors: active) {
+  .hero-app-card,
+  .step-visual-card,
+  .pricing-card,
+  .calc-panel,
+  .algodon-notice,
+  .status-pill,
+  .step-validate-row,
+  .step-month-banner,
+  .wa-confirm-box,
+  .phone-frame,
+  .desktop-frame,
+  .hilo-lightbox,
+  .btn {
+    border: 1px solid CanvasText;
+  }
+
+  .hilo-separator-line {
+    background-color: CanvasText;
+  }
+
+  .hilo-separator-knot {
+    border: 1px solid CanvasText;
+  }
+}
+
+/* ---------- Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

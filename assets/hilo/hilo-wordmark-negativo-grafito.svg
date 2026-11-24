@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="48" viewBox="52 0 82 48" role="img" aria-label="hilo">
+  <path d="M 59 10.5 L 59 38.5 M 59 27 C 59 21.5 63.2 19.5 67.5 19.5 C 72.5 19.5 75.5 22.8 75.5 28.5 L 75.5 38.5" fill="none" stroke="#FFFFFF" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 85.5 20.5 L 85.5 38.5" fill="none" stroke="#FFFFFF" stroke-width="4.4" stroke-linecap="round"/>
+  <circle cx="85.5" cy="12" r="2.9" fill="#FF6B4A"/>
+  <path d="M 96 10.5 L 96 38.5" fill="none" stroke="#FFFFFF" stroke-width="4.4" stroke-linecap="round"/>
+  <circle cx="115" cy="29.2" r="9.3" fill="none" stroke="#FFFFFF" stroke-width="4.4"/>
+</svg>
